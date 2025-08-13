@@ -1,0 +1,21 @@
+{
+  "name": "pencil-engine",
+  "version": "1.0.0",
+  "description": "A simple JavaScript module that processes text with callbacks",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": ["module", "text-processing", "callback", "analysis"],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/pencil-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/pencil-engine/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/pencil-engine#readme"
+} 
