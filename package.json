@@ -12,10 +12,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_USERNAME/pencil-engine.git"
+    "url": "git+https://github.com/moebio/pencil-engine.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/pencil-engine/issues"
+    "url": "https://github.com/moebio/pencil-engine/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/pencil-engine#readme"
+  "homepage": "https://github.com/moebio/pencil-engine#readme"
 } 
