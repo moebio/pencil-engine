@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pencil Engine</title>
+</head>
+<body>
+    
+    <script type="module">
+        try {
+            const module = await import('./index.js');
+            window.runAnalysis = module.runAnalysis;
+        } catch (error) {
+            console.error('Failed to load modules:', error);
+        }
+    </script>
+</body>
+</html>

@@ -1,43 +1,81 @@
+// Import LLMsKirigami functions
+import {
+    buildPromptAndSend,
+    llm_completion_with_insertions,
+    getLLMActivitiesReport,
+    TOTAL_COST_SESSION
+} from './libraries/LLMsKirigami.js';
+
+// Load and parse the confluencePencilReport model at module initialization
+let confluencePencilReport = null;
+try {
+    const response = await fetch('./resources/confluencePencilReport_model.json');
+    if (response.ok) {
+        confluencePencilReport = await response.json();
+        console.log('✅ confluencePencilReport model loaded successfully');
+    } else {
+        console.warn('⚠️ confluencePencilReport model not found, continuing without it');
+    }
+} catch (error) {
+    console.warn('⚠️ confluencePencilReport model could not be loaded, continuing without it:', error.message);
+}
+
 /**
  * Processes text with two callback functions
  * @param {string} text - The input text to process
- * @param {Function} callbackEach - The first callback function to execute with the text, will be called multiple times through the process
+ * @param {Function} callBackEach - The first callback function to execute with the text, will be called multiple times through the process
  * @param {Function} callBackAll - The second callback function to execute with the text, will be called once at the end of the process
  * @returns {void}
  */
-export function runAnalysis(text, callbackEach, callBackAll) {
+export function runAnalysis(text, callBackEach, callBackAll) {
   if (typeof text !== 'string') {
     throw new Error('Text parameter must be a string');
   }
   
-  if (typeof callbackEach !== 'function') {
-    throw new Error('callbackEach parameter must be a function');
+  if (typeof callBackEach !== 'function') {
+    throw new Error('callBackEach parameter must be a function');
   }
   
   if (typeof callBackAll !== 'function') {
     throw new Error('callBackAll parameter must be a function');
   }
-  console.log('starting analysis simulation...(analysis will take 4 seconds)');
-  // Execute the callbacks with the text
-  setTimeout(() => {
-    //uses LLMs to process the text
-    //…
-    callbackEach("Result 1 for 1st callback (each)");
-  }, 2000);
 
-  setTimeout(() => {
-    //uses LLMs to process the text
-    //…
-    callbackEach("Result 2 for 1st callback (each)");
-  }, 3000);
+  callBackEach({
+    type:"communication",
+    value:`Communication stablished 👌🏼`
+  });
+    
+  // Use LLM to process the text
+  buildPromptAndSend(
+    [],
+    'Summarize in one sentence the following text: '+text,
+    'o3m-h-100k',
+    (response) => {
+      callBackEach({
+        type:"proxy_test",
+        value:`LLM Analysis Result (summary of text): ${response.content}`
+      });
 
-  setTimeout(() => {
-    //uses LLMs to process the text
-    //…
-    callBackAll("Result for 2nd callback (all)");
-  }, 4000);
-  
+      callBackAll({
+        type:"json_report",
+        value:confluencePencilReport
+      });
+    },
+    false,
+    'testing the LLM proxy'
+  );
 }
+
+// Export LLMsKirigami functions for direct access
+export {
+    buildPromptAndSend,
+    llm_completion_with_insertions,
+    getLLMActivitiesReport,
+    TOTAL_COST_SESSION
+};
+
+// Export the loaded model for external access
+export { confluencePencilReport };
 
 // Default export
 export default runAnalysis; 

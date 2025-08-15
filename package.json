@@ -7,7 +7,12 @@
   "scripts": {
     "test": "node test.js"
   },
-  "keywords": ["module", "text-processing", "callback", "analysis"],
+  "keywords": [
+    "module",
+    "text-processing",
+    "callback",
+    "analysis"
+  ],
   "author": "",
   "license": "MIT",
   "repository": {
@@ -17,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/moebio/pencil-engine/issues"
   },
-  "homepage": "https://github.com/moebio/pencil-engine#readme"
-} 
+  "homepage": "https://github.com/moebio/pencil-engine#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
