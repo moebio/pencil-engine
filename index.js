@@ -9,13 +9,37 @@ import {
 // Load and parse the confluencePencilReport model at module initialization
 let confluencePencilReport = null;
 try {
-    const response = await fetch('./resources/confluencePencilReport_model.json');
-    if (response.ok) {
-        confluencePencilReport = await response.json();
-        console.log('✅ confluencePencilReport model loaded successfully');
-    } else {
-        console.warn('⚠️ confluencePencilReport model not found, continuing without it');
-    }
+    ///////////Previous version that works on local
+  // const response = await fetch('./resources/confluencePencilReport_model.json');
+    // if (response.ok) {
+    //     confluencePencilReport = await response.json();
+    //     console.log('✅ confluencePencilReport model loaded successfully');
+    // } else {
+    //     console.warn('⚠️ confluencePencilReport model not found, continuing without it');
+    // }
+    
+    
+    ///////////Marcos fix for production:
+    // console.log('Loading confluencePencilReport model...');
+    // const __dirname = path.dirname(new URL(import.meta.url).pathname);
+    // const modelPath = path.resolve(__dirname, 'resources/confluencePencilReport_model.json');
+    
+    // if (fs.existsSync(modelPath)) {
+    //   const data = fs.readFileSync(modelPath, 'utf-8');
+    //   confluencePencilReport = JSON.parse(data);
+    //   console.log('✅ confluencePencilReport model loaded successfully');
+    // } else {
+    //   console.warn('⚠️ confluencePencilReport model not found, continuing without it');
+    // }
+
+    //now using loadJSONFile from fileLoader.js
+    console.log('Loading confluencePencilReport model...');
+    // Import loadJSONFile first
+    const { loadJSONFile } = await import('./fileLoader.js');
+    confluencePencilReport = await loadJSONFile('./resources/confluencePencilReport_model.json');
+    console.log('✅ confluencePencilReport model loaded successfully');
+
+
 } catch (error) {
     console.warn('⚠️ confluencePencilReport model could not be loaded, continuing without it:', error.message);
 }
