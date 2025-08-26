@@ -1,0 +1,299 @@
+id,label,section_guidelines,LLM setup,use refs,explanation,default_words_count,section_example,PNAS,CELL ,NATURE,IMMUNITY
+Title,Title,,o4m-h,,"The title of a scientific article is a concise statement that summarizes the main topic or findings of the research. It serves as the first point of contact for readers, helping them identify the relevance and focus of the study. A well-crafted title includes relevant keywords to enhance discoverability and is designed to capture the interest of potential readers, facilitating quick recognition in academic searches.",20,,100 characters,20 words, 90 characters,120 characters
+Abstract,Abstract,"Write the abstract section. Initially join the units. 
+Remove all titles from the units and create a fluid, clear narrative.
+
+
+Below between "" "" you have a good example of what you need to do regarding structure, size, and content organization: 
+
+""Italy was the first Western country to be severely affected by the COVID-19 pandemic. Within it, immigrants have played an important role as essential workers and throughout solidarity initiatives. The present article is
+based on 64 in-depth interviews with immigrants who engaged in solidarity actions directed toward the immigrant population and the host society during the COVID-19 pandemic. Analytically, it emerged that through solidaristic initiatives, immigrants articulated what we called ‘claims of recognition.’ Recognition here is considered in both its individual form, as interpersonal acceptance and esteem for single immigrants, and its collective form, as the social regard of immigrant groups as constituents of Italian society. Despite being perhaps ’elementary,’ these claims aim to fight forms of both non-recognition and misrecognition that are pervasive in Italy and aim to transform the symbolic ’fabric’ of this country.""",cl37-t-he,,"An abstract is a concise summary of a research paper, intended to provide a clear overview of the paper’s main objectives, methodology, results, and conclusions. It is designed to communicate the significance and implications of the research findings to both specialists and non-specialists. An abstract must stand alone, meaning it should be intelligible without reading the full paper, and it should not reference figures, tables, or sections of the paper directly.",250,,250 words,150 words,150 words,150-200 words
+Introduction,Introduction,"### ✦ Purpose (what the Introduction must achieve)  
+• **Show relevance** – hook readers with a concrete stake (statistic, cost, bold fact).  
+• **Describe in a logic flow what is known abaut the subject** so readers can follow your logic.  
+• **Pinpoint what is not known and support it with evidence or a good resoning** (the knowledge gap).  
+• **State the single research question or hypothesis** that will fill that gap.  
+• **Highlight your unique approach or headline result** so readers trust you can deliver.
+
+---
+
+### ✦ Step-by-step Content Guidelines  
+
+**1. Impact – Why is the topic relevant?**  
+Write 1–3 sentences that grab attention:  
+  • Use one or more of the three hook styles:  
+    – *Statistic-first* (“Ambient air pollution causes 7 million deaths annually (WHO 2023).”).  
+    – *Problem statement* (“Current rapid tests miss 30 % of early influenza cases (Li 2021).”).  
+    – *Broad unanswered question* (“How ocean viruses influence carbon export remains unclear.”).  
+  • Immediately cite a peer-reviewed source.  
+  • Avoid clichés (“Since the dawn of time…”), dictionary definitions, and vague numbers.
+
+**2. Background – What is already known?**  
+  • Start broad, then funnel to the precise sub-field.  
+  • Explain landmark studies and emerging trends.
+  • Use transition phrases: “Together, these results suggest… However, no study has…”.  
+  • Define acronyms and key terms on first use.  
+   
+
+**3. Gap – What remains unknown or unresolved?**  
+  • One explicit statment, for example: “However, the long-term effect of X on Y remains unknown.”  
+  • Support with 1–2 citations and/or a clear rational.  
+  • Ensure the gap flows logically from the Background paragraph.
+
+**4. Aim – What will your study do to fill the gap?**  
+  • One precise primary research question or hypothesis for example:  
+    “Here we test whether drug A reduces biomarker B in patients with condition C.”  
+  • Use testable verbs: determine, quantify, compare.  
+  • Do not list sub-questions or future explorations here.
+
+**5. Edge – Why is your study uniquely able to succeed (or, for some journals, what is the headline result)?**  
+  • **Road-map / novelty close** (default):  
+    “Here we apply single-cell time-lapse microscopy to resolve X at millisecond precision.”  
+  • **Key-finding preview close** (journals that allow result preview):  
+    “Using a 5 000-patient cohort, we find that variant Z doubles recurrence risk.”  
+  • Limit to one or two sentences; keep statistics minimal unless journal guidelines require them.
+
+---
+
+### ✦ Common Pitfalls and Fixes  
+• **Background swamp before the hook** → Start with the Impact hook; move extra history later.  
+• **Laundry-list of studies** → Group by theme, add synthesis sentences.  
+• **Gap buried or vague** → End Background with one crisp sentence that names the gap.  
+• **Aim does not match gap** → Re-word so the research question addresses that exact gap.  
+• **Detailed results in Introduction** → Save data for Results; keep the close to aim + edge only.
+
+---
+
+### ✦ Suggested Micro-Outline  
+1. Impact hook with citation 
+2. Broad context  
+3. Thematic synthesis of prior work  
+4. Explicit gap 
+5. One research question / hypothesis 
+6. Road-map or key-finding closing sentence 
+",cl37-t-he,y,"The introduction of a scientific paper establishes the context, background, and rationale for the research. It summarizes what is already known in the field, identifies gaps or unanswered questions, and clearly states the study’s objectives or hypotheses. By the end of the introduction, readers should understand why the research is important and what the authors aim to accomplish.",500,"
+
+
+
+
+
+","Below between "" "" you have a good example of what you need to do regarding structure,  and content organization: 
+
+
+""In Italy, the first Western country to be severely affected by the COVID-19 pandemic and the ensuing crisis, immigrants have played a key role to address the critical situation. Besides being critical epidemic workers (Ambrosini, 2020), immigrants, individually and collectively, have done much to come to the aid of both the immigrant and Italian populations with solidarity initiatives. This study examines Italian immigrants’ solidarity during the COVID-19 pandemic. It is based on 64 in-depth interviews with ’immigrants’ (including naturalized citizens and ‘second generations’) who participated in COVID-19 solidarity initiatives. As will be seen, this research examined both fixed and continuous solidarity actions, especially by immigrant organizations and religious communities, and more individual, shorter, and occasional forms of help linked to specific needs or requests (Ambrosini, 2021). This study seeks to fill a gap in the growing literature on immigrants and COVID-19. Most literature on solidarity during COVID-19 focuses on immigrants’ actions for fellow immigrants (Black, Chattopadhyay & Chisholm, 2020; Galam, 2020; Kynsilehto, 2020) or pro-migrant initiatives from ’native’ actors (e.g., Bauder & Godoy, 2020; Falicov et al., 2020). Instead, here, we observed how immigrants’ support also unfolded toward the receiving society in general, beyond the limits of ’co-nationalism.’ As will be shown, this participation is driven by the desire for recognition, especially of individual deservingness, and public awareness of minority groups in society. After this introduction, we will present the theoretical framework, focusing on the definition of recognition and claims of recognition. Then, the study will briefly discuss COVID-related repercussions on immigrants, emphasizing the forms of non- and mis-recognition. A methodology section follows. The main findings will be presented in two main sections, where we analyze the empirical data. The conclusion will discuss the analysis and suggest directions for future research. Defining Recognition and Claims of Recognition Recognition is a much disputed and multifaceted topic. Theorists of multicultural politics of recognition have emphasized the individual and social importance of recognition (e.g., Honneth, 2004; Modood, 2013). In their readings, recognition revolves around the challenges of accommodating minoritarian customary practices; it can also be defined as cultural recognition, namely the protection and celebration of different and minoritarian cultural expressions (see Chin & Levey, 2022). This equal recognition for different cultures becomes important in light of forms of mis-recognition (the ascription of a negative valuation) and non-recognition (the lack of an acknowledgment) affecting the obtainment of social justice for minority groups and individuals as well as subjective well-being (for a detailed definition of non-/mis-recognition, see Schweiger, 2019). When a group is constituted as marginal or somehow outside the norm, it is indeed deprived of the capacity to effectively influence the rest of society, and its members may also lose their sense of belonging, self-confidence, and self-respect (Lamont, 2018; Modood, 2013). Against this backdrop, recognition takes the form of a process developing through struggles against non- or mis-recognitions (Chin & Levey, 2022). These struggles for recognition are praised for broadening the criteria by which people can gain cultural membership, social justice, and human dignity (Lamont, 2018). This framing of recognition has been in tension with some feminist scholars. Okin (1994) maintained that the recognition of cultures justifying women’s subordination conflicts with the feminist goal of social equality between men and women. Fraser (2007) warned against the tendency of (multicultural) struggles for recognition to prioritize cultural struggles and the politics of recognition over social struggles and the politics of redistribution. Connolly (2010) identified, in feminist thinkers such as Judith Butler and Kelly Oliver, the assumption that the struggles for recognition are embedded in relations of dependencies and social domination from hegemonic cultures and dominant institutions. Migration studies academics concur that hegemonic cultures and dominant institutions shape the terms of recognition struggles. In studies on irregular immigrants, for example, it has been observed how migrants contest the identities of ’non-citizens’ assigned to them with counterstrategies and assertions of subjective legitimacy that call attention to their good behavior and reliability (Chauvin & Garce´s-Mascaren˜as, 2014). In particular, to achieve legal status, they manifest a lifestyle compliant with standards of behavior perceived by the majority as worthy of appreciation (Ambrosini, 2023). ’Performances of deservingness’ (Chauvin & Garce´s-Mascaren˜as, 2014) like these appear to be particularly employed in neoliberal societies for counteracting forms of non- or mis-recognition. Lamont (2018) found that stigmatized individuals respond to discrimination based on prevailing cultural norms. In neoliberal contexts, specifically, their responses underscore individual self-sufficiency and hard work. These performance-based responses, based on the idea of appealing to ‘deservingness’ in the eyes of the receiving society, have been also emphasized by migrant movements. Dazey (2021), for example, observed that for French Muslim activists, the best way to fully integrate into the political system is by using ’polite’ responses (e.g., good manners and exemplary behavior) instead of confrontational actions. Neoliberal responses have also been related to active civic participation, by which migrants engaging with churches, ethnic associations, and voluntary organizations positively impact society (see Yap et al., 2011). Such interventions are accused of being complicit with neoliberal logic in sustaining the state’s commitment to privatization and the idea of citizenship as something to be personally earned (ibid.). Neoliberal responses generally coincide with ’quiet’ actions and a certain reluctance to deploy more confrontational initiatives and tend to reproduce the usual legal and social framework (Lamont, 2018). For critics, they minimize the role that social structures and political or economic power systems play in racism and structural discrimination, contributing to the neutralization of political claims to citizenship (Dazey, 2021; Guzman Garcia, 2016). However, other works (Balazard et al., 2023; Ellefsen et al., 2022; Strunk, 2015) have highlighted the transformational and subtly political nature of quiet struggles for recognition, challenging this understanding. In contexts where the politicization of discrimination is usually disapproved, there is a tendency to favor subdued behaviors as opposed to overt political endeavors (Balazard et al., 2023; Ellefsen et al., 2022). Nonetheless, these discrete collective endeavors—such as engaging in recreational activities like sports, participating in workshops, and attending festivals (Strunk, 2015)—can lead to awareness of the collective nature of discrimination and imbue individuals with a sense of political consciousness (Balazard et al., 2023). This dynamic resonates with what scholars have recently observed in connection with ’acts of citizenship.’ Acts of citizenship have been originally defined as moments that rewrite established practices, status, and order of citizenship; they often promote a new concept of citizenship via visible claims, like demonstrations and protests, to rewrite the meanings and foundations of citizenship (Isin & Nielsen, 2008). Recently, scholars have revised this notion, opening the analysis to a broader set of processes involved in constituting citizens, including those consistent with wider ’technologies of governmentality’ that prescribe what it means to be a ’good citizen’ worthy of inclusion and rights. This includes acts performed in very discreet ways, through daily experiences, and under less visible guises, like engagement with local people and urban spaces, that, despite the ambiguity, allow the development of politics of belonging contrasting hegemonic and restrictive definitions of citizenship (e.g., Askins, 2014; Canepari & Rosa, 2017). In this contribution, recognition has a two-fold level: individual and collective. Specifically, recognition is defined as the legitimate presence of minority groups and their members as co-constitutive of the political community (Chin & Levey, 2022). Unlike standard multicultural recognition, which focuses on celebrating minoritarian cultural expressions, here, recognition represents the relationship of members that look at each other as equal members of a community, aware to belong to the same collective, without simply concealing their differences (see also Modood, 2013). This might represent an ’elementary’ form of acknowledgment, but it potentially transforms how the polity (the political community) is publicly symbolized. Aligning with the recent broadening of acts of citizenship and recognition struggles toward quiet initiatives, we will observe how non-confrontational solidarity acts of immigrants during COVID-19 express what we can call ’claims of recognition.’ To be clear, with recognition claims, here, we especially indicate both the demand for individual recognition of an individual’s ’worth’ and collective, positive public acknowledgment of minority groups that make up society. Instead, the recognition of cultural diversity (multicultural standard conception’s forte) is less emphasized, perhaps because the particular situation of COVID-19 did not favor initiatives traditionally connected with this aspect, like public protests and cultural events. In particular, these claims of recognition aim to fight forms of non- or mis-recognition expressing ethno-cultural membership boundaries in receiving society. These boundaries are established by the so-called politics of belonging, which can be defined as ’the dirty work of boundary maintenance’ of the community of belonging by the hegemonic political powers (Yuval-Davis, 2006). Through legislation and public discourses, politics of belongings (re)produce divisions in society between those who ’really’ belong and those who do not; by denying recognition (or stimulating negative public regard) to social groups, they establish boundaries of belonging that, in Italy, are often ’thicker’ than the legal citizenship, evoking a community of belonging based on ’blood’ and ’heritage’ (Guglielmi, 2020). Specifically, for immigrants, these solidarity activities represented resources to resist forms of politics of belonging and feed their sense of ’Italianness.’ In this context, the pandemic situation (despite many negativities) also opened a space for nurturing a sense of belonging that defied the limits of ethno-cultural belonging as well as for claims of recognition of individual and collective values. As we will observe, however, all this was not without ambiguity and limitations in how these initiatives have reached public appreciation. COVID-19 Non-/Mis-Recognitions and Italian Membership Ethno-Cultural Boundaries Italy was the first ’Western’ nation to deal with the COVID-19 epidemic in late February 2020, highlighting its systemic difficulties. Public institutions, especially healthcare services, were often underfunded and unable to handle the virus’s spike and reach the entire community with supportive programs (Gatti, 2022). The ’lockdowns’ implemented to reduce the virus spread were undoubtedly necessary, although they exacerbated socio-economic inequality (Ambrosini, 2020). According to the Italian National Institute of Statistics, the COVID-19 epidemic worsened absolute poverty in Italy (Istat, 2021). People faced fear, isolation, and economic distress. This condition hurt migrants especially. Immigrants have suffered the most economically from lockdowns. Due to the temporary or informal nature of many of their work contracts, they lost more jobs and had fewer state economic protections (Quaranta et al., 2021). Due to healthcare access issues, they were more exposed to SARS-CoV and had trouble getting COVID swab testing (Pagani et al., 2021), especially when deprived of legal status. The pandemic situation exacerbated forms of non-/misrecognition toward immigrants, too. During the pandemic, migrants faced hostility and discrimination (Ambrosini, 2020). While assaults and beatings against migrants occurred across Italy (e.g., the Guardian, 2020; Krause & Bressan, 2020), the former Interior Minister, Salvini, tried to politicize the situation by criticizing the Italian government for not defending Italy against migrants, a narration also reflected by those media that linked immigration to the virus (Arcilla-Calderon et al., 2023). These are only the newest examples of Italians’ struggles to accept their multiethnic identity. On the one hand, many statistics and analyses disclose the negative perception of immigrants and diversity in the Italian population; Italy has one of the strongest oppositions to ethnic variety in Western countries (Pew Research Centre, 2019). Simultaneously, political debate and legislation tend to privilege securitarian and discriminatory approaches to migration (Corsi, 2021). Many administrations oppose the construction of mosques or Arabic schools, demonstrating that governmental authorities fail to recognize cultural or religious diversity (Ambrosini et al., 2022; Artero & Chiodelli, 2019). Italian boundaries of belonging present a strong ethnocultural character. Jus sanguinis, which determines citizenship by ancestry, underpins Italian citizenship law. Accordingly, while the Italian ’diaspora’ can preserve, impart, or obtain Italian citizenship while living abroad, non-EU migrants must demonstrate 10 years of continuous legal presence in Italy, and minors born in Italy must demonstrate their uninterrupted presence from birth to 18 to apply for naturalization (Ibrido & Marchese, 2020). In the meantime, immigrants cannot vote or run for office, even in municipal elections. All this is also reflected in the meaning that ’Italianness’ has for many Italian citizens. According to Guglielmi (2020), Italians generally consider a person Italian if they share Italian habits, traditions, and, for some, ’blood.’ Italian citizens of immigrant descent are likewise affected by non-recognition. Thus, being an immigrant typically means symbolic banishment from Italian society. In conclusion, these understandings do not allow for varied expressions of ‘Italianness’ and tend to exclude immigrant groups, especially visibly different ones (e.g., Blacks and practicing Muslims), from the recognition of their contribution to and membership in Italian society.       """,500-800 words, 500-700 words, 500 words
+Subresult,Subresult,"Your task is to write the sub-results:
+
+
+1 Objective:
+
+Turn the tagged input units — heading → purpose → strategy → result — into polished, publication-ready sub-result narratives that:
+
+use every piece of author-supplied content,
+
+eliminate redundancy,
+
+reference all figures/sub-figures/tables/formulas as indicated in the result unit (not in the units tags),
+
+respect scientific style and traceability.
+
+2 Input Logic
+
+Each unit carries tags of the form sub-result(n)_figure(x)_sub-figure(y).
+
+A heading may have one or many purpose-strategy-result triplets.
+
+More than one heading can share the same sub-result number.
+
+3 Title Rules
+
+Main title — one per sub-result number.
+
+Derive it from the heading of that number to build a coherent integrated message.
+
+Capture the key takeaway.
+
+Group title — only when a sub-result number contains ≥ 2 headings.
+
+Place it once, above all subresults for that number.
+
+Summarise the shared theme .
+
+4 Narrative Construction Workflow
+
+For each sub-result number n:
+
+    Output the sub-result title (and, if needed, the single group title).
+
+    For each heading tagged with n, in the order received:
+
+        Opening sentence — restate the heading’s insight in past tense.
+
+        Loop through every tagged triplet (purpose, strategy, result):
+
+            Introduce the purpose (“To determine…”, “We examined…”, ...).
+
+            Describe the strategy in formal prose. If standard, cite briefly; if novel, explain the rationale.
+
+            State the result quantitatively and neutrally.
+
+            Attach the correct figure/sub-figure label to the sentence.
+
+        Handle reuse (“Same as …” tags):
+
+            Write the shared purpose or strategy once.
+
+            Follow it with all unique downstream elements (strategy or result) without repeating identical text.
+
+        Use concise connectors (“Additionally,” “We next tested,” etc.) between triplets and between headings.
+
+5 Writing & Style Requirements
+
+    Quantify outcomes; state statistical significance when supplied (“p < 0.05, Mann-Whitney test”).
+
+    Past tense for completed actions; present tense for enduring facts.
+
+    Prefer active voice.
+
+    Keep sentences succinct; no meta-comments, no discussion, no summary outside the sub-result text.
+
+    Maintain uniform terminology and tone across all sections.
+
+6 Quality Checklist (system must verify before output)
+
+Every tagged figure and sub-figure appears exactly once and is linked to its statement.
+
+No redundant prose when purposes or strategies are shared.
+
+Transitions between sentences and headings read smoothly.
+
+Titles follow word-limit rules and accurately reflect content.
+
+Final text contains only the sub-result narrative(s); no chatty remarks or extra explanations.",gpt41,y,"The Sub-results refer to findings that are part of a larger set of results, but focus on more specific or granular aspects of the data. They might represent outcomes from a particular subgroup, a secondary analysis, or additional metrics that support or elaborate upon the main results. Essentially, sub-results help break down the overall findings into smaller, more detailed components, providing a clearer and more nuanced understanding of the study’s outcomes.",2000,,,,,
+Results,Results,"The results section is composed by the sub-results sub-sections and the closure unit.
+
+Your tasks are:
+
+
+First, to assemble the results section:
+<
+Use the subresults section and the closure unit to write a fluid results section of the scientific paper keeping the original order. 
+
+
+How to Write: 
+
+
+You must read each subresult and write a coherent narrative.
+Eliminate any redundancy.
+Be extremely diligent in keeping the statments conected to the respective figure label in the body of the text. 
+Be extremely diligent in presenting all the figures statements and labels referenced in the sub-results.
+Be extremely diligent in not adding any figure reference that you did not receive in the contents above.
+Ensure consistency by using a consistent style and terminology throughout the results section to avoid confusing the reader.
+Ensure narrative clarity by ensuring the narrative is coherent and clear across all the result section. 
+>
+
+
+
+Second, to revise the text:
+<
+After assembling the results section, review it to ensure that it presents a unified and logical progression of the narrative.
+Adjust for clarity and style make necessary adjustments to enhance clarity and maintain uniform style and terminology throughout the section.
+Remove the title ""subsection"" and ""closure""
+>
+
+
+",gpt41,y,"The Results section of a scientific article systematically presents the study’s findings. It objectively reports the data collected, without interpreting its meaning. Typically, it includes key measurements, observations, and analyses, supported by tables, figures, or graphs to clearly convey the outcomes of the research.",2000,, 1500-2500 words, 2000-3000 words,1500-2000 words,2000-3000 words
+Subdiscussion,Subdiscussion,"The Discussion section is divided into several sub-disucssion sub-sections.
+
+
+Each subsection is built by a """"Context"""", a """"Finding"""",and a """"Interpretation"""" unit. Your tasks are:
+
+First, to building each sub-discussion sub-section according to the instructions below:
+<
+Start by constructing each sub-discussion sub-section. For that, you will need to pick the Context, Finding and Interpretation with numeber (x).
+See the logic below:
+
+Sub-discussion 1:
+Context 1
+Finding 1
+Interpretation 1
+
+
+Sub-discussion 2:
+Context 2
+Finding 2
+Interpretation 2
+
+...
+
+
+IMPORTANTE: 
+1) You are not obliged to follow the order Context, Finding, Interpretation inside the sub-sections. Instead study the content and write to maximize for narative logic and clarity.
+2) Be extremely diligent in presenting all the arguments of the units in the body of the text of the sub-sections.
+
+>
+
+Second, to revise the text:
+<
+Maintain smooth transitions within and between each unit to facilitate reader comprehension and narrative flow.
+After assembling the Sub-Discussion Sub-sections, review it to ensure that it presents a unified and logical progression of the narrative.
+Adjust for clarity and style make necessary adjustments to enhance clarity and maintain uniform style and terminology throughout the section..
+Synthesis, summaries, and comments ate the bottom are strictly forbiden, this is not a chat.
+>
+
+
+
+
+
+
+
+
+
+""
+
+",gpt41,y,"The Sub-discussion refers to a portion of the broader discussion section in a scientific paper, where the authors focus on interpreting and analyzing a specific subset of the findings or a particular theme emerging from the results. By breaking the overall discussion into these smaller, more targeted segments, the paper can offer a more structured and in-depth interpretation of each aspect of the study’s outcomes.",2000,,,,,
+Discussion,Discussion,"The Discussion section is composed by: ""response"", ""Sub-discussions"", ""limitation"", ""contribution"" and ""next"".
+
+
+Your tasks are: 
+
+<
+First, to write the discussion section with the following order: 
+response
+context
+subsection 1
+subsection 2
+subsection 3
+...
+limitation (mention but don't give a big emphasis)
+contribution (more emphasis)
+next (make it a natural follow up of yours and your co-authors contributions you just mentioned above)
+
+
+
+Important:
+1) Remove all titles from units and subsections and create a fluid, clear narrative.
+
+>
+
+Second, to revise the text:
+<
+Maintain smooth transitions within and between each unit to facilitate reader comprehension and narrative flow.
+After assembling the Discussion, review it to ensure that it presents a unified and logical progression of the narrative.
+Adjust for clarity and style make necessary adjustments to enhance clarity and maintain uniform style and terminology throughout the section.
+>
+
+
+",gpt41,y,"The Discussion section of a scientific paper interprets the findings presented in the Results. It explains what the results mean in the context of existing knowledge, addresses whether the objectives or hypotheses were met, explores potential reasons for unexpected outcomes, and identifies limitations. Ultimately, it shows how the study advances understanding and suggests future research directions.",2000,,1000-1500 words,1000-1500 words,1000-1500 words,1000-1500 words
+Conclusion,Conclusion,"
+
+",cl37-t-he,,"The conclusion of a scientific paper succinctly summarizes the main findings and their implications, reinforcing the significance of the research. It often restates the study’s contribution to the field and may suggest practical applications or policy recommendations based on the results. This section typically provides a final statement on the relevance of the study, thereby closing the discussion by emphasizing the study's impact and broader relevance.",500,,,,,
+paper,paper,"The Paper is a research document composed by the following sections: ""Title"", ""Abstract"", ""Introduction"", ""Results"", ""Discussion"" and ""Conclusion"".
+
+Your tasks are: 
+
+First, to write the final paper by joining the sections. Keep the titles of the Sections.
+
+
+Second, to revise the text: After assembling the paper, review it to ensure that it presents a unified and logical progression of the narrative requested for a final version. Make the necessary adjustments to enhance narrative clarity and maintain uniform style and terminology throughout the final version of the paper
+
+",cl37-t-he,y,"A research paper is a formal document that presents the results of an original study or investigation. It typically includes a clear statement of the research question, a review of relevant literature, a detailed description of the methods used, a presentation of the findings, and a discussion of their significance and implications. The goal of a research paper is to communicate the advance of knowledge in a particular field offering evidence-based insights that can inform future research, practice, or policy decisions..",6000,,,,,

@@ -1,0 +1,525 @@
+id,label,section,minisection,inputs,context inputs,guidelines,LLM setup,use refs,explanation,length,difficulty,relevance,unit_example,example 2,example 3,example 4,example 5,example 6
+title,title,Title,,[response],,"Write an informative title that effectively summarises the research findings, is concise and clear.
+- Be smart in finding the main point for the title
+- Use precise language to highlight the topic question and/or key findings.
+- Keep it concise
+- Use keywords relevant to the paper's scientific field to enhance discoverability in search engines and databases.
+- Avoid uncommon abbreviations, unless widely recognized (e.g., DNA, AI, PCR).
+- Do not use question marks, hyphens, colons, or slashes in the title, unless required by the journal.
+- Use informative/ declarative title structure.
+
+
+
+
+Review your work:
+- Be diligent in respecting the guidelines. 
+- Review and adjust your response to ensure all guidelines have been met.
+- Output only the title, with no additional comments, summaries, or sentences!!!
+
+",gpt41,,"a concise and informative statement that reflects the main topic and key findings of the study. It is the most visible and searchable element of the publication and plays a critical role in attracting readers, improving discoverability in academic databases, and setting expectations for the paper's content. A strong title provides clarity, emphasizes novelty, and accurately represents the paper’s contribution to its field.",1,5,9,Heterogeneous Effects of Calorie Content and Nutritional Components Underlie Dietary Influence on Pancreatic Cancer Susceptibility,,,,,
+a_context,context,Abstract,,"[impact], [gap], [aim]",,"This unit should concisely and accurately reflect the context and purpose of the study.
+
+Please write a short and clear background for the reader, proceeding to explain what is not known about the field and what is the purpose of the work:
+
+— Start broad, outlining the landscape of your research area (opening unit).
+
+— Zoom in on what exactly you looked at in your project (gap and question unit).
+
+Maintain consistency and accuracy with the unit(s) text.
+
+Ensure there are no discrepancies in terminology with the unit(s).
+
+Incorporate relevant keywords for indexing purposes and ensure that technical terms are clearly defined or explained.
+
+Do not include references in this unit.",gpt41,,"the segment of the abstract designed to give readers a summarized overview of the study's context and purpose.  The a_context unit is part of the abstract section that includes: a_context,  a_methods, a_results, a_conclusion and a_implications, in this order.",3,4,7,"Pancreatic cancer is a rare but fatal form of cancer, the fourth highest in absolute mortality. Known risk factors include obesity, diet, and type 2 diabetes; however, the low incidence rate and interconnection of these factors confound the isolation of individual effects.",,,,,
+a_methods,methods,Abstract,,{abst_methods},,"Focus on the essential aspects of the methodology, offering enough detail for comprehension while avoiding excessive technicality or detail.
+
+Maintain consistency and accuracy with the answer text.
+
+Ensure there are no discrepancies in terminology with the answer.
+
+Incorporate relevant keywords for indexing purposes and ensure that technical terms are clearly defined or explained.",gpt41,,"the segment of the abstract designed to give readers a summarized overview of the study's methodologies. The a_methods unit is part of the abstract section that includes: a_context,  a_methods, a_results, a_conclusion and a_implications, in this order.",4,6,6,"Here, we use epidemiological analysis of prospective human cohorts and parallel tracking of pancreatic cancer in mice to dissect the effects of obesity, diet, and diabetes on pancreatic cancer.",,,,,
+a_results,results,Abstract,,"[response], [finding]",[aim],"Clearly state the main outcomes and discoveries of the research, ideally in a manner that directly addresses the question posed in the aim unit but without restating the question.
+
+Maintain consistency and accuracy with the unit(s) text.
+
+Ensure there are no discrepancies in terminology and data with the unit(s).
+
+Incorporate relevant keywords for indexing purposes and ensure that technical terms are clearly defined or explained.",gpt41,,"a segment of the abstract designed to give readers a summarized overview of the study's key findings. The a_results unit is part of the abstract section that includes: a_context,  a_methods, a_results, a_conclusion and a_implications, in this order.",5,6,8,"Through longitudinal monitoring and multi-omics analysis in mice, we found distinct effects of protein, sugar, and fat dietary components, with dietary sugars increasing Mad2l1 expression and tumor proliferation. Using epidemiological approaches in humans, we find that dietary sugars give a MAD2L1 genotype-dependent increased susceptibility to pancreatic cancer.",,,,,
+a_conclusion,conclusion,Abstract,,[novelty],,"Include a brief statement to emphasize the novelty or unique contribution of your work to the field.     
+
+Maintain consistency and accuracy with the unit text.
+
+Ensure there are no discrepancies in terminology with the unit(s).
+
+Incorporate relevant keywords for indexing purposes and ensure that technical terms are clearly defined or explained.
+",gpt41,,"the segment of the abstract designed to give readers a summarized overview of the study's conclusions. The a_conclusion unit is part of the abstract section that includes: a_context,  a_methods, a_results, a_conclusion and a_implications, in this order.",3,5,7,,,,,,
+a_implications,implications,Abstract,,"[novelty], [catch]",,"Based on the information provided write a clear summary of the implications and impact your study brings to the field or other areas, ex: economy, therapeutics, conservation, ….
+
+Maintain consistency and accuracy with the unit(s) text.
+
+Ensure there are no discrepancies in terminology with the unit.
+
+Incorporate relevant keywords for indexing purposes and ensure that technical terms are clearly defined or explained.",gpt41,,"the segment of the abstract designed to give readers a view of broader implications and practical applications of the findings. The a_implications unit is part of the abstract section that includes: a_context,  a_methods, a_results, a_conclusion and a_implications, in this order.",3,6,8,The translation of these results to a clinical setting could aid in the identification of the at-risk population for screening and potentially harness dietary modification as a therapeutic measure.,,,,,
+impact,impact,Introduction,,{relevance},,"---
+
+### 1. Purpose  
+Create a concise, attention-grabbing passage that:  
+• Shows why the topic matters through a compelling statistic, cost, or bold question.  
+• Cites at least one peer-reviewed source immediately after the key claim.  
+• Leads smoothly into the Background section.
+
+---
+
+### 2. Fidelity to Author Content  
+• Use only the facts, numbers, and citations supplied by the author—do not invent data.  
+• Re-phrase or reorder strictly for clarity; do not add new content.
+• Add all citations and references the author uses in his answer.
+
+---
+
+### 3. No Extraneous Sentences  
+• Do **not** add introductory, concluding, or summary lines outside the substantive Impact content itself.
+
+---
+
+### 4. Suggested Content Flow (funnel logic)  
+• **Establish context and importance** – open with a striking stake that hooks the reader.  
+• **Show broader impact** – weave in any additional numbers or facts the author provides to convey scale and urgency.
+
+---
+
+### 5. Hook Types & Templates  
+
+**Statistic-first hook** – when a headline number captures scale.  
+Template: “X % / Y million / $Z billion shows that <phenomenon> is an urgent challenge (Ref).”
+
+**Problem-statement hook** – for clinical, engineering, or applied problems.  
+Template: “Current <technology/practice> fails in Q % of cases, costing … (Ref).”
+
+**Broad unanswered-question hook** – for fundamental science gaps.  
+Template: “How <process> influences <system> remains unclear (Ref).”
+
+Choose the template that best matches the author’s notes.
+
+---
+
+### 6. Construction Rules  
+• Put the stake at or near the start.  
+• Cite immediately in the style the author used (author-year or bracket).  
+• Write in present tense, active voice (“affects”, “costs”, “remains unclear”).  
+• Spell out units on first use (“$2 billion”, “7 million”).  
+• Avoid clichés and do **not** preview study methods or results.
+
+---
+
+### 7. Quality-Control Checklist  
+✔ Uses only author-supplied content.  
+✔ Citation present and correctly placed.  
+✔ No added introductory or concluding phrases.  
+✔ Passage clearly signals why the topic matters and flows toward Background.
+
+---
+
+### 8. Example Transformations  
+
+**Author notes**  
+• Breast cancer diagnosed in 2.26 million people 2020 (WHO 2023)  
+• most common cancer type  
+
+**System output**  
+“Breast cancer was diagnosed in **2.26 million people worldwide in 2020**, making it the most common cancer type (WHO 2023).”
+
+---
+
+**Author notes**  
+• Rapid tests miss 30 % early flu (Li 2021)  
+• leads to delays, outbreaks  
+
+**System output**  
+“Current rapid influenza tests miss **about 30 % of early infections**, delaying treatment and fuelling outbreaks (Li 2021).”
+
+---
+
+### 9. Output Format  
+Return the polished Impact paragraph as plain text—no bullets, headings, or commentary.
+",cl37-t-m,y,"the first unit of the introduction section. 
+The introduction is built by 5 units: impact, background, gap, aim and catch.
+
+
+The impact unit should identify the topic of the study and highlight the relevance of the study’s topic.
+
+",3,2,6,"Pancreatic cancer is a relatively rare form of cancer, with a life-time risk of developing pancreatic cancer of 1 in 76. 
+Due to the high fatality rate, however, it is the fourth highest in absolute numbers of fatalities (Siegel et al., 2016). 
+One of the major reasons for the high mortality is the late detection of pancreatic cancer and poor therapeutic options. This gives a median survival of <6 months and a 5-year survival rate of <8% (Cleary et al., 2004).","Transposable elements are DNA segments capable of moving between different locations[1]
+They are widespread across all domains of life and have significantly affected genome diversity and evolution[2]. 
+Transposable elements can modulate gene expression, disseminate virulence and antibiotic resistance cassettes and are associated with numerous diseases[3] 
+Some mobile elements are also emerging as potential biotechnological and gene editing tools[5]
+","Transgenesis in plants is widely used to both generate research tools and engineer crop improvement[13].
+Traditional transgene integration occurs at random locations in the plant genome[14], which can generate unintended mutations and subject the expression of the transgene to undesired position effects[15]
+Sequence-specific target-site integration of transgenes is highly desired and has been attempted in plants for over a decade (reviewed previously[1]). 
+Although there has been progress[17],[18], the low efficiency and quality of current target-site integration technologies hampers crop genome engineering[2].
+",,,
+background,background,Introduction,,{known},,"---
+1. Purpose
+
+Create a narrative that moves from broad, established knowledge to the specific research context, so readers can understand why the forthcoming gap exists.• State the landmark findings and recent advances that the reader needs to know to understand the study.• Show limitations, conflicts, or missing data that lead directly to the gap (But the gap itself will be stated later).
+
+2. Fidelity to Author Content
+
+• Use the author-supplied information with maximum rigor—no invention of facts or citations.• You may re-order, compress, or paraphrase only to improve clarity and narrative flow; never distort meaning.• Every reference provided by the author must appear in the output. Preserve citation style (author–year or numbered) exactly as given.
+
+3. Absolute Prohibitions
+
+• No introductory, concluding, or summarising sentences beyond the substantive background narrative.
+
+• No invention of facts or references.• Do not mention “this study,” the methods, or results.
+
+4. Structure – “Funnel Shape”
+
+Broad context opening– Begin with a direct statement of widely accepted information about the topic (no lead-in phrases).
+
+**Thematic synthesis of prior work**– Group studies by theme; link them with phrases such as “collectively,” “together,” “however.”– Highlight consensus first, then narrow to unresolved or contested points.
+
+Limitations / conflicts / missing data– If available in the authors notes, Briefly note methodological flaws, small samples, contradictory findings, or unknowns that set up the forthcoming gap.
+
+Lead-in to the gap– End with a sentence that naturally positions the reader to hear the explicit gap next.
+
+5. Writing Rules
+
+• Use present tense, active voice where feasible (“studies show…”, “evidence remains conflicting…”).• Define acronyms or specialised terms the first time they appear.• No word-limit applies—write as long as needed for clarity.
+
+6. Quality-Control Checklist
+
+✔ Only author-supplied facts and citations?✔ Direct broad-to-specific flow without extra intro/outro lines?✔ All author citations included and correctly placed?✔ Active-voice sentences with logical transitions?✔ Final sentence leads into the gap but does not state it yet?
+
+7. Output Format
+
+Return the polished Background paragraphs as plain text—no headings, bullets, or commentary.",cl37-t-m,y,"the segment of the introduction section that presents the contextual information and relevant literature for the research. 
+
+The background section is where the authors provide an overview of the existing knowledge, research, and theories related to the topic of their study.
+
+The introduction is built by 5 units: impact, background, gap, aim and catch.",8,8,7,"Transgenesis in plants is widely used to both generate research tools and engineer crop improvement[13]
+Traditional transgene integration occurs at random locations in the plant genome[14], which can generate unintended mutations and subject the expression of the transgene to undesired position effects[15],[16].
+Sequence-specific target-site integration of transgenes is highly desired and has been attempted in plants for over a decade (reviewed previously[1]). 
+Although there has been progress[17],[18], the low efficiency and quality of current target-site integration technologies hampers crop genome engineering[2].
+Several approaches have been taken in plants to insert transgenic sequences into specific genomic locations[17],[18],[19]. 
+Homologous recombination (HR) in plants has been demonstrated, but the rate is extremely low and it is therefore not used[20]. 
+Programmable nuclease systems that create sequence-specific DNA breaks, such as CRISPR–Cas9, have improved targeted integration[1]. 
+Prime editing techniques in plants enable the insertion of small sequences up to 34 base pairs (bp) at a targeted site[21], but larger insertions are required to encode new extrinsic traits[22]. 
+Homology-directed repair (HDR) can integrate new DNA through the resolution of induced double-stranded DNA breaks by recombination with a supplied DNA sequence that matches both flanks of the cleaved DNA[23]. 
+HDR occurs at a low frequency in plants as the repair of the DNA breaks occurs primarily by non-homologous end joining (NHEJ), which can include the integration of random fragments of DNA[24]. 
+The preference for NHEJ repair in plants has been taken advantage of to knock-in supplied extrachromosomal DNA during the repair of a CRISPR-induced double-stranded break[25],[26].
+HDR and NHEJ knock-ins are frequently subject to deletions of the flanking target-site DNA and/or the sequence that was delivered (the cargo)[17],[27]. 
+Owing to the low integration frequency and high deletion rate, these approaches involve the expensive production of many transgenic plants followed by laborious screening for a rare intact targeted integration event.",,,,,
+gap,gap,Introduction,,{unknown},,"You must use the content provided with maximum rigor.
+You must re-write the information to optimize for clarity and narrative coherence. No word limits apply.
+Write the unit to provide a comprehensive explanation about what is unkown in your study's topic.
+It is strictkly forbidden to add introductory, concluding, or summarizing sentences.
+
+
+How to Write:
+
+- Articulate what remains not known or less explored in the field of study by pinpointing the specific knowledge lack the research aims to address.
+- When pertinent, start the gap unit with words similar to  “However” to effectively highlight the contrast between what is known (impact and background units) and what is yet to be discovered or understood. 
+- When that information is available in the answer unknown, you may build the gap unit by highlighting the limitations or shortcomings of previous research in the field stated in the unknown.  This can be done by pointing out areas where data is lacking, where findings are controversial, or where more information is needed.
+- Write the gap unit with a sense of tension or urgency.  This tension drives the narrative forward and highlights the need for your study to address these specific issues or areas of uncertainty.
+- You are not obliged to keep the order of information provided by the author. Instead, optimize the sequence of information for clarity and narrative flow. 
+
+
+Below between "" "" you have a good example of what you need to do: 
+
+""Although there has been significant progress in understanding the role of exosomes in cancer, the specific mechanisms by which exosomal miRNAs influence the immune system are not well-defined (Smith et al., 2020). Existing studies predominantly utilize in vitro models, which may not accurately reflect the in vivo tumor microenvironment (Johnson et al., 2021). Recent reviews have called for more comprehensive investigations into the interactions between exosomal miRNAs and immune cells (Lee et al., 2019). Additionally, the potential for exosomal miRNAs to serve as biomarkers for cancer progression remains underexplored (Kumar et al., 2020).""
+
+
+
+Review your work:
+- Be diligent in respecting the guidelines. 
+- Ask yourself: Does this unit start directly with the topic? Does it avoid introductory phrases and adhere to the active, impactful tone?
+- Ask yourself: Does this unit follow the same structure as the good example above between "" "".
+- It is strictkly forbidden to add introductory, concluding, or summarizing sentences. 
+- Review and adjust your response to ensure all guidelines have been met. ",cl37-t-m,y,"the segment of the introduction section that carries the idea of a contrast between what is known and what remains to be discovered or is controversial. 
+
+The introduction is built by 5 units: impact, background, gap, aim and catch.",3,5,8,"Although there has been significant progress in understanding the role of exosomes in cancer, the specific mechanisms by which exosomal miRNAs influence the immune system are not well-defined (Smith et al., 2020). Existing studies predominantly utilize in vitro models, which may not accurately reflect the in vivo tumor microenvironment (Johnson et al., 2021). Recent reviews have called for more comprehensive investigations into the interactions between exosomal miRNAs and immune cells (Lee et al., 2019). Additionally, the potential for exosomal miRNAs to serve as biomarkers for cancer progression remains underexplored (Kumar et al., 2020).","While renewable energy sources such as solar and wind power are well-known for their potential to reduce carbon emissions, the integration of these intermittent energy sources into the existing power grid remains a significant challenge (Smith et al., 2020). However, the specific impacts of large-scale renewable energy integration on grid stability and reliability are not well understood. Previous studies have predominantly focused on small-scale implementations and ideal conditions, which do not account for the complexities of large, interconnected power systems (Johnson et al., 2021). This gap in understanding necessitates further research into effective strategies for managing grid stability and reliability in the context of widespread renewable energy adoption.",,,,
+aim,aim,Introduction,,{question},,"State specifically what the study aims to know or understand about the research topic. No word limits apply.
+The research aim can be presented in different ways but rarely as a question with a question mark (?). It could be in the form of a statement of the study's aims, a hypothesis to be tested, or a focused question.
+It is strictkly forbidden to add introductory, concluding, or summarizing sentences.
+
+
+
+To ensure that the research aim follows a logical flow from the gap unit that is written above in the introduction, use transitional wording to start the question unit like ""Therefore"" or similar. This shows that your research question arises as a natural next step to fill the previously identified and presented gap in knowledge.
+
+- You are not obliged to keep the order of information provided by the author. Instead, optimize the sequence of information for clarity and narrative flow. ",cl37-t-m,,"the segment of the introduction section that presents what the research group aims to find out by doing the study.
+
+The introduction is built by 5 units: impact, background, gap, aim and catch.",3,5,8,"Here, we used both human epidemiological studies and mouse model studies in parallel to dissect the interplay of diet, obesity, and T2D in pancreatic cancer.",Here we generated a transposase-assisted target-site integration (TATSI) system by co-expressing catalytically active programmable nucleases with the rice Pong DNA transposon system.,,,,
+catch,catch,Introduction,,{edge},"[novelty], [response]","From the information gathered, identify the particular strength(s) of the study. They may include one or more of these options:
+It is strictkly forbidden to add introductory, concluding, or summarizing sentences.
+
+- very short overview of the results obtained in the study
+- the contribution of the findings to the current body of knowledge in the topic field
+- the future impact of the findings in, for example, public health, treatment, environment, economy, ….
+- the use of a new methodology
+- details on the type of analysis performed if the analysis done is novel
+- unique features of the samples / patients / groups used in the study
+- You are not obliged to keep the order of information provided by the author. Instead, optimize the sequence of information for clarity and narrative flow. 
+- Write in a very succinct way, 2-4 sentences,  but that raises the reader's interest.
+",gpt41,,"the final segment of the introduction section that highlights what makes the paper unique and worth reading. 
+
+The introduction is built by 5 units: impact, background, gap, aim and catch.",3,6,8,"This study is the first to employ a real-time simulation model to evaluate the stability of power grids with large-scale integration of renewable energy sources, offering a more accurate prediction of potential challenges and solutions.","By studying the db/db and ob/ob mouse models alongside human epidemiological data, we aim to clarify how diet, obesity, and T2D contribute to pancreatic cancer development, providing clearer insights into potential prevention and treatment strategies","We accomplished transposase-mediated targeted insertion in a model plant (Arabidopsis) and translated this technology into a crop plant (soybean). We demonstrate a higher frequency and accuracy of targeted integration compared with currently used methodologies, as well as the delivery of enhancers and gene cargos, in individual plants rather than cultured cells.
+",,,
+heading,heading,Results,Subresult,{found},,"1. Produce a single-sentence, present-tense title stating the core finding of the figure (or panel).
+
+2 Essential Rules:
+2.2 Voice & Tense ∙ Active voice, present tense.
+2.3 Content to Keep ∙ Only the key finding itself.
+2.4 Content to Remove ∙ Numbers, statistics, p-values, citations, background, methods, interpretive words (“suggests”, “may indicate”).
+2.5 No Additions ∙ Do not invent data, broaden claims, or import outside sources.
+
+3 Recommended Sentence Patterns:
+Quantitative [Subject] + active verb + key quantitative change
+Drug A Reduces Tumour Volume in Xenograft Mice
+
+Qualitative [Actors/context] + active verb + core theme
+Patients With Chronic Pain Describe Social Isolation as Central to Daily Life
+
+Theoretical Clear, verbalised claim
+Any Convex Polytope Is Uniquely Reconstructed From Its Graph Under Specified Dimensions
+
+4 Review Your Work:
+Be diligent in respecting all guidelines above.
+
+Ask yourself: Does my output follow the required structure and patterns?
+
+Revise until every rule is met.
+
+Output only the title—it is strictly forbidden to add introductory, concluding, or summarizing sentences.
+",o4m-h,,"an informative statement that summarizes the main finding(s) of the figure/table/theorem/questionnaire that you are going to present. 
+",1,6,9,"Obesity Drives Murine Pancreatic Cancer Development, Growth, and Lethality, Independent of Diet Composition",High-Protein Diet Inhibits Pancreatic Cancer Onset and Reduces the Expression of Cell-Cycle Components,High-Fat Diets Are Associated with Increased Pathogenicity of Pancreatic Cancer,Autoinhibited IstB remodels duplex DNA,IstA β-barrel stimulates ATP hydrolysis,
+prologue,purpose,Results,Subresult,{sub-questions},,"1. You must use the content provided with maximum rigor. 
+2. You must re-write the information to optimize for clarity and narrative coherence. 
+3. Write the information about each sub-figure to give the reader the context of why an experiment was done.
+4. Be diligent in including all the sub-figures described.   
+
+
+How to write: 
+
+
+1. Use the information provided in the answers to help the reader understand the why behind each experiment. 
+2. When you see the content ""Same as Subfigure(x)"", just keep that same information  ""Same as Subfigure(x)"" under the title Subfigure title.
+3. Keep the label: Subresult p | Figure q | Subfigure: q.r (where p,q and r=number you receive in the content of the provided answer to each sub-figure and can or not be the same).
+4. Follow the example as a template:
+
+
+Below between "" "" you have good examples of what you need to do: 
+
+Subresult 1 | Figure 1 | Subfigure: 1.1
+""Susceptibility to pancreatic cancer in humans is associated with diet, obesity, and T2D, creating a complex web of interconnections that are difficult to dissect using epidemiological data"" 
+
+Subresult 1 | Figure 1 | Subfigure: 1.2
+""Having established obesity or total calorie intake as an independent driver of pancreatic acinar carcinoma, we sought to test the independent impact of dietary components. "". 
+
+
+
+Review your work:
+- Be diligent in respecting the guidelines. It is strictly forbidden to add introductory, concluding, or summarizing sentences.
+- Ask yourself: Does my output follow the same structure as the good examples above between "" "".
+- Review and adjust your response to ensure all guidelines have been met.
+",gpt41,y,"the segment of the sub-results that describes the reasoning behind each experiment or test, explaining why you conducted it. ",6,7,8,"Susceptibility to pancreatic cancer in humans is associated with diet, obesity, and T2D, creating a complex web of interconnections that are difficult to dissect using epidemiological data. To disentangle the effect of obesity and T2D from diet, we intercrossed the db/db and ob/ob mouse strains with the well-characterized TAg transgenic model of pancreatic acinar carcinoma. These strains reflect a genetic form of human obesity, which, while rare, allows the decoupling of qualitative and quantitative dietary changes. ","Having established obesity or total calorie intake as an independent driver of pancreatic acinar carcinoma, we sought to test the independent impact of dietary components. We investigated the effect of dietary protein by placing breeder cages on either control or high-protein diets and continuing the dietary manipulation after weaning, in effect manipulating dietary exposure from the in utero stage onward.","Using the same system of dietary change from the in utero stage onward, we investigated the effect of increased dietary fat. TAg+ mice were exposed to either 10% or 30% dietary fat
+and compared to the control diet through longitudinal MRI assessment.","As dietary sugars have been linked to obesity and T2D, risk factors for pancreatic cancer, we tested the effect of simple dietary sugars on tumor kinetics. We compared tumor growth in mice fed the control diet versus either a sugar-free or a high-glucose diet (Figure S2).","In the human context, studying the effect of diet on pancreatic cancer is problematic. As a disease with late detection and an effect on patient appetite, prospective studies are essential for the causal dissection of disease drivers. Few population studies are, however, sufficiently powered to study such a rare cancer. We therefore turned to the European Prospective Investigation into Cancer and Nutrition (EPIC) study, an ongoing prospective cohort designed to investigate the relationships between diet, lifestyle, and environmental factors on cancer and other chronic diseases. More than half a million participants were enrolled in 23 centers across 10 European countries from 1992 to 2000. Epidemiological information was collected at the time of recruitment and included medical history, anthropometric measures, and lifestyle and dietary characteristics, with ongoing follow-up for cancer outcomes. For the current analysis, epidemiologic data were available for 465,076 individuals, 1,344 individuals of which
+had developed pancreatic cancer during the follow-up period. Using a multivariable Cox proportional hazards model and taking into account smoking status, body mass index (BMI), age, diabetes, and sex, we evaluated the effects of eight dietary components on the risk of pancreatic cancer. The only significant effect observed was a retrotective effect of dietary plant fat, with a hazard ratio of 0.9926 (Table S1), which translates to a 0.74% decrease in the risk of pancreatic cancer development per
+gram increase in daily plant fat consumption. This effect was largely unchanged following control for by diabetes, smoking, BMI, age at recruitment, or sex (see Data Resource on Mendeley Data in STAR Methods). We investigated genotype-dependent dietary effects through integrating nutritional information with genotype information for 5,726 individuals comprising 465 pancreatic cancer cases and 5,261 controls. A genome-wide gene 3 environment (GxE) interaction analysis was conducted to detect interactions between dietary factors and genotype on pancreatic cancer susceptibility (Figure S8).",
+rational,strategy,Results,Subresult,{approach},,"1. You must use the content provided with maximum rigor. 
+2. You must re-write the information to optimize for clarity and narrative coherence. 
+3. Write the information about each sub-figure to help the reader understand the rationale behind each experiment and how it was done.
+4. Be diligent in including all the sub-figures described.   
+
+
+How to write: 
+
+1. Use the information provided in the answers to help the reader understand the how behind each experiment.
+2. When you see the content ""Same as Subfigure(x)"", just keep that same information  ""Same as Subfigure(x)"" under the title Subfigure title.
+3. Keep the label: Subresult p | Figure q | Subfigure: q.r (where p,q and r=number you receive in the content of the provided answer to each sub-figure and can or not be the same).
+4. Follow the example as a template:
+
+
+Below between "" "" you have good examples of what you need to do: 
+
+Subresult 1 | Figure 1 | Subfigure: 1.1
+""To disentangle the effect of obesity and T2D from diet, we intercrossed the db/db and ob/ob mouse strains with the well-characterized TAg transgenic model of pancreatic acinar carcinoma.
+These strains reflect a genetic form of human obesity, which, while rare, allows the decoupling of qualitative and quantitative
+dietary changes"" 
+
+Subresult 1 | Figure 1 | Subfigure: 1.2
+""We investigated the effect of dietary protein by placing breeder cages on either control or high-protein diets and continuing the dietary manipulation after weaning, in effect manipulating dietary exposure from the in utero stage onward. TAg+ mice, on either the control or high-protein diet, were then assessed by MRI every 2 weeks for the presence and size of pancreatic tumors (Figure S2). We assessed the effect of altered dietary protein on pancreatic cancer development (Figures 2A and 2B). "". 
+
+Subresult 1 | Figure 1 | Subfigure: 1.3
+""We compared tumor growth in mice fed the control diet versus either a sugar-free or a high-glucose diet (Figure S2).""
+
+
+Review your work:
+- Be diligent in respecting the guidelines. It is strictly forbidden to add introductory, concluding, or summarizing sentences.
+- Ask yourself: Does my output follow the same structure as the good examples above between "" ""?
+- Review and adjust your response to ensure all guidelines have been met.1. Each rational should contain the explanation of how an experiment or set of experiments was done. 
+",gpt41,y,"the segment of the sub-results that describes the reasoning behind each experiment or test, explaining how you conducted it. ",3,7,8,,,,,,
+data,result,Results,Subresult,{lessons},,"1. Rule: Every Info Has to be Used In the Output. Use as many tokens in the output as you need.
+You must use the content provided with maximum rigor. 
+2. You must re-write the information to optimize for clarity and narrative coherence. 
+3. Write the information about each sub-figure to tell the reader the result of each experiment.
+4. Be diligent in including all the sub-figures described.   
+
+
+How to write: 
+
+1. Use the information provided in the answers to help the reader understand the what was discovered with this experiment.
+2. Use the information provided in the answers to tell the result of each experiment:
+        a)- Illustrate significant trends or outcomes with specific instances, such as ""Patients treated with Drug X showed a 30% reduction in symptom severity compared to the control group.""
+        b)- Be Succinct and Clear: Describe the results succinctly, using clear and concise sentences that convey the essence of the data without overloading the reader.
+        c)- Statistical Significance: Use terms like ""significant"" to denote statistical significance, clearly stating the statistical tests used and what the results imply about the hypothesis.
+        d)- Use Appropriate Tense and Voice: Use past tense to discuss completed actions (e.g., ""The study found"") and present tense for ongoing truths (e.g., ""The results show""). Employ active voice for clarity and engagement.
+        e)- Be Concise: Edit for wordiness and ensure each sentence contributes to understanding the key findings.
+        f)- Highlight the Most Relevant Data: Focus on the data that most strongly supports your hypotheses or is most surprising, rather than covering all results equally.
+        g)- Example of an Effective Result: ""In evaluating the efficacy of the new treatment, results indicated a significant improvement in patient outcomes. Treatment group A exhibited a 40% increase in recovery rates compared to the control group, as detailed in Figure 2.""
+3. Be diligent in keeping the figures references linked to the statements they support.     
+4. When you see the content ""Same as Subfigure(x)"", just keep that same information  ""Same as Subfigure(x)"" under the title Subfigure title.
+5. Keep the label: Subresult p | Figure q | Subfigure: q.r (where p,q and r=number you receive in the content of the provided answer to each sub-figure and can or not be the same).
+5. Follow the example as a template:
+
+
+Below between "" "" you have good examples of what you need to do: 
+
+Subresult 1 | Figure 1 | Subfigure: 1.1
+""Despite being fed a low-sugar diet, both TAg+ db/db and TAg+ ob/ob mice developed severe and early onset obesity (Figures S1A–S1F); however, only the TAg+ db/db mice
+also developed diabetes (Figures S1G–S1L). From 7 weeks of age onward, TAg+ , TAg+ db/db, and TAg+ ob/ob mice were scanned by magnetic resonance imaging (MRI) for the presence
+and size of pancreatic tumors (Figures S1M–S1Z). The cumulative incidence of pancreatic tumors in these mice demonstrated that both the db/db and ob/ob genotypes significantly hastened
+tumor onset (Figures 1A and 1B), resulting in tumor development 5 weeks earlier than that observed in non-obese TAg+ mice (Figure 1C). Both the db/db and ob/ob genotypes trended toward an
+increased tumor growth rate (Figure 1D). For both female and male mice, obesity resulted in elevated mortality due to pancreatic cancer, with a high level of death observed at 14 weeks in
+both db/db and ob/ob strains, while substantial mortality was delayed out past 21 weeks in the non-obese TAg+ mice (Figures 1E and 1F). Even after normalizing for the earlier development,
+db/db and ob/ob mice still showed significantly higher levels of tumor-associated mortality (Figures 1G and 1H). "" 
+
+Subresult 1 | Figure 1 | Subfigure: 1.2
+""Female mice raised on a high-protein diet exhibited a 2-week delay in pancreatic cancer onset (Figures 2A and 2C). No significant effect was observed in male mice (Figure 2B); this was due to the statistical limitations of pairwise dietary effects rather than sex-specific dietary effects, as a nutritional landscape analysis demonstrated similar effects of dietary protein on male and female mice (see below). Overall,no significant effect was seen on the tumor growth rate (Figure 2D) at the macroscopic level; however, a substantial drop in tumor proliferation was observed in both sexes through histology (Figures 2E and 2F). Using RNA sequencing (RNA-seq), we profiled the transcriptome of size-matched tumors from highprotein and control diets. Pathway analysis (Figure 2G) identified a strong downregulation of cell-cycle-associated genes (Figures
+2H and S3A) and ribosome components (Figures 2I and S3B).""
+
+Review your work:
+- Be diligent in respecting the guidelines. It is strictly forbidden to add introductory, concluding, or summarizing sentences.
+- Ask yourself: Does my output follow the same structure as the good examples above between "" ""?
+- Review and adjust your response to ensure all guidelines have been met.
+
+
+
+",gpt41,,"the segment of the sub-results that tells the results founded in that sub-section. It should highlight trends, patterns and unexpected results. ",3,7,8,"TAg+ mice, on either the control or high-protein diet, were then assessed by MRI every 2 weeks for the presence and size of pancreatic tumors (Figure S2). We assessed the effect of altered dietary protein on pancreatic cancer development (Figures 2A and 2B). Female mice raised on a high-protein diet exhibited a 2-week delay in pancreatic cancer onset (Figures 2A and 2C). No significant effect was observed in male mice (Figure 2B); this was due to the statistical limitations of pairwise dietary effects rather than sex-specific dietary effects, as a nutritional landscape analysis demonstrated similar effects of dietary protein on male and female mice (see below). Overall, no significant effect was seen on the tumor growth rate (Figure 2D) at the macroscopic level; however, a substantial drop in tumor proliferation was observed in both sexes through histology (Figures 2E and 2F). Using RNA sequencing (RNA-seq), we profiled the transcriptome of size-matched tumors from high-protein and control diets. Pathway analysis (Figure 2G) identified a strong downregulation of cell-cycle-associated genes (Figures 2H and S3A) and ribosome components (Figures 2I and S3B). At the molecular level, the high-protein diet is therefore associated with a stalling of the cell cycle and a reduction in biomass synthesis capacity, explaining the macro-level phenotype observed.
+
+Tumor-induced mortality was unchanged (Figures S4C and S4D), although the duration of observation was not sensitized for detecting decreased mortality.","Through cumulative pancreatic cancer incidence, there was no effect of increased dietary fat on female mice (Figure 3A) and only a minor acceleration of incidence in male mice fed 30% fat (Figures 3B and 3C). Analysis of the effect of dietary fat on pancreatic cancer growth rates indicated no systematic effect (Figure 3D). At a histological level, no changes were observed in tumor morphology, cellular density, or proliferation (Figures 3E–3G). Despite the lack of any substantial effects on the tumor itself, a high-fat diet had a profound effect on the mortality rate of tumor-bearing male (Figure 3H) but not female (Figure 3I) mice. Male TAg+ mice fed either the 10% or the 30% fat died on average 7 weeks earlier than control-fed mice, despite similar tumor burdens. Notably, these effects were observed before any major changes in body weight (Figure S4), indicating that the diet, rather than obesity, was the causative factor. This toxicity effect could not be explained at the molecular level, with few coordinated transcriptional or metabolic changes in tumors from mice fed 30% fat compared to the control diet revealed by RNA-seq analysis (Figure 3J).","Analysis of cumulative incidence of pancreatic cancer found no significant effect of high-glucose relative to the (sugar-containing) control diet; however, there was a significant delay in tumor development of 5 weeks in mice fed sugar-free diets (Figures 4A–4C). A nutritional landscape analysis, however, identified this effect as tracking with the elevated protein composition of the sugar-free diet (see below), demonstrating the complexity of a multifactorial nutritional analysis. Analysis of tumor growth rates found a trend toward higher sugar levels’ driving more rapid tumor expansion (Figure 4D). At the histological level, a clear dose-dependent effect of the glucose content of the diet on tumor cell proliferation and density was observed (Figures 4E–4G). A large effect of sugar was also observed on tumor-induced mortality, with high-glucose diets driving early-onset mortality (Figures 4H and 4I), and the sugar-free diet significantly delaying mortality in female mice (Figure 4I). At a transcriptional level, the tumors from high-glucose-fed mice exhibited an elevated expression of cell-cycle genes and ribosome components compared to sugar-free-fed mice (Figures 4J and S5). Metabolic profiling revealed a reduction in amino acid levels in the tumors from high-glucose-fed mice (Figure 4K), possibly indicating that amino acids were actively used for protein synthesis. We then tested the association between blood glucose level and upregulation of the cell-cycle signature within the tumor. Across the range of diets used in this study, mice with higher blood glucose levels showed a tendency toward high expression of the cell-cycle signature (Figure 4L).","Through MRI monitoring (Figure S6), no significant effect of additional sugar was observed on the cumulative incidence and age of tu-
+mor onset (Figures 5A and 5B). The determination of growth rates likewise indicated no effect of additional sugars on tumor growth (Figure 5C). However, the addition of glucose, but not fructose or sucrose, substantially increased the tumor-induced mortality (Figure 5D). These results suggest two major roles of dietary sugar on pancreatic cancer. First, sugar starvation is associated with a delay in the onset and a reduction in growth of the cancer (Figure 4). Second, excessive glucose, and not the other sugars tested, is associated with an increase in the lethality of the cancer (Figure 5D). To determine whether these two properties are linked, we aged female TAg+ mice, which demonstrated the strongest protection of a sugar-free diet (Figure 4H), on the control diet during longitudinal MRI assessment. 
+At the point of first tumor detection, we switched a subset of these mice to the sugar-free diet and monitored pancreatic cancer growth. The switch to a sugar-free diet after first tumor detection delayed the growth of the tumors in female mice, similar to the growth levels observed in mice continuously on a sugar-free diet (Figure 5E). By contrast, while female mice continually on a sugar-free diet show no tumor-induced mortality within the observation period, mice switched onto a sugar-free diet at tumor detection maintained the high level of mortality associated with control-diet mice (Figure 5F).","A total of 5 loci reached p values of %107 for their effect on pancreatic cancer susceptibility given the sugar intake (Table 1). One locus, at LINC01365 neighboring the MAD2L1 gene (Table 1) and within a regulatory region linked to MAD2L1 expression (Figure S9), reached a p value of 7.3 3 108 for GxE with sugar intake. An interaction between sugar intake and MAD2L1 expression is supported through our transcriptional analysis of murine tumors, in which dietary glucose levels were positively associated with the regulation of Mad2l1 expression in the tumor (Figure 6F). We also observed one locus modifying the previously identified effect of plant fat consumption on pancreatic cancer risk (p < 105). The top locus, DIRC3, had a pvalue of 3.07 3 106 (Table 1; Figure S10). We further evaluated these loci with credible set analysis Fuchsberger et al., 2016). We constructed credible sets of variants that contain the variant causal for the corresponding association signal with R99% probability.",
+closure,closure,Results,,"[heading], [data] ",,"1. Summarize and write a brief conclusion of the main findings of the results section.
+2. Write the closure section in a way that can help readers quickly understand your main findings.
+3. The closure unit is very short and should have a maximum of two to five short sentences.
+4. Do not use any figure labels/references here.",gpt41,,the final segment of the results section that states a brief conclusion of the results presented.,4,5,8,"Overall, these results validate obesity or total calorie intake as a driver of pancreatic acinar carcinoma, independent of diet composition, with significant effects on tumor development. By contrast, in this model, there was no additional effect of T2D, with no significant differences between the obese and diabetic db/db mice and the obese non-diabetic ob/ob strain.","These results indicate tumor-suppressant effects of the high-protein diet on pancreatic acinar carcinoma. While this result could be interpreted as a suppressive effect of dietary protein, shifts in the alternative macro-molecule composition and total calorie intake (13% reduced in
+the high-protein diet mice compared to the control diet mice) may also contribute to the effect observed.","These results suggest that while dietary fat has little or mild direct pro-oncogenic properties, the high-fat diets have a major effect on tumor-induced mortality in male mice. While this effect could be a direct result of the dietary fat, high-fat diets also had elevated dietary sugars and increased energy density, suggestive of alternative sources of the effect.","These data indicate that dietary sugar (or downstream mediators, such as insulin) enhances the cell cycle and upregulates the ribosomal capacity, feeding the proliferation and pathogenicity of pancreatic acinar carcinoma.","These results are consistent with a model of dietary sugar in which the effect on lethality is programmed in at the point of tumor develop-
+ment, while the effect on tumor growth is a continuous property.",
+response,response,Discussion,,"{answer}, [aim]",,"The response unit directly replies to the research question presented in the aim unit of the introduction.
+
+Write an answer to the question using the description of the main finding(s) of the study presented in the answer answer.
+
+Ensure coherence and connection with the initial question raised in the Introduction, establishing a logical flow in the scientific paper.
+
+Be as concise as you can while not compromising clarity",cl37-t-m,,the segments of the discussion that present the main findings of the study.,5,6,9,"The parallel analysis of multiple obesity, diabetes, and diet related variables in pancreatic cancer mice has identified two key principles of pancreatic cancer susceptibility. The first is that pancreatic cancer onset, growth, and lethality can be modulated via independent forces, rather than being inherently linked characteristics. A reasonable supposition could have been made that pancreatic cancer lethality was simply derived from tumor growth rates; here, however, we identify multiple contexts (high-fat diet, dietary sugar withdrawal) in which these effects were disentangled. The second key principle is that both quantitative and qualitative effects of diet were observed, with a distinct modulation of pancreatic cancer by calorie quantity (obesity) and source (nutrient composition). ","The findings presented here help address a long-standing question
+concerning how ATP-dependent molecular matchmakers control
+DNA transposition. Using IS21 as a model system, our results showed
+that ATPase site integrity is important for the IstB regulator protein
+to support transposon integration catalysed by the IstA transposase
+(Fig. 1c,d). Nucleotide binding and hydrolysis regulate multiple IstB
+functions, including DNA b","Here we produced a functional TATSI system to generate targeted insertions in whole individuals of the model plant Arabidopsis, and translated this technology into soybean plants, which represent a critically important crop for global oil and protein production.
+",,,
+finding,finding,Discussion,Subdiscussion,"{integration}, [heading], [data]",,"The content of the answer integration is composed by :
+
+- Findings: A finding to be discussed.
+- Contexts: The literature background needed to give the finding context with the respective references. It includes literature with information that supports, refutes, or complements the finding.
+- Interpretation: The interpretation of the finding. Usually the author suggests hypotheses, and proposes explanations.
+
+Here you should list !!!only the findigs!!!! using the labels:  Finding_1! (original text) /Finding_2! (original text) /Finding_3! (original text)/… 
+
+Describe the findings obtained in the study with all the detail you can find..
+
+ It is strictly forbidden to add introductory, concluding, or summarizing sentences to the output requested!",cl37-t-m,,"the segments of the discussion in which the author states the findings of the study.
+",5,5,10,"Tumor Growth: in our mouse study, three diet-related factors independently increased the rate of pancreatic cancer growth: calorie quantity, reduced proportions of dietary protein, and the presence of dietary sugar. Of particular importance is insulin, which is elevated in the obese mouse strains and is increasingly recognized as a potential mitogen (see below). ","Tumor-Associated Mortality: three individual factors increased the mortality rate from pancreatic cancer—obesity, high-fat diets, and high-glucose diets.",,,,
+context,context,Discussion,Subdiscussion,{integration},[finding],"The content of the answer integration is composed by :
+
+- Findings: A finding to be discussed.
+- Contexts: The literature background needed to give the finding context with the respective references. It includes literature with information that supports, refutes, or complements the finding.
+- Interpretation: The interpretation of the finding. Usually the author suggests hypotheses, and proposes explanations.
+
+Here you should list only the Context using the labels:  Context 1 (original text) /Context_2 (original text) /Context_3 (original text)/… 
+
+Describe the contexts described in the answer integration with all the detail you can find and with clarity in the place where (original text) is mentioned.
+
+Write each context to make clear how each finding relates to the literature.
+Present the scientific literature that supports or contradicts each of the findings in the study.",cl37-t-m,y,"the segment of the discussion that presents the literature that supports, contradicts or complements a finding of the study. ",5,6,7,"The function of sugar, in particular glucose, in increasing the rate of tumor growth is potentially explained by the Warburg effect. Unlike the pre-cancerous precursor cells, which typically use the efficient oxidative phosphorylation pathway, most cancer cells use aerobic glycolysis (Vander Heiden et al., 2009). While aerobic glycolysis is less efficient at energy metabolism, it allows the rapid expansion of biomass required for highly proliferative cells and appears to confer other 
+important advantages (Kim and Dang, 2006). Under the traditional Warburg model, the dependence of cancer cells on aerobic glycolysis makes glucose availability a limiting factor for energy production, with additional glucose thus allowing more rapid division. An alternative explanation for the Warburg phenomenon is that increased glycolysis is more important for carbon incorporation into the dividing biomass rather than ATP production (Lunt and Vander Heiden, 2011","While insulin secretion was not measured in our study, hyperinsulinemia is a well-known risk factor for pancreatic cancer (Andersen et al., 2017). Identifying the causative direction of this association is problematic; however, genetic reduction in insulin secretion capacity in the KrasG12D mouse model results in a slowing of pancreatic cancer initiation (Zhang et al., 2019). Together with the efficacy of phosphatidylinositol 3-kinase (PI3K) inhibitors, suppressing insulin signaling, in pre-clinical models of pancreatic cancer (Hopkins et al., 2018)",,,,
+interpretation,interpretation,Discussion,Subdiscussion,{integration},[finding],"The content of the answer integration is composed by :
+
+- Findings: A finding to be discussed.
+- Contexts: The literature background needed to give the finding context with the respective references. It includes literature with information that supports, refutes, or complements the finding.
+- Interpretation: The interpretation of the finding. Usually the author suggests hypotheses, and proposes explanations.
+
+Here you should list only the Interpretation using the labels:  Interpretation 1 (original text) /Interpretation_2 (original text) /Interpretation_3 (original text)/… 
+
+Describe the interpretations described in the answer integration with all the detail you can find and with clarity in the place where (original text) is mentioned.
+
+
+Write the interpretation of each finding, knowing that every finding should have at least one interpretation.
+Use verbs like suggest, propose, test, speculate, hypothesize, etc.",cl37-t-m,,"the segment of the discussion in which the author suggests an explanation for the finding, based on the literature. ",5,10,9,"Here, we find suggestive molecular evidence to indicate that dietary sugar drives the cell cycle in pancreatic cancer cells, with increased ribosomal capacity and utility for biomass production. Perhaps the most attractive hypothesis for molecular mechanism is hyperinsulinemia.","this suggests that increased insulin secretion may be a primary mechanism by which obesity and dietary glucose influences pancreatic cancer. The effect of dietary protein in suppressing tumor proliferation was not predicted; however, it appears to act in direct opposition of dietary sugar, downregulating the same key pathways.",,,,
+limitation,limitation,Discussion,,{constraints},,"When applicable to the paper being written, integrate this reasoning:
+- Mention significant limitations such as small sample size, missing data, or inadequate controls.
+- Describe how these limitations might affect the results.
+- Recognize any constraints related to methodology, data collection, or analysis.
+- Propose ways future research could address these limitations.
+
+Please be clear and concise. Use no more than 2-4 sentences.",gpt41,,"the segment of the discussion that addresses the constraints or shortcomings associated with the study. It provides an honest assessment of the study's constraints, either in terms of technical aspects or the generalization of results .",5,6,7,"Our study uses both mouse models and human epidemiological data to dissect the effect of nutrition on pancreatic cancer. There are strengths and limitations to both approaches. With the inability to dissect the interacting risk factors from patient data, reliance on animal models is critical to formally separate effects such as obesity versus nutrition. Nevertheless, the limitations of the mouse model used here need to be considered. A multitude of animal models for pancreatic cancer exist (Salomanet al., 2019). The TAg oncogenic driver is relatively crude, although the molecular impact has been well studied, and the disruption of both KRAS and p53, two commonly mutated genes in pancreatic cancer patients (Hidalgo, 2010), results in an aberrations similar to patients (Hobbs et al., 2016). A more important limitation may be the acinar origin of the tumor, which only reflects a minority of patient cases. Of note, the TAg system does model the complexity of tumor composition, with the interaction of genetically heterogeneous cancer cells, cancer stem cells, tumor stroma, and the immune system, a complexity that is generally lost in cell line systems, even after transfer into mice. Epidemiological work in patients overcomes many of the difficulties of animal models. We should note, however, that even the best-designed observational trial will suffer from unaccounted for confounding effects and erroneous data. In particular, nutritional measurement is notoriously different to validate and changes over time. The heterogeneity in pancreatic cancer type and the limitation of looking at a single snapshot of the diet also dilute effect sizes. In this regard, we consider the mouse and epidemiological aspects to synergize, with effects observed across both methodologies that are much more likely to be robustly reproduced.","Drawbacks to TATSI that can be improved in the future include controlling the orientation of mPing insertion (which is currently uncontrolled) and reducing free transpositions. Off-target insertions occur with both prokaryotic CRISPR-associated transposases and similar eukaryotic synthetic systems12,28,29. In TATSI, these untargeted insertions are the product of the active TE, and not off-target cleavage by the catalytically active CRISPR–Cas9. ",,,,
+next,next,Discussion,,{future},[finding],"Describe what should be investigated as a follow-up to the current study based on what was found.
+
+Build on the findings of the study to elaborate possible questions for a future study.
+
+Create a fluid text with 1 to 6 sentences.",gpt41,,the segment of the discussion that outlines specific recommendations for advancing the field based on the findings of the current study. ,5,7,8,"An improved understanding of which dietary factors act as pancreatic cancer risk factors could allow earlier screening and improved detection. Finally, dietary modification is a potential pathway to restrict tumor growth, such as glucose restriction in individuals bearing the risk allele neighboring MAD2L1. We would, however, based on our mouse results, caution that even dietary interventions that succeeded in slowing tumor growth may not affect mortality.",,,,,
+novelty,novelty,Discussion,,{new},[gap],"Describe the positive impact of your study´s findings.
+Describe the contribution of the study’s findings to the field, or another field(s).
+Describe the postive applications your study might have.
+
+For you guidance, examples of contributions include:
+
+- **New Knowledge:** Highlight revelations of previously unknown information.
+- **New Application:** Describe new uses for existing technologies, methods, treatments, etc.
+- **New Method:** Introduce new ways of performing analyses or procedures.
+- **New Mechanism or Theory:** Present discoveries of new functions, mechanisms, or the development of new hypotheses.
+
+**Ensure your write the novelty unit addressing the gap in knowledge previously identified and that led to the research. Demonstrate how the study fills this gap and advances knowledge in the field and/or other fields.**",gpt41,,"the segment of the discussion section that explicitly mentions the unique and valuable contributions of the research to the field, emphasizing the novel insights or advancements brought by the investigation.",4,6,9,"Here, the interactions between dietary sugar and MAD2L1 stand out, with potentially profound clinical implications. ","One of the most surprising results from our study was the degree to which the immune
+profiles of parents were more similar to one another than to unrelated pairs. This suggests
+that a shared environment acts in some way to bring immunoprofiles towards a convergent
+equilibria. Within the environment shared by parents, there is a panoply of plausible
+biological mechanisms. For example, an individual’s microbiome converges with those that
+they live with 32, even including their dogs 33. Individuals in a relationship, rather than just
+co-habiting, have a more similar microbiome 34, possibly via direct transmission 35, which
+would make the microbial convergence even stronger for parents. Within our study design,
+this shared environment also includes a shared vector (the child), the significance of which
+requires further investigation. Beyond the bacterial components of the microbiome, close
+proximity allows the transmission of viral pathogens, including CMV, which was found to
+influence twin concordance in more than half of their immune traits 3. A shared
+environment, including, presumably, socio-economic status, will also bring shared
+behaviours, a process called spousal concordance: diet (which can also influence gut
+microbiome 36), smoking 37, alcohol intake 38, exercise levels and even control of chronic
+diseases like hypertension 39 are all likely to be influenced by a partner’s attitudes towards
+them. It is fascinating to speculate that partner choice may also influence response to
+immunity and immune pathologies. Finally, we also note, but decline to comment further,
+that this “parenthood effect” is a far stronger influence on the immune system than acute and untreated gastroenteritis.","Our results, indicating the potential for pancreatic autoimmunity to control tumour growth, suggest that the immune checkpoint inhibitor trials currently underway may exhibit more success as these strategies essentially serve to unleash the latent autoimmunity encoded in the immune system [25].",,,
+conclusion,conclusion,Conclusion,,"[aim], [response], [finding], [novelty]",,"Follow the 3 steps below to build a conclusion:
+
+Step 1. Restate the problem: Remind the reader of your research problem. Use the unit aim for information and restate the problem avoiding phrasing it identically to how it appeared in the aim unit. 
+
+Step 2. Sum up the paper: Restate your thesis and arguments. Use the units response and findings to briefly summarize the key arguments made in the body of the paper, showing how each of them contributes to the thesis. Don’t go into the details, instead focus on outlining in broad strokes the argument that was made.
+
+Step 3. Discuss the implications: Explain the broader implications of your research. Use the unit novelty to get the key takeaways from your paper. 
+
+Use 1 paragraph, maximum 2.
+
+Revise for coherence, conciseness and clearness.",gpt41,,the take-home message of the study. It should be short and should not include any new ideas.,3,5,8,,,,,,

@@ -5,8 +5,72 @@
 </head>
 <body>
     
+    <!-- Load pulse library globally first -->
+    <script>
+        console.log("=== PULSE LIBRARY DEBUGGING ===");
+        console.log("About to load pulse library...");
+        console.log("Before loading, _ object:", typeof _);
+        console.log("window object available:", typeof window);
+        console.log("self object available:", typeof self);
+        console.log("this object:", this);
+        console.log("Current window._:", window._);
+    </script>
+    
+    <script>
+        // Force the pulse library to attach to window
+        var root = window;
+        console.log("Setting root to window:", root);
+        
+        // Also try to set up a fallback
+        if (typeof _ === 'undefined') {
+            console.log("_ is undefined, setting up fallback...");
+            window._ = {};
+        }
+    </script>
+    
+    <script src="./libraries/pulse.js" 
+            onload="console.log('Pulse library loaded successfully'); console.log('_ object after load:', typeof _); console.log('_ object details:', _); console.log('window._ object:', window._);" 
+            onerror="console.error('Failed to load pulse library'); console.log('Setting up fallback _ object'); window._ = {};">
+    </script>
+    
+    <!-- Load test.js to make triggerExample available globally -->
+    <script src="./test.js"></script>
+    
+    <script>
+        // Check what we have after loading
+        console.log("=== AFTER PULSE LIBRARY LOAD ===");
+        console.log("_ object:", typeof _);
+        console.log("window._ object:", window._);
+        console.log("Global _ object:", typeof window._);
+        
+        // If still no _, create a basic one
+        if (typeof _ === 'undefined') {
+            console.log("Creating fallback _ object...");
+            window._ = {
+                CSVToTable: function(data, flag) {
+                    console.log("Fallback CSVToTable called with data length:", data ? data.length : 'undefined');
+                    console.log("Flag:", flag);
+                    
+                    // Return a simple table structure
+                    return {
+                        get: function(column) {
+                            console.log("Fallback get called for column:", column);
+                            return [];
+                        }
+                    };
+                }
+            };
+            console.log("Fallback _ object created:", window._);
+        }
+    </script>
+    
     <script type="module">
         try {
+            console.log("=== ES6 MODULES LOADING ===");
+            console.log("_ object before ES6 modules:", typeof _);
+            console.log("_ object details:", _);
+            console.log("window._ object:", window._);
+            
             const module = await import('./index.js');
             window.runAnalysis = module.runAnalysis;
         } catch (error) {

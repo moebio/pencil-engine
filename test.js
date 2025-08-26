@@ -1,46 +1,19 @@
-import { runAnalysis, buildPromptAndSend, llm_completion_with_insertions } from './index.js';
+function triggerExample(){
+    const text = `Introduction
+    Thus, in the present study, we set out (i) to characterize the lymphoid cells found in the myocardium and heart-draining lymph nodes of healthy (unimmunized/uninfected) mice at different ages and (ii) to investigate in which ways the activity of such lymphocytes could influence the myocardial aging process.
+    
+    Discussion
+    In the present study, we observed that a smallpopulation of B and T lymphocytes can also be consistentlyfound in the myocardial parenchyma of healthy mice.Although lymphocytes are best characterized in the blood,lymphatic fluid, and lymphoid organs, interest in tissue-residentlymphocytes is currently emerging (33–37). Different lymphocytepopulations have now been described in several nonlymphoidorgans, where they can influence the local molecular milieu andmodulate other resident cells (38–41). For instance, Tregs foundin the skeletal muscle can signal to local satellite (progenitor)cells and mediate tissue renewal (41) whereas conventionalhippocampal T cells can modulate neuronal synapse plasticity(39). In the present study, we confirmed that the heart is not anexception and that lymphocytes indeed seed the myocardiumunder steady-state conditions.Holzinger et al`
 
-// Example usage
-console.log('Testing pencil-engine module...\n');
+    runAnalysis(text, (ob) => {
+        console.log("each:", ob)
+    }, (ob) => {
+        console.log("all:", ob)
+    })
+}
 
-// Test 1: Basic functionality (simulation mode)
-console.log('\n=== Test 1: Basic functionality (simulation mode) ===');
-runAnalysis('Hello, World!', 
-  (text) => {
-    console.log('CallbackEach received text:', text);
-  },
-  (text) => {
-    console.log('CallbackAll received text:', text);
-  }
-);
-
-// Test 2: LLM functionality
-console.log('\n=== Test 2: LLM functionality ===');
-runAnalysis('Hello, World!', 
-  (text) => {
-    console.log('LLM CallbackEach received text:', text);
-  },
-  (text) => {
-    console.log('LLM CallbackAll received text:', text);
-  },
-  true // Enable LLM processing
-);
-
-// Test 3: Direct LLM usage
-console.log('\n=== Test 3: Direct LLM usage ===');
-buildPromptAndSend(
-  [
-    { anchor: '{{name}}', content: 'Developer' },
-    { anchor: '{{language}}', content: 'JavaScript' }
-  ],
-  'Hello {{name}}! Write a simple "Hello World" program in {{language}}.',
-      'gpt4o',
-  (response) => {
-    console.log('Direct LLM response:', response.content);
-  },
-  false,
-  'Hello World program generation'
-);
-
-console.log('\nAll tests started. Check the console for responses...');
-
+// Make triggerExample available globally
+if (typeof window !== 'undefined') {
+    window.triggerExample = triggerExample;
+    console.log("✅ triggerExample function made globally available");
+}

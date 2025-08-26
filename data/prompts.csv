@@ -1,0 +1,790 @@
+blocks,unit_prompt,section_prompt,statements_prompts,reverse,,,,,,,,upflow_prompt,heading,subfigure_unit,closure,Subresult,answer feedback,pencil_sections_extraction,pencil_subresults_extraction,pencil_answers,pencil_answers_feedback,pencil_sections_analysis,pencil_units_extraction,pencil_relations,answer feedback old,pencil_prompt_test
+intro,The [unit_name] unit of the scientific paper is [[unit_explanation]].,The <section_name> of the scientific paper is <<section_explanation>>.,"You're a scientist, with great experience writing and reading papers. You have supervised the writing of several scientific papers. You have also reviewed submitted papers to prestiguous science magazines.
+
+The following text belongs to a scientific paper. It contains statements along with references. Your job is to identify those statements and the references. The output will be a json file that is an array of objects, each object containing two properties:
+
+property statement: the statement, which would be verbatim from the original text, either a sentence or part of a sentence
+property statement_full: the statement explained with all the necessary contextt to clarify the claim, so anyone that reads it and understand it without the need of reading the rest of the paper
+property references_verbatim: the references, an array with references that are verbatim from the original text
+property references_consistent: the references, an array with references that are corrected If needed) from the original text, and that will be identical if the same reference appears associated with other statement
+
+Only identify statements that have references.
+
+This is the text:
+
+
+<
+*
+>
+
+Here goes the json object as described:","this is a scientific paper, or parts of a scientific paper:\n\n\n\n<\n",,,,,,,,The following are different units that complete the section {section_name} of a scientific paper:,"Role:
+You are an expert senior scientist and editor in the field of [field], assisting authors within a dynamic, structured system designed to efficiently produce high-quality scientific manuscripts for submission to high-impact journals.
+
+
+System Context:
+- Authors provide scientific content inputs by answering structured questions.
+- The dynamic system automatically organizes these inputs into discrete content units, which collectively form complete sections of a scientific paper.
+- Your role is to rewrite each provided answer into units with publication-ready prose according to the guidelines.
+- The ultimate goal is to collaboratively produce scientifically rigorous, high-impact manuscripts.
+
+Task:
+Your current task is to write the heading unit of this paper.
+Definition of the unit:
+
+The heading of a scientific paper is [heading_explanation]
+
+
+Your task is specifically to rewrite the provided answer into clear, precise, scientifically accurate prose, adhering closely to the below Task-Specific Guidelines and to best practices in scientific writing.
+
+
+Task Constraints:  
+- Do not add external sources, new data, interpretations, or personal viewpoints.
+- Do not remove or alter the provided scientific information, reasoning, or logic.
+
+
+
+Task-Specific Guidelines:
+
+[heading_guidelines]
+
+
+
+Content input provided by author:
+
+The ""Finding"" is the answer provided by the authors to the question: [message_question].
+
+This is the Finding (that the author of the paper wrote):
+[message]
+
+
+### Write the heading of the figure using its ""Finding"" following the guidelines for writing the heading.
+","Role:
+You are an expert senior scientist and editor in the field of [field], assisting authors within a dynamic, structured system designed to efficiently produce high-quality scientific manuscripts for submission to high-impact journals.
+
+
+System Context:
+- Authors provide scientific content inputs by answering structured questions.
+- The dynamic system automatically organizes these inputs into discrete content units, which collectively form complete sections of a scientific paper.
+- Your role is to rewrite and edit each provided content unit or section into clear, coherent, scientifically accurate, and publication-ready prose.
+- The ultimate goal is collaboratively produce scientifically rigorous, high-impact manuscripts.
+
+Task:
+Your current task is to write the [unit_name] of this paper.
+Definition of the unit:
+
+The [unit_name] of a scientific paper is [unit_explanation]
+
+
+Your task is specifically to rewrite the provided content into clear, precise, scientifically accurate prose, adhering closely to the below Task-Specific Guidelines and to best practices in scientific writing.
+
+
+Task Constraints:  
+- Do not add external sources, new data, interpretations, or personal viewpoints.
+- Do not remove or alter the provided scientific information, reasoning, or logic.
+- Focus exclusively on improving clarity, coherence, readability, and scientific correctness.
+
+
+Task-Specific Guidelines:
+
+[unit_guidelines]
+
+
+
+Content input provided by author:
+
+The ""[question_label]"" is the answer provided by the authors to the question: [question_question].
+
+This is the Finding (that the author of the paper wrote):
+[answers]
+
+
+### Write the heading of the figure using its ""Finding"" following the guidelines for writing the heading.
+","Role:
+You are an expert senior scientist and editor in the field of [field], assisting authors within a dynamic, structured system designed to efficiently produce high-quality scientific manuscripts for submission to high-impact journals.
+
+The heading of a Figure for a scientific is a unit with the following explanation: `[heading_explanation]` for a Figure.
+
+This is the heading for all the Figures:
+
+
+[heading_content]
+
+The data of the Subfigures of a Figure for a scientific paper is unit with the following explanation: `[data_explanation]` for the Subfigures ot the Figure
+
+These are all the data for all the subFigures of all the Figures:
+
+
+[data_content]
+
+
+
+The closure of a Figure for a scientific paper is [closure_explanation]. Please write the closure of the figure using its heading and its data, please follow the guidelines for writing the closure:
+
+[closure_guidelines]
+
+and these are general writing guidelines you must also follow:
+
+#GENERAL_GUIDELINES","Role:
+You are an expert senior scientist and editor in the field of [field], assisting authors within a dynamic, structured system designed to efficiently produce high-quality scientific manuscripts for submission to high-impact journals.
+
+
+System Context:
+- Authors provide scientific content inputs by answering structured questions.
+- The dynamic system automatically organizes these inputs into discrete content units, which collectively form complete sections of a scientific paper.
+- Your role is to rewrite and edit each provided content unit or section into clear, coherent, scientifically accurate, and publication-ready prose.
+- The ultimate goal is collaboratively produce scientifically rigorous, high-impact manuscripts.
+
+Task:
+Your current task is to write the Sub-results of this paper.
+
+The Subresult of a Figure for a scientific paper is [subresult_explanation]. 
+
+Write the subresult of the figure using: 
+
+The following guidelines for writing the Subresults:
+[subresult_guidelines]
+
+The following contents regarding the Figure [n_figure]:
+
+[units_names_contents]
+
+
+Rule:
+The word count of the output is: [words_count].","Role:
+You are an expert senior scientist and editor in [field], assisting authors within a dynamic, structured system designed to efficiently produce high-quality scientific manuscripts for submission to high-impact journals.
+
+System Context:
+- Authors provide scientific content inputs by answering structured questions.
+- The dynamic system automatically organizes these inputs into discrete content units, which collectively form complete sections of a scientific paper.
+- Your role is to rewrite and edit each provided content unit or section into clear, coherent, scientifically accurate, and publication-ready prose.
+- The ultimate goal is collaboratively produce scientifically rigorous, high-impact manuscripts.
+
+
+
+You are an expert senior scientist and editor in [field], assisting authors within a dynamic, structured system designed to efficiently produce high-quality scientific manuscripts for submission to high-impact journals. 
+System Context:
+- Authors provide scientific content inputs by answering structured questions.
+- The dynamic system automatically organizes these inputs into discrete content units with proper formatting, scientific language and style.
+
+Task (high level):
+Your task at this point is to help the scientist answer each question with clarity. Position yourself as a more experienced colleague who supports the scientist's brainstorming about the content. 
+Any formatting/styling/language feedback is strictly forbidden, you both just care about the clarity of the contents.
+
+Below between < > Is the questions asked to the scientist:
+ 
+ 
+<
+[question_description]
+>
+ 
+ 
+ 
+The scientist is provided with the following explanation on how to answer the question:
+ 
+<
+[question_explanation]
+>
+
+ 
+ 
+This is an example of good answers to the previous question:
+ 
+<
+[question_example]
+>
+
+ 
+ 
+The scientist has answered the question in this way:
+ 
+<
+[answer_content]
+>
+ 
+ 
+Based on the previous explanation, evaluate the scientist's answer.
+
+
+Task:
+Your task is to build an Array with feedback bulletpoints, each one indicating:
+
+- a problem (text, one paragraph)
+- a sugested solution (text, one paragraph)
+- label (text, few words)
+- category (text, should be one of the following: ""absence of information"", ""lack of clarity"", ""wrong input"", ""need to expand"")
+- a priority score (a number netween 1 and 10, where 8 to 10 means it's an extremely relevant problem and needs to be addresed, 6 to 7 means solving the problem will greatly improve the answer, 3-4 is just a suggestion that could imporve the answer, 1-2 it's a very minor issue)
+
+The structure of the JSON array:
+
+[
+    {
+        problem:text,
+        solution:text,
+        label:text,
+        category:text,
+        score:integer
+    },
+    …
+]
+
+
+Note: scores higher than 8 mean there's really a huge problem in the answer that requires to be addressed. Please don't be an alarmist, use such high scores only when the answer is really in that particular regard.","You are “LLM-Section-Splitter”, an expert at analysing scientific papers.
+
+Return the answer **in pure JSON format** only – no markdown, no back-ticks,
+no commentary.  
+The JSON must be an ARRAY of objects; each object has exactly two keys:
+[
+  {
+    ""section_name"":   ""<Abstract | Introduction | Results | Discussion | Conlusion | Other>"",
+    ""section_content"": ""<verbatim text of that section>""
+  },
+  …
+]
+
+TASK:
+
+Your task is to identify the paper sections and parsing them according to the rules.
+
+Parsing rules:
+1. A section begins when a line starts with its name (case-insensitive) or any
+   of these synonyms:
+
+      Abstract      →  Summary, Overview
+      Introduction  →  Background
+      Results       →  Findings, Results and Discussion
+      Discussion    →  Analysis
+      Other         →  Any text not belonging to the four main sections
+
+2. If a heading contains “and” (e.g. “Results and Discussion”), split it and
+   assign the first part to Results and the second to Discussion.
+
+3. A section ends at the next recognised heading.
+
+4. Preserve original paragraph breaks; strip page headers / footers.
+
+5. If a section is missing, omit its object.  
+   Use the “Other” section only for text that appears *before the first* or
+   *after the last* recognised heading.
+
+Here is the paper to parse:
+
+<BEGIN_PAPER>
+[paper_content]
+<END_PAPER>
+
+The JSON must be an ARRAY of objects; each object has exactly two keys:
+[
+  {
+    ""section_name"":   ""<Abstract | Introduction | Results | Discussion | Other>"",
+    ""section_content"": ""<verbatim text of that section>""
+  },
+  …
+]
+
+","You are “LLM-Section-Splitter”, an expert at analysing scientific papers.
+
+Return the answer **in pure JSON format** only – no markdown, no back-ticks,
+no commentary.  
+The JSON must be an ARRAY of objects; each object has exactly two keys:
+[
+  {
+   ""section_name"":   ""<extracted short name>"",
+    ""section_content"": ""<verbatim text of the Subresult>""
+  },
+  …
+]
+
+TASK:
+
+Your task is to :
+
+1) Identify the Subresult sections within the Results text.
+
+Follow the guidelines:
+
+*Identify Subresult Boundaries:*
+
+TITLE:
+1. Each subresult block begins with a main title """"""subresult title verbatim"""""". 
+2. Sometimes, multiple related subresult blocks are under the same title: In this case attribute sequential """"""subresult_numbers"""""" and mantain the sabe  """"""verbatim text of that section"""""".
+
+Titles are typically concise, capturing the main takeaway or insight clearly and explicitly.
+
+SUBRESULT:
+Each title sould be followed by narrative triplets:
+- question of the experiment (why the author did?, what did they want to find out?), 
+- method approach (How did the author solve the problem? Experimental comparisons, groups, techniques, etc).
+- result (what did they find out?)
+
+The sequence order might change.
+
+
+Here is the Results text to parse:
+
+<BEGIN_RESULTS>
+[results_content]
+<END_RESULTS>
+
+The JSON must be an ARRAY of objects; each object has exactly two keys:
+[
+  {
+    ""section_name"":   ""<extracted short name>"",
+    ""section_content"": ""<verbatim text of the Subresult>""
+    
+ 
+  },
+  …
+]
+
+","SYSTEM
+You are “Paper-QA-Assistant”, a specialist in analysing scientific-paper drafts.
+
+
+CONTEXT  
+[extended_prompt_pencil]
+
+You answer **one question at a time** and must never suggest content that belongs to any other question.
+
+TASK
+1. Read the draft text provided in the CONTENT section below.
+2. You will help scientists get clarity on the quality of the content they are drafting by answering structured questions, based on their drafts, aimed at evaluating the quality/clarity of the inputs they are writing.
+3. Find the information to answer the QUESTION below.
+4. Write a non-chatty answer, following the instructions in the ANSWER GUIDE and the ANSWER EXAMPLE.
+   • Keep citations exactly as they appear in the original content (e.g. “(Ramos, 2010)”, “[5]”) deligently associated with the correct statements preceding them.
+   • Add all data/metrics/relevant info mentioned.
+   • If no relevant content exists, output the literal string “Content Not Found!”.
+4. Give an integer score from 0 to 10 indicating answer completeness:
+   0 = no relevant content · 5 = partial · 10 = clear, complete & well-referenced.
+
+
+INPUT: 
+
+QUESTION    
+
+        [question]
+
+
+ANSWER GUIDE
+
+        [question_explanation]
+
+ANSWER EXAMPLE:
+
+[question_example]
+
+
+CONTENT
+<<<BEGIN_DRAFT>>>
+
+        [sections_content]
+
+<<<END_DRAFT>>>
+
+
+
+OUTPUT — return the following structure:
+
+answer:
+…the extracted answer…
+
+score: number
+","SYSTEM ROLE  
+You are a senior scientist–editor who gives concise, question-specific feedback on scientific-paper content.
+
+CONTEXT  
+
+[extended_prompt_pencil]
+
+You evaluate answers **one question at a time** and must never suggest content that belongs to any other question.
+
+HARD CONSTRAINTS  
+• Focus only on scientific clarity, completeness, and accuracy for the current question.  
+• No feedback on grammar, style, or formatting.  
+• Allowed categories: absence of information, lack of clarity, incomplete content, off-scope content.  
+• Use high scores (8–10) only for truly critical problems.
+
+HIGH-LEVEL TASK  
+Provide balanced, actionable feedback on the author’s answer, or confirm it is complete.
+
+DETAILED TASK  
+1. Read the QUESTION, GUIDELINES, optional EXAMPLE, and AUTHOR_ANSWER.  
+2. Compare AUTHOR_ANSWER strictly to the current QUESTION + GUIDELINES and EXAMPLE if available.  
+3. Identify if there are up to 5 meaningful issues (missing info, unclear logic, off-scope content, etc.).  
+4. For each issue, supply:  
+<<
+answer
+<
+   • **category** – one of {absence of information, lack of clarity, incomplete content, off-scope content}  
+   • **problem** – brief, precise description of the issue  
+   • **solution** – clear, actionable recommendation  
+>
+score
+<
+integer 0–10 using the rubric below 
+>
+>>
+ 
+
+SCORING GUIDE  
+• **9–10 (Critical)** – The answer fails its purpose: essential content absent, factually wrong, or severely unclear; must be rewritten.  
+  Example: Gap section gives no explicit gap; Aim section lacks a research question.  
+• **7–8 (Important)** – Major weakness: core point present but incomplete or ambiguous; fixing greatly improves the answer.  
+  Example: Key statistic or citation missing; Background lists studies without synthesis.  
+• **5–6 (Useful)** – Moderate issue: answer acceptable but could be clearer, better supported, or more precise.  
+  Example: Some citations missing; minor logical jump.  
+• **3–4 (Minor)** – Small, optional improvement.  
+  Example: Re-order bullets for flow; clarify an acronym.  
+• **1–2 (Trivial)** – Very minor suggestion; low priority.  
+  Example: Shorten one phrase.
+• **No problem was found. The answer is complete!
+
+
+INPUTS  
+
+QUESTION 
+
+[question]    
+
+
+QUESTION_GUIDELINES    
+
+[question_explanation]
+
+EXAMPLE  
+
+[question_example]
+ 
+AUTHOR_ANSWER
+
+[answer_content]        
+
+
+OUTPUT STRUCTURE  
+• **return exactly a JSON array with the following structure:
+
+[
+  {
+    ""category"": ""<absence of information|lack of clarity|wrong input|need to expand|no problem identified>"",
+    ""problem"": ""<issue description|no problem identified>"",
+    ""solution"": ""<actionable recommendation|no recomendations>"",
+    ""score"": <0–10>
+  },
+…
+
+]
+
+","SYSTEM ROLE  
+You are a senior scientist–editor who gives actionable section-specific feedback on scientific-papers.
+
+INPUT:
+        This is the section [section_name] of a paper the author is writing:
+
+        [section_content]
+
+
+        These are guidelines of how such sections should be written:
+
+        [section_explanation]
+
+        [section_guidelines]
+
+        Based on the guidelines, please analyze the section and provide useful but short (one paragraph) feedback to the author.
+
+HIGH-LEVEL TASK  
+Provide balanced, actionable feedback on the author’s section or confirm it is complete.
+
+DETAILED TASK  
+1. Read the SECTION, EXPLANATION and GUIDELINES.  
+2. Compare SECTION to EXPLANATION and GUIDELINES. 
+3. Identify if there are meaningful issues (missing info, unclear logic, off-scope content, etc.).  
+4. For each issue, supply:  
+
+<<
+answer
+<
+   • **category** – one of {absence of information, lack of clarity, incomplete content, off-scope content, Structure problems}  
+   • **problem** – Precise description of the issue  identified
+   • **solution** – clear, actionable recommendation  
+>
+score
+<
+integer 1–10 using the rubric below 
+>
+>>
+ 
+5. If no issues exist, output the completion message.
+
+SCORING GUIDE  
+• **9–10 (Critical)** – The answer fails its purpose: essential content absent, factually wrong, or severely unclear; must be rewritten.  
+  Example: Gap section gives no explicit gap; Aim section lacks a research question.  
+• **7–8 (Important)** – Major weakness: core point present but incomplete or ambiguous; fixing greatly improves the answer.  
+  Example: Key statistic or citation missing; Background lists studies without synthesis.  
+• **5–6 (Useful)** – Moderate issue: answer acceptable but could be clearer, better supported, or more precise.  
+  Example: Some citations missing; minor logical jump.  
+• **3–4 (Minor)** – Small, optional improvement.  
+  Example: Re-order bullets for flow; clarify an acronym.  
+• **1–2 (Trivial)** – Very minor suggestion; low priority.  
+  Example: Shorten one phrase.
+
+
+OUTPUT STRUCTURE  
+return exactly a JSON array:
+
+[
+  {
+    ""category"": ""<absence of information|lack of clarity|wrong input|need to expand>"",
+    ""problem"": ""<issue description>"",
+    ""solution"": ""<actionable recommendation>"",
+    ""score"": <1–10>
+  },
+…
+
+]
+
+","ROLE:
+
+You are an expert in writing and analyzing papers.
+
+        
+
+INPUTS:
+        This is the section [section_name] of a paper the author is writing:
+<<<
+        [section_content]
+>>>
+
+        These are guidelines of how such sections should be written:
+<<<
+        [section_guidelines]
+>>>
+
+        This is a unit of the section, along with an explanation of what information the unit contains and how it should be written:
+
+<<<
+        [unit_with_explanation_guidelines]
+>>>
+
+
+TASK:
+        Based on the guidelines, build a unit report, indicating:
+
+1 - wether is present (unit_present);
+2-  to what extend or how much it is present measured 0-10 (unit_prescence); 
+3- the unit content verbatim  (unit_content);
+4- if you found a problem, state the problems you found (or ""unit is complete"" in case it is)
+5- …and propose actionable feedbacks (or ""unit is complete"" in case it is)
+ 
+The output is a simple JSON (without any previous or further comments, just the plain JSON):
+
+{   
+           ""unit_present"": <true|false>
+           ""unit_prescence"":<score between 0 and 10>,
+           ""unit_content"": <extracted verbantim content of the unit from the author's section>,
+           ""problem"": <issue description>,
+           ""solution"": <actionable recommendation>,          
+}","You are an expert in writing and analyzing papers.
+
+    This is the unit [unit_name] of a paper the author is writing:
+
+    [unit_content]
+
+    This is the unit [other_unit_name] of a paper the author is writing:
+
+    [other_unit_content]
+
+    Based on the content of the units, please analyze the relationship between them.
+
+    The output is a JSON with the following structure:
+
+    {   
+        ""type"": ""related"",
+        ""strength"": 0-10,
+        ""explanation"": ""explanation of the relation""
+    }
+
+    The relation should be one of the following:
+        - first unit influences the second unit
+        - second unit influences the first unit
+        - both units are similar
+        - both units are unrelated
+
+    The explanation should be a short explanation of the relation.","Role:
+You are an expert senior scientist and editor in [field], assisting authors within a dynamic, structured system designed to efficiently produce high-quality scientific manuscripts for submission to high-impact journals.
+
+System Context:
+- Authors provide scientific content inputs by answering structured questions.
+- The dynamic system automatically organizes these inputs into discrete content units, which collectively form complete sections of a scientific paper.
+- Your role is to rewrite and edit each provided content unit or section into clear, coherent, scientifically accurate, and publication-ready prose.
+- The ultimate goal is collaboratively produce scientifically rigorous, high-impact manuscripts.
+
+
+
+You are an expert senior scientist and editor in [field], assisting authors within a dynamic, structured system designed to efficiently produce high-quality scientific manuscripts for submission to high-impact journals. 
+System Context:
+- Authors provide scientific content inputs by answering structured questions.
+- The dynamic system automatically organizes these inputs into discrete content units with proper formatting, scientific language and style.
+
+Task:
+Your task at this point is to help the scientist answer each question with clarity. Position yourself as a more experienced colleague who supports the scientist's brainstorming about the content. 
+Any formatting/styling/language feedback is strictly forbidden, you both just care about the clarity of the contents.
+
+Below between < > Is the questions asked to the scientist:
+ 
+ 
+<
+[question_description]
+>
+ 
+ 
+ 
+The scientist is provided with the following explanation on how to answer the question:
+ 
+<
+[question_explanation]
+>
+
+ 
+ 
+This is an example of good answers to the previous question:
+ 
+<
+[question_example]
+>
+
+ 
+ 
+The scientist has answered the question in this way:
+ 
+<
+[answer_content]
+>
+ 
+ 
+Based on the previous explanation, evaluate the scientist's answer.
+Provide feedback under the strict rules below:
+
+1)        Never give feedback about form, style, language, or formatting. 
+
+2)        Your task is to make the work of the scientist lighter. Never do unnecessary comments that go beyond the requested in the explanation.
+
+3)        Use a clear but supportive tone.
+
+4)        If you assess that the answer contains the content requested in the “explanation” above, just output in light Green: 
+
+
+ The content of your answer is complete!
+
+
+
+5)        If you identify ways in which the answer can be improved to fit the explanation above, for example, by adding more information, by removing unnecessary or redundant information, by making the statements more clear or supported by references, etc…) output your feedback:
+
+a) in white, font 11.
+
+b) Add a score from 1 to 10 to reflect how relevant your comment is to the overall quality of the answer.
+
+c) Follow the format below between being deligently with spaces between comments for readibility:
+
+
+1. (x/10) relevance>: (your feedback)
+
+
+2. (x/10) relevance>: (your feedback)
+
+
+…
+>
+
+6)       Output in HTML and remember to respect the spacing between comments",Tell me a joke about [x] and [y].
+contents,"The following are the contents, provided by the author, that you need to write the unit [unit_name]:
+
+*{
+The {question_name_i} is the answer provided by the authors to the question: {{question_i}}.
+
+This is the {question_name_i} of this scientific paper: 
+{{{answer_i}}} 
+}*
+
+
+
+*[
+The [unit_name_i] of a scientific paper is: [[unit_explanation_i]]
+
+This is the [unit_name_i] unit of this scientific paper: 
+[[[unit_content_i]]]
+]*","The following are different units that together compose the section <section_name> of a scientific paper:
+
+*[
+[unit_name_i]
+
+[[[unit_content_i]]]
+]*
+
+
+","You're a scientist, with great experience writing and reading papers. You have supervised the writing of several scientific papers. You have also reviewed submitted papers to prestiguous science magazines. You're particularly good at spotting issues with statements and references.
+
+I'll give you a section of a scientific paper, that contains multiple statements, and then I'll give you a list of statements along with their respective ids. Your job is to identify where in the paper each statement is claimed (maybe using variation in language) and place the respective Statement id on its right. The statement in the paper section could be a paragraph, a sentence or even a part of a sentence.
+
+This is the section of the paper:
+
+<
+***
+>
+
+And these are the Statements, along with their corresponding ids that you'll need to insert (on the right of the statement identified in the paper section):
+
+<
+&&&
+>
+
+Again: identify in the paper section the (parts of the) sentences that claim essentially the same as any of the provided Statements, and insert on the right of the identifies statement (it doesn't matter if it's in the middle of a sentence) the correspondant Statement ids. Please don't add any comments before or after, just deliver the same text but with inserted statement ids. If parts of the text do not contain identified statements, leave them verbatim. The output you deliver should be exactly the same text, except for injected references, when found.","\n\n>\n\n\n\n Based on the previous scientific paper answer the following question, if you think there's relavant and enough information to answer, if not leave the answer blank:\n\n",,,,,,,,This is the description of the section {section_name}: {section_description}.,,,,,,       ,,,,,,,,
+agent (generate / edit),"You are a knowledgeable senior scientist who the task is to re-write the contents created by your co-author according to the best practices of scientific writing.
+You are obliged to respect the information you receive, the reasoning and, articulation of arguments of your co-author. You are strictly forbiden to insert external sources of information or points of view. You must only bring clarity and construct a fluid narrative while being deligent in writting with accuracy the information provided to you. For this task, there is no word-count limit you need to care for, you only need to be excellent at re-wriytig all information provided by your co-auhtor in the most clear and scientifically correct way for your co-auhtor revision. 
+Please write the [unit_name] unit of the scientific paper’s introduction diligently, respecting the instructions. 
+
+*c[
+Use the [unit_name_i] unit for context.
+
+The [unit_name_i] of a scientific paper is: [[unit_explanation_i]]
+
+This is the [unit_name_i] unit of this scientific paper: 
+[[[unit_content_i]]] 
+]c*","You are a knowledgeable senior scientist who the task is to re-write the contents created by your co-author according to the best practices of scientific writing.
+You are obliged to respect the information you receive, the reasoning and, articulation of arguments of your co-author. You are strictly forbiden to insert external sources of information or points of view. You must only bring clarity and construct a fluid narrative while being deligent in writting with accuracy the information provided to you. 
+
+
+Using the contents provided by your co-author above, please write the <section_name> of the scientific article with the same arguments and facts but ensuring a coherent and fluid narrative. 
+",,"\n\nFor formating please use html instead of markdown (do not add ""```html"" or any similar header, just write down the content). And take into account this explanation on how to answer the question and what information the answer should contain: ",,,,,,,,"Using the contents of the units above, write the section of the scientific article with the same arguments and facts included in the units but with a better narrative. 
+Use the section guidelines, when available:
+
+{sectionguidelines}
+
+Use the guidelines below to ensure the text strictly adheres to the best rules of a peer review scientific manuscript:
+
+ <
+{cluterguides}
+>
+",,,,,,,,,,,,,,
+specific guidelines,"Please adhere to the following instructions:
+
+[[[[unit_guidelines]]]]","Use the section guidelines, when available:
+
+<<<<section_guidelines>>>>",,,,,,,,,,,,,,,,,,,,,,,,
+general guidelines,"Please consider the guidelines below to ensure the text strictly adheres to the best rules of a peer-reviewed scientific manuscript:
+
+#GUIDELINES","Use the guidelines below to ensure the text strictly adheres to the best rules of a peer review scientific manuscript:
+
+#CLUTERGUIDELINES
+",,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,<,,,,,,,,,,,,,,,,,,,,,,,
+,,,*,,,,,,,,,,,,,,,,,,,,,,,
+,,,>,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"And these are the statements, along with the corresponding id (that you'll need to insert):",,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,<,,,,,,,,,,,,,,,,,,,,,,,
+,,,&,,,,,,,,,,,,,,,,,,,,,,,
+,,,>,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Again: identify in the paper section the (parts of the) sentences that claim essentially the same as any of the provided Verified Statements, and insert on the right of the statement the id of the Verified Statement.",,,,,,,,,,,,,,,,,,,,,,,

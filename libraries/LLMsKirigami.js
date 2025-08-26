@@ -133,6 +133,7 @@ let llm_completion_proxy2 = function(promptObject){
 
     activePrompts.push(promptObject)
     nPromptsActive++
+    //console.log("++[LLMp] nPromptsActive:", nPromptsActive)
     lastPromptObject = promptObject
 
     //console.log("[LLMp] Starting LLM proxy... | promptObject.description:", promptObject.description)
@@ -205,6 +206,7 @@ let llm_completion_proxy2 = function(promptObject){
     fetch(llm_api_urlCompletions, requestOptions)
         .then(response => {
             nPromptsActive--
+            //console.log("--[LLMp] nPromptsActive:", nPromptsActive)
             activePrompts = activePrompts.filter(p=>p!=promptObject)
             concludedPrompts.push(promptObject)
             //console.log("[LLMp] activePrompts:", activePrompts)
@@ -323,10 +325,15 @@ let llm_completion_proxy2 = function(promptObject){
             slim_reportObject.query_tokens = reportObject.query_tokens
             slim_reportObject.answer_tokens = reportObject.answer_tokens
 
+            data.reportObject = reportObject
+
             
 			promptObject.onLoad(data)
         })
         .catch(error => {
+            nPromptsActive--
+            console.log("--[LLMp] nPromptsActive:", nPromptsActive)
+
             console.error("[LLMp] Error in prompt, description:", promptObject.description)
             console.error("[LLMp] Error with LLM proxy:", error)
             console.error("[LLMp] requestOptions:", requestOptions)
@@ -385,6 +392,22 @@ export {
     MODELS_ACTIVITY,
     TOTAL_COST_SESSION,
     TOTAL_COST_QUERY_SESSION,
-    TOTAL_COST_RESPONSE_SESSION
+    TOTAL_COST_RESPONSE_SESSION,
+    nPromptsActive
+}
+
+// Make nPromptsActive available globally
+if (typeof window !== 'undefined') {
+    // Create a getter that always returns the current value
+    Object.defineProperty(window, 'nPromptsActive', {
+        get: function() { return nPromptsActive; },
+        set: function(value) { nPromptsActive = value; },
+        configurable: true
+    });
+    console.log("✅ nPromptsActive made globally available with live binding");
+} else if (typeof global !== 'undefined') {
+    // Node.js environment
+    global.nPromptsActive = nPromptsActive;
+    console.log("✅ nPromptsActive made globally available in Node.js");
 }
 
