@@ -133,7 +133,11 @@ let llm_completion_proxy2 = function(promptObject){
 
     activePrompts.push(promptObject)
     nPromptsActive++
-    //console.log("++[LLMp] nPromptsActive:", nPromptsActive)
+    // Update global reference
+    if (typeof global !== 'undefined') {
+        global.nPromptsActive = nPromptsActive;
+    }
+    console.log("++[LLMp] nPromptsActive:", nPromptsActive)
     lastPromptObject = promptObject
 
     //console.log("[LLMp] Starting LLM proxy... | promptObject.description:", promptObject.description)
@@ -206,7 +210,11 @@ let llm_completion_proxy2 = function(promptObject){
     fetch(llm_api_urlCompletions, requestOptions)
         .then(response => {
             nPromptsActive--
-            //console.log("--[LLMp] nPromptsActive:", nPromptsActive)
+            // Update global reference
+            if (typeof global !== 'undefined') {
+                global.nPromptsActive = nPromptsActive;
+            }
+            console.log("--[LLMp] nPromptsActive:", nPromptsActive)
             activePrompts = activePrompts.filter(p=>p!=promptObject)
             concludedPrompts.push(promptObject)
             //console.log("[LLMp] activePrompts:", activePrompts)
@@ -295,7 +303,7 @@ let llm_completion_proxy2 = function(promptObject){
 			//data.date = new Date()
 
             if(data.error || !data.content){
-                throw new Error("LLM proxy error: " + (data.error || "No content returned from LLM"))
+                throw new Error("LLM proxy error: " + (data.error || "No content returned from LLM")+" + data:"+JSON.stringify(data, null, 2))
                 return
             }
 
@@ -332,7 +340,11 @@ let llm_completion_proxy2 = function(promptObject){
         })
         .catch(error => {
             nPromptsActive--
-            console.log("--[LLMp] nPromptsActive:", nPromptsActive)
+            // Update global reference
+            if (typeof global !== 'undefined') {
+                global.nPromptsActive = nPromptsActive;
+            }
+            console.log("error --[LLMp] nPromptsActive:", nPromptsActive)
 
             console.error("[LLMp] Error in prompt, description:", promptObject.description)
             console.error("[LLMp] Error with LLM proxy:", error)
@@ -396,7 +408,7 @@ export {
     nPromptsActive
 }
 
-// Make nPromptsActive available globally
+// Make nPromptsActive available globally with live binding
 if (typeof window !== 'undefined') {
     // Create a getter that always returns the current value
     Object.defineProperty(window, 'nPromptsActive', {
@@ -406,8 +418,12 @@ if (typeof window !== 'undefined') {
     });
     console.log("✅ nPromptsActive made globally available with live binding");
 } else if (typeof global !== 'undefined') {
-    // Node.js environment
-    global.nPromptsActive = nPromptsActive;
-    console.log("✅ nPromptsActive made globally available in Node.js");
+    // Node.js environment - use getter/setter for live binding
+    Object.defineProperty(global, 'nPromptsActive', {
+        get: function() { return nPromptsActive; },
+        set: function(value) { nPromptsActive = value; },
+        configurable: true
+    });
+    console.log("✅ nPromptsActive made globally available in Node.js with live binding");
 }
 

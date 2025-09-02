@@ -17,14 +17,23 @@ let load = async function(){
     console.log("start Loading Pencil tables...");
 
     // Resolve global pulse reference first
-    if (typeof window !== 'undefined' && window._) {
-        _ = window._;
+    if (typeof global !== 'undefined' && global._) {
+        _ = global._;
+    }
+
+    // Import pulse library for Node.js compatibility
+    try {
+        const { _: pulseLibrary } = await import('../libraries/pulse-node.js');
+        global._ = pulseLibrary;
+        console.log("✅ Pulse library imported successfully for Node.js");
+    } catch (error) {
+        console.error("❌ Failed to import pulse library:", error);
     }
 
     // If pulse is missing or incomplete, create a minimal fallback and bind to local _
     if (typeof _ === 'undefined' || typeof _.CSVToTable !== 'function') {
         console.log("⚠️ Pulse library not loaded or missing CSVToTable. Creating fallback _ object.");
-        window._ = {
+        global._ = {
             CSVToTable: function(data, flag) {
                 console.log("Fallback CSVToTable called with data length:", data ? data.length : 'undefined');
                 console.log("Flag:", flag);
@@ -54,7 +63,7 @@ let load = async function(){
                 return table;
             }
         };
-        _ = window._;
+        _ = global._;
         console.log("✅ Fallback _ object created and bound successfully");
     }
 

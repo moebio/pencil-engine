@@ -1,5 +1,11 @@
 // Build.js - Pencil Engine Build Functions
 
+// Import pulse library for Node.js compatibility
+import { _ } from '../libraries/pulse-node.js';
+
+// Make pulse library globally available
+global._ = _;
+
 // Global variables
 let QUESTIONS_TABLE = null
 let UNITS_TABLE = null

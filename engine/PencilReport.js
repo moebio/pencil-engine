@@ -53,7 +53,7 @@ function sendReport(callBackEach,step, next_steps, actor_type="", actor=""){
             next_steps:next_steps,
             actor_type:actor_type,
             actor:actor,
-            nPromptsActive:window.nPromptsActive,
+            nPromptsActive: (typeof window !== 'undefined' ? window.nPromptsActive : global.nPromptsActive),
             report:JSON.parse(JSON.stringify(PENCIL_REPORT_OBJECT))
         }
     })
@@ -87,7 +87,13 @@ if (typeof window !== 'undefined') {
     window.pencilSectionsExtraction = pencilSectionsExtraction;
     window.initPencilMode = initPencilMode;
     window._buildPencil = _buildPencil;
-    console.log("✅ PencilReport functions made globally available");
+    console.log("✅ PencilReport functions made globally available in browser");
+} else if (typeof global !== 'undefined') {
+    // Node.js environment
+    global.pencilSectionsExtraction = pencilSectionsExtraction;
+    global.initPencilMode = initPencilMode;
+    global._buildPencil = _buildPencil;
+    console.log("✅ PencilReport functions made globally available in Node.js");
 }
 
 //similar to pencilSectionsExtraction, but extracts only sections Subresult
@@ -546,7 +552,7 @@ function pencil_completion(id_prompt, insertions, alias, onLoad, structured=fals
         onLoad(answer)
 
         let reportObject = answer.reportObject
-        reportObject.nPromptsActive = window.nPromptsActive
+        reportObject.nPromptsActive = (typeof window !== 'undefined' ? window.nPromptsActive : global.nPromptsActive)
 
         callBackEach({
             type:"models usage",

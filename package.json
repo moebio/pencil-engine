@@ -5,7 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "start": "node run-repl.js",
+    "repl": "node run-repl.js",
+    "dev": "node run-dev.js"
   },
   "keywords": [
     "module",
