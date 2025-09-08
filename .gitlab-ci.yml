@@ -1,0 +1,22 @@
+include:
+  - project: kirigami2/cloud/ops/cicd
+    file: /templates/.ci_kit.yml
+    ref: dev
+
+
+image: node:latest
+deploy:
+  stage: deploy
+  script:
+     - npm publish
+
+# -----------------------------------------------------------------------
+# Ordered stages
+# ------------------------------------------------------------------------
+stages:
+  - lint
+  - plan
+  - deploy
+  - tag
+  - release
+  - post-deploy
