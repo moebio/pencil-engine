@@ -1,5 +1,5 @@
 {
-  "name": "pencil-engine",
+  "name": "@pencil-engine",
   "version": "1.0.0",
   "description": "A simple JavaScript module that processes text with callbacks",
   "main": "index.js",
@@ -30,6 +30,6 @@
     "node-fetch": "^3.3.2"
   },
   "npmconfigset":{
-    "pencil-engine:registry": "https://gitlab.com/api/v4/projects/CI_PROJECT_ID/packages/npm/"
+    "@pencil-engine:registry": "https://gitlab.com/api/v4/projects/CI_PROJECT_ID/packages/npm/"
   }
 }
