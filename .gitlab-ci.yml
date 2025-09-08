@@ -3,7 +3,6 @@ include:
     file: /templates/.ci_kit.yml
     ref: dev
 
-
 deploy-package:dev:
   image: node
   stage: deploy
@@ -14,7 +13,7 @@ deploy-package:dev:
     npm_config_registry: $CI_API_V4_URL/projects/$CI_PROJECT_ID/packages/npm/
     NPM_TOKEN: $CI_JOB_TOKEN
   before_script:
-    - echo "@@pencil-engine:registry=http://${CI_SERVER_HOST}:${CI_SERVER_PORT}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
+    - echo "@pencil-engine:registry=http://${CI_SERVER_HOST}:${CI_SERVER_PORT}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
     - echo "//${CI_SERVER_HOST}:${CI_SERVER_PORT}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
 
   script:
