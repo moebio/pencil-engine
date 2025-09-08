@@ -6,6 +6,9 @@ include:
 
 deploy-package:dev:
   image: node
+  stage: deploy
+  only:
+    - dev
   variables:
     npm_config_cafile: $CI_SERVER_TLS_CA_FILE
     npm_config_registry: $CI_API_V4_URL/projects/$CI_PROJECT_ID/packages/npm/
