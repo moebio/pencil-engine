@@ -1,5 +1,5 @@
 {
-  "name": "@pencil-engine",
+  "name": "pencil-engine",
   "version": "1.0.0",
   "description": "A simple JavaScript module that processes text with callbacks",
   "main": "index.js",
