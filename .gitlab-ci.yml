@@ -7,6 +7,13 @@ include:
 image: node:latest
 deploy:
   stage: deploy
+  when: manual
+  only:
+    - dev
+  before_script:
+    - echo "@products:registry=http://${CI_SERVER_HOST}:${CI_SERVER_PORT}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
+    - echo "//${CI_SERVER_HOST}:${CI_SERVER_PORT}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
+
   script:
      - npm publish
 

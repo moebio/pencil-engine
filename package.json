@@ -30,6 +30,6 @@
     "node-fetch": "^3.3.2"
   },
   "npmconfigset":{
-    "@kirigami2/cloud/application/engine/pencil-engine:registry": "https://gitlab.com/api/v4/projects/CI_PROJECT_ID/packages/npm/"
+    "pencil-engine:registry": "https://gitlab.com/api/v4/projects/CI_PROJECT_ID/packages/npm/"
   }
 }
