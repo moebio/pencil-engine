@@ -4,7 +4,7 @@ include:
     ref: dev
 
 deploy-package:dev:
-  image: node
+  image: node:latest
   stage: deploy
   only:
     - dev
@@ -14,6 +14,8 @@ deploy-package:dev:
   before_script:
     - echo "@kirigami2:registry=https://gitlab.com/api/v4/projects/106378894/packages/npm/">.npmrc
     - echo "//gitlab.com/api/v4/projects/106378894/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
+  script:
+     - npm publish
 # -----------------------------------------------------------------------
 
 # image: node:latest
