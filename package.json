@@ -10,6 +10,12 @@
     "repl": "node run-repl.js",
     "dev": "node run-dev.js"
   },
+  "files": [
+    "src"
+  ],
+  "exports": {
+    ".": "./src/index.js"
+  },
   "keywords": [
     "module",
     "text-processing",
