@@ -6,6 +6,7 @@ include:
 deploy-package:dev:
   image: node:latest
   stage: deploy
+  when: manual
   only:
     - dev
   variables:
@@ -15,6 +16,7 @@ deploy-package:dev:
     - echo "@kirigami-pencil:registry=https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
     - echo "//gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
   script:
+     - cp ./src/* ./
      - npm publish
 # -----------------------------------------------------------------------
 

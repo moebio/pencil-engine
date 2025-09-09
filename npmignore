@@ -1,0 +1,6 @@
+# Exclude everything …
+scripts/*
+changelogs/*
+.gitlab-ci.yml
+version
+Mafefile
