@@ -12,7 +12,7 @@ deploy-package:dev:
     npm_config_registry: $CI_API_V4_URL/projects/${CI_PROJECT_ID}/packages/npm/
     NPM_TOKEN: $CI_JOB_TOKEN
   before_script:
-    - echo "@kirigami2:registry=https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
+    - echo "@kirigami-pencil:registry=https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
     - echo "//gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
   script:
      - npm publish
