@@ -1,6 +1,7 @@
-# Exclude everything …
+# Exclude the following files and directories from the npm package
 scripts/*
-changelogs/*
+src/*
+changelog/*
 .gitlab-ci.yml
 version
-Mafefile
+Makefile
