@@ -1,6 +1,7 @@
 # Exclude the following files and directories from the npm package
 scripts/*
 src/*
+src_OLD/*
 changelog/*
 .gitlab-ci.yml
 version
