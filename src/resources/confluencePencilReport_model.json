@@ -1,0 +1,847 @@
+{
+  "questions": [
+    {
+      "question_name": "edge",
+      "question": "What is unique about your paper?",
+      "answer": "answer:\nHere, we apply a novel allele-specific expression analysis—leveraging data from two large breast cancer cohorts (METABRIC and TCGA)—to disentangle the independent roles of cis‑regulatory variation and DNA copy-number alterations in modulating the clinical impact of oncogenic PIK3CA mutations.",
+      "score": 10,
+      "relevant_sections": "Introduction",
+      "answerFeedback": {
+        "category": "no problem identified",
+        "problem": "The sentence clearly states your unique approach by emphasizing a novel allele‐specific expression analysis and specifying the unique datasets (METABRIC and TCGA) to address the gap.",
+        "solution": "No recommendations.",
+        "score": 0
+      }
+    },
+    {
+      "question_name": "question",
+      "question": "What is your research question?",
+      "answer": "answer:\nThe study asks: “Does cis‐regulatory variation modulate the penetrance of oncogenic coding mutations by causing an oncogenic activating mutation in the preferentially expressed allele of PIK3CA to have a different clinical impact compared to the same mutation in the less expressed allele?” Because the impact of gene dosage differences at the expression level remains largely unexplored, this hypothesis directly addresses that gap.",
+      "score": 10,
+      "relevant_sections": "Introduction",
+      "answerFeedback": {
+        "result": [
+          {
+            "category": "no problem identified",
+            "problem": "The research question is precisely framed in a single sentence that clearly states the hypothesis and links it to the identified gap regarding gene dosage differences.",
+            "solution": "No revision is needed.",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "relevance",
+      "question": "Why is studying your topic relevant?",
+      "answer": "answer:\nStudying this topic is relevant because it addresses a critical gap in understanding how gene dosage differences at the expression level influence tumorigenesis. Activating oncogenic mutations can arise from a gain of a single mutant allele—a change that occurs in approximately half of all oncogenic driver mutations and is sufficient to trigger tumorigenesis, thereby potentially dictating prognosis and therapeutic sensitivity (1). Additionally, normal cis‐regulatory variation affects most of the human genome and underpins a significant portion of phenotypic diversity (3–5). Given that such regulatory mechanisms have been linked to disease risk in breast tissue (8–11) but their influence on the clinical impact of oncogenic mutations remains largely unexplored, investigating how cis‐regulatory variation modulates the penetrance of mutations (as in the case of PIK3CA) is crucial for improving our mechanistic understanding and clinical management of cancer.",
+      "score": 10,
+      "relevant_sections": "Introduction",
+      "answerFeedback": {
+        "feedback": [
+          {
+            "category": "incomplete content",
+            "problem": "The answer provides a specific statistic about the occurrence of oncogenic mutations, but it does not begin with a broader, attention‐grabbing hook that establishes the overall public health or clinical burden of cancer.",
+            "solution": "Introduce a broader, high‐impact fact (e.g., a figure on cancer incidence, mortality, or economic burden) immediately to frame why investigating gene dosage differences is important in a wider real-world context.",
+            "score": 5
+          },
+          {
+            "category": "lack of clarity",
+            "problem": "The link between the technical detail (gene dosage differences and cis‐regulatory variation) and its ultimate impact on prognosis and therapeutic sensitivity is not made completely explicit.",
+            "solution": "Clarify how these mechanistic insights translate into improved clinical management or outcomes, explicitly connecting the molecular observations to tangible benefits in cancer treatment.",
+            "score": 4
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "approach",
+      "question": "What was done to answer the question?",
+      "answer": "answer:\nTo address the question, we first reanalyzed previously generated allelic expression data from normal breast tissue from 64 healthy donors. In these samples we computed the ratio of expression of each allele at heterozygous variant positions to specifically capture cis-acting effects, thereby controlling for common trans influences. We then performed a mapping analysis to identify candidate regulatory SNPs (rSNPs) and complemented this with in‐silico functional analysis and in vitro binding assays to validate the regulatory potential of specific variants. For breast tumor samples, we conducted a mutant versus wild‐type allelic expression analysis using DNA-seq and RNA-seq data from two independent datasets (METABRIC, n=94; TCGA, n=178). For each tumor, we calculated three allelic ratios: (1) α – the log2 ratio of mutant to wild‐type RNA-seq reads reflecting net mutant allele expression imbalance; (2) β – the log2 ratio of mutant to wild‐type DNA-seq reads representing relative copy number; and (3) γ – defined as α minus β to isolate the contribution of cis‐regulatory variation. Subsequent statistical analyses, including correlation assessments, variance decomposition, and survival analyses, were then applied to quantify the impact of cis‐regulatory variants on allelic imbalances and clinical outcomes.",
+      "score": 10,
+      "relevant_sections": "Results",
+      "answerFeedback": {
+        "category": "no problem detected",
+        "problem": "The answer clearly outlines the experimental process used to address the question: it describes reanalysis of allelic expression data from normal breast tissue, details the computation of allele expression ratios to capture cis‐acting effects, outlines the mapping analysis used to identify candidate regulatory SNPs with in silico and in vitro validations, and explains the approach for tumor samples including the derivation of three allelic ratios and subsequent statistical analyses. This information is complete, directly relevant, and aligns with the guidelines.",
+        "solution": "No recommendations.",
+        "score": 0
+      }
+    },
+    {
+      "question_name": "known",
+      "question": "What is already known about your study's topic?",
+      "answer": "answer:\nActivating oncogenic mutations are known to arise via gain‐of-function single-base alterations or focal DNA copy-number amplification, where gaining even a single mutant allele can drive tumorigenesis (1). Additionally, cis-regulatory variation is established as a major regulator of allele-specific gene expression across the genome (2), contributing to the phenotypic diversity seen in species (3–5) and to RNA alterations in tumors, including allelic imbalances of somatic mutations (6,7). In breast tissue, previous studies have linked germline regulatory variation with disease risk and have shown that variants affecting the expression of key genes such as BRCA1 and BRCA2 influence breast cancer susceptibility (8–11).",
+      "score": 10,
+      "relevant_sections": "Introduction",
+      "answerFeedback": {
+        "category": "no problem identified",
+        "problem": "The answer clearly and completely summarizes well‐established findings relevant to the study's topic with appropriate citations.",
+        "solution": "no recommendations",
+        "score": 0
+      }
+    },
+    {
+      "question_name": "methods",
+      "question": "Describe the Materials and Methods.",
+      "answer": "answer:\n• Breast tumor specimens were obtained from two public datasets—the METABRIC and TCGA projects—with reported allelic imbalance in 70.2% (METABRIC) and 60.1% (TCGA) of tumors.\n• The analysis focused on comparing mutant versus wild‐type PIK3CA allele expression to assess allelic expression imbalance.\n• The contribution of cis‐regulatory variants was evaluated, showing that 27.7% (METABRIC) and 11.8% (TCGA) of tumors exhibited imbalance due to these regulatory variants.\n• Statistical analyses were performed to correlate preferential mutant allele expression with clinical outcomes, notably a link with poor prognosis (P = 0.031) and with ER–, PR–, and HER2+ tumor statuses.",
+      "score": 6,
+      "relevant_sections": "Abstract",
+      "answerFeedback": {
+        "feedback": [
+          {
+            "category": "absence of information",
+            "problem": "The answer does not specify the total sample sizes (n) for the datasets, even though the guidelines require a clear statement of the organism/material and total number of specimens.",
+            "solution": "Include the total number of breast tumor specimens obtained from each dataset (or overall) to meet the essential criteria.",
+            "score": 8
+          },
+          {
+            "category": "off-scope content",
+            "problem": "The answer includes detailed percentages and a p-value, which are more indicative of results rather than a concise description of the methods.",
+            "solution": "Focus the bullet points on the methodological aspects (e.g., the use of public datasets, comparison between mutant and wild‐type alleles, and statistical correlation methods) and remove or simplify the detailed outcome data.",
+            "score": 7
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "sub-questions",
+      "question": "  What is the question you aimed to answer?   ",
+      "answer": "answer:\nTo test whether cis‐regulatory variation modulates PIK3CA expression in normal breast tissue, we investigated allelic expression differences—asking if the intrinsic, allele‐specific regulatory mechanisms drive expression imbalances that are independent of shared trans effects.",
+      "score": 10,
+      "relevant_sections": "Results",
+      "answerFeedback": {
+        "category": "no problem identified",
+        "problem": "No problem identified.",
+        "solution": "No recommendations.",
+        "score": 0
+      }
+    },
+    {
+      "question_name": "answer",
+      "question": "What is the main finding of your research?",
+      "answer": "answer:\nOur study shows that differential expression between the mutant and wild‐type alleles of PIK3CA is common in breast cancer and largely driven by allele-specific cis-regulatory variation (explaining ~16% of the variability in net allelic expression). This preferential expression of the mutant allele is associated with adverse clinical parameters such as ER-negative, PR-negative, and HER2-positive statuses and correlates with poorer overall and disease-specific survival (as demonstrated in the METABRIC dataset). Collectively, these results establish the prognostic relevance of evaluating the transcriptional expression of PIK3CA somatic mutations, supporting the use of expression level as an additional biomarker for patient management.",
+      "score": 10,
+      "relevant_sections": "Discussion",
+      "answerFeedback": {
+        "result": [
+          {
+            "category": "off-scope content",
+            "problem": "The answer includes a numerical detail (~16%) that may be considered extraneous. The guidelines recommend avoiding numbers in the main take‑home message.",
+            "solution": "Remove the specific percentage and focus on the summary message (e.g., 'Our study shows that differential expression between mutant and wild‐type PIK3CA driven by allele-specific cis‑regulatory variation is associated with adverse clinical outcomes and poorer survival').",
+            "score": 3
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "unknown",
+      "question": "What is the knowledge gap your study aims to fill ?",
+      "answer": "answer:\nThe study addresses the gap in understanding how gene dosage differences stemming from oncogenic mutations—specifically measured at the gene expression level—contribute to allelic imbalances. In particular, although cis‐regulatory variation is known to modulate gene expression (2) and activating oncogenic mutations have been characterized in cancers (1), it remains largely unexplored (i) how much each mechanism (cis‐regulatory variation versus altered DNA copy-number) contributes to generating these imbalances and (ii) whether they act independently or synergistically.",
+      "score": 10,
+      "relevant_sections": "Introduction",
+      "answerFeedback": {
+        "category": "absence of information",
+        "problem": "The answer clearly identifies what is unknown but does not explain why filling this gap is important or what impact it might have on advancing the field.",
+        "solution": "Include a closing sentence that highlights the significance of addressing this gap (e.g., how understanding the contribution of each mechanism could improve cancer biology insights or inform targeted therapeutic strategies).",
+        "score": 7
+      }
+    },
+    {
+      "question_name": "constraints",
+      "question": "What are the limitations of your study?",
+      "answer": "answer:\n• The study is limited by its restricted sample size due to the use of high stringency in calling allelic imbalance and focusing on a specific mutation type in only one gene (PIK3CA), which may reduce statistical power and generalizability.",
+      "score": 10,
+      "relevant_sections": "Discussion",
+      "answerFeedback": {
+        "result": [
+          {
+            "category": "incomplete content",
+            "problem": "The answer does not include any potential mitigation or future steps that could be taken to address the identified limitations.",
+            "solution": "Consider adding a statement on how sample size and gene focus limitations might be overcome (e.g., expanding the sample, using relaxed criteria, or including additional gene targets) in future studies.",
+            "score": 7
+          },
+          {
+            "category": "absence of information",
+            "problem": "The answer focuses solely on sample size and the mutation type in one gene, without mentioning other possible methodological or control-related limitations that might also affect the findings.",
+            "solution": "Review the study design for any additional constraints (e.g., data collection techniques or control group issues) that could impact the results, and include them if relevant.",
+            "score": 6
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "finding",
+      "question": "What is the main finding on each of your Figures?",
+      "answer": "answer:\nFigure 1 shows that normal breast tissue exhibits cis‐regulatory variation leading to differential allelic expression of PIK3CA, as evidenced by the identification of six daeSNPs with distinct linkage disequilibrium patterns.  \nFigure 2 demonstrates that in breast tumors harboring PIK3CA missense mutations, net mutant allele expression imbalances are common—with tumors often displaying preferential mutant allele expression driven by cis‐regulatory effects even when the mutant copy number is lower—and that these imbalances correlate positively with both copy number and cis‐regulatory variation.  \nFigure 3 reveals that preferential expression of the mutant PIK3CA allele, mediated by cis‐regulatory variation, is associated with poorer disease‐specific survival and adverse clinicopathological features (i.e. ER-negative, PR-negative, and HER2-positive statuses).",
+      "score": 10,
+      "relevant_sections": "Results",
+      "answerFeedback": {
+        "result": [
+          {
+            "category": "off-scope content",
+            "problem": "The finding statements include detailed evidentiary elements (e.g., 'six daeSNPs with distinct linkage disequilibrium patterns') that belong in the 'data' answer rather than in a concise main finding.",
+            "solution": "Streamline each sentence to focus solely on the core result of the figure, leaving numerical specifics and linked evidence for the corresponding 'data' response.",
+            "score": 7
+          },
+          {
+            "category": "lack of clarity",
+            "problem": "Some sentences (particularly for Figures 2 and 3) combine multiple related aspects, which may reduce clarity on what the single main finding is.",
+            "solution": "Refine these sentences to highlight one clear, overarching conclusion per figure to ensure each main finding is expressed unambiguously.",
+            "score": 6
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "contribution",
+      "question": "What is the main contribution of your study?",
+      "answer": "answer:\n• Our study demonstrates, for the first time, that cis‐regulatory variation modulates the penetrance of PIK3CA somatic mutations by causing an allelic expression imbalance between the mutant and the wild‐type alleles in breast cancer.\n• We show that preferential expression of the mutant allele is common and is significantly associated with poor prognostic variables (ER‐negative, PR‐negative, and HER2‐positive statuses) and worse overall and disease‐specific survival, as evidenced by analyses in the METABRIC and TCGA cohorts.\n• The work quantifies the impact of cis‐regulatory variation, revealing that it explains approximately 16% of the variability in net allelic expression across tumor samples.\n• These findings not only fill the knowledge gap regarding the role of allelic dosage in mutation penetrance but also suggest that incorporating expression-level analysis into mutation testing could improve patient management and therapeutic decision-making.",
+      "score": 10,
+      "relevant_sections": "Discussion",
+      "answerFeedback": {
+        "result": [
+          {
+            "category": "no problem identified",
+            "problem": "The answer fully addresses the question by clearly stating the main contributions of the study. It explains the novel finding regarding cis‐regulatory variation affecting PIK3CA mutation penetrance, supports this with evidence from independent cohorts (METABRIC and TCGA), quantifies the effect (16% variability explained), and outlines its potential clinical impact on patient management. All required elements are clearly connected to the identified knowledge gap.",
+            "solution": "no recommendations",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "future",
+      "question": "What future research do you suggest?",
+      "answer": "answer:\n• Investigate the role of positive selection and the underlying cis‐regulatory mechanisms leading to the preferential expression of the mutant PIK3CA allele. In particular, future work should determine whether mutations arise on alleles already predisposed to higher expression or if successive somatic (cis‐regulatory) events contribute to the observed imbalance.\n• Conduct studies within molecular‐driven clinical trials to evaluate the prognostic and therapeutic impact of allelic expression imbalances, including detailed RNA-seq profiling in tumors to correlate mutant allele expression with therapy response and survival outcomes.\n• Explore the combined effects of coding and noncoding PIK3CA mutations—specifically by examining double mutations in the same allele—to clarify how these events contribute to tumor evolution and progression.",
+      "score": 10,
+      "relevant_sections": "Discussion",
+      "answerFeedback": {
+        "category": "no problem identified",
+        "problem": "The answer is complete and directly addresses the question by proposing specific, feasible future studies that build on the study's findings.",
+        "solution": "No recommendations.",
+        "score": 0
+      }
+    },
+    {
+      "question_name": "data",
+      "question": "What did you find out?",
+      "answer": "answer:\nCis‐regulatory variation was found to significantly affect PIK3CA expression in both normal and tumor breast tissues. In normal tissue, six SNPs (“daeSNPs”) showed differential allelic expression—with rs3960984 displaying a 57% frequency of heterozygotes with imbalance and a unilateral distribution of preferential expression (Fig. 1; Supplementary Table 1)—indicating strong (though incomplete) linkage disequilibrium among regulatory variants. In breast tumors, net mutant allele expression imbalances were common, occurring in 70.2% of METABRIC samples and 60.1% of TCGA samples, with striking mutant allele fold differences (up to 44.8-fold in METABRIC and 220-fold in TCGA) as opposed to much smaller differences for the wild-type allele (Fig. 2b). Moreover, cis‐regulatory effects—quantified via the γ ratio—accounted for imbalances in 27.7% of METABRIC and 11.8% of TCGA tumors and explained 20.6% and 14.4% of the variance in mutant allele expression, respectively (Supplementary Table 5). Finally, tumors that preferentially expressed the mutant allele (the γmut group) were significantly associated with poorer disease‐specific survival (median overall survival of 5.88 versus 12.46 years; P = 0.031; Fig. 3a) and with adverse clinicopathological features such as ER-negative, PR-negative, and HER2-positive status (Fig. 3b).",
+      "score": 10,
+      "relevant_sections": "Results",
+      "answerFeedback": {
+        "return": [
+          {
+            "category": "no problem identified",
+            "problem": "No issues were found; the answer clearly describes the pattern/trend, includes key supporting numbers and statistics, and provides precise source pointers.",
+            "solution": "No recommendations.",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "integration",
+      "question": "How do you contextualize your results ?",
+      "answer": "answer:\nFinding 1:\nOur study demonstrates that allelic expression imbalance between the mutant and wild‐type alleles of PIK3CA is common in breast cancer and holds prognostic value. \n\nContext 1:\nThe manuscript places this finding within the broader literature by noting that, given PIK3CA’s role as an oncogene, the preferential expression of the mutant allele may reflect positive selection processes. This is reinforced by analyses of RNA‐seq data from two independent cohorts (METABRIC and TCGA), and the result is further contextualized by its association with adverse clinical parameters (ER‐negative, PR‐negative, and HER2‐positive statuses20,21) as well as worse overall and disease‐specific survival in the METABRIC dataset. Additional prior work (e.g., the observation that genomic PIK3CA mutations lack clear prognostic value22,23) further emphasizes the novelty of evaluating expression levels.\n\nInterpretation 1:\nThese results suggest that transcript‐level analysis of PIK3CA mutations can reveal clinically relevant heterogeneity. The preferential expression of the mutant allele may indicate a more aggressive tumor phenotype and implies that incorporating allelic expression assessment into diagnostic protocols could improve patient stratification and therapeutic decisions.\n\nFinding 2:\nThe study quantifies the contribution of cis‐regulatory variation, showing that it explains approximately 16% of the variability observed in net allelic expression in tumors.\n\nContext 2:\nThis finding is discussed in relation to prior studies on normal cis‐regulatory variation, including the evaluation of the rs2699887 variant—which has been linked to poor prognosis in other cancers (30,31) though with some contradictory reports (32,33). Moreover, the observed greater allelic imbalance in tumors compared to normal-matched tissue, alongside supportive data from independent cohorts, situates this result within the current understanding of somatic regulatory mutations.\n\nInterpretation 2:\nThe data indicate that, besides genomic allelic dosage, cis‐regulatory mechanisms significantly modulate mutation penetrance and expression. This implies that noncoding regulatory variations might contribute to tumor evolution and progression and that future therapeutic strategies should consider the combined effects of coding and cis‐regulatory mutations.",
+      "score": 10,
+      "relevant_sections": "Discussion",
+      "answerFeedback": {
+        "result": [
+          {
+            "category": "need to expand",
+            "problem": "Although the answer clearly states and contextualizes the findings and provides an interpretation, it does not explicitly tie the discussion back to the research gap outlined in the Introduction.",
+            "solution": "Include a brief statement in one or both interpretation sections that links the findings to the original research gap, reinforcing the narrative coherence of the paper.",
+            "score": 3
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "approach",
+      "question": "What was done to answer the question?",
+      "answer": "answer:\nIn normal breast tissue, we re‐analyzed previously generated allelic expression data from 64 healthy donors by calculating the expression ratio between alleles at heterozygous variant positions. This method—used to cancel out trans effects—enabled the detection of cis‐acting variant effects, and we subsequently identified six daeSNPs in PIK3CA. A mapping analysis was then performed to pinpoint candidate regulatory SNPs, followed by in‐silico functional analyses (e.g., assessing disruption of transcription factor NF-YA binding) and in vitro protein–DNA binding assays to validate the functional impact of variants such as rs2699887.\n\nIn breast tumors, to test whether cis‐regulatory variation modulates the functional impact of PIK3CA somatic mutations, we analyzed mutant versus wild-type allelic expression on two independent datasets (METABRIC with n = 94 and TCGA with n = 178). For each tumor carrying a PIK3CA missense mutation, we calculated three allelic ratios using DNA-seq and RNA-seq data: \n1. α = log₂(mutant RNA / wild-type RNA), representing the net mutant allele expression imbalance;\n2. β = log₂(mutant DNA / wild-type DNA), reflecting relative copy-number differences;\n3. γ = α − β, isolating the cis‐regulatory effect by normalizing for copy-number imbalances. \n\nWe then examined the distributions of these ratios, performed statistical tests (e.g., Wilcoxon two-sample and binomial tests) to assess the significance and prevalence of the imbalances, and conducted correlation and variance decomposition analyses to quantify the relative contributions of copy number versus cis‐regulatory variation. Finally, we carried out univariate survival analyses and stratified tumors based on the direction of allelic imbalance (mutant, wild-type, or balanced) to determine the clinical impact of these regulatory effects, and we assessed associations with known prognostic markers (ER, PR, HER2).",
+      "score": 10,
+      "relevant_sections": "Subresult, Subresult, Subresult, Subresult, Subresult",
+      "answerFeedback": {
+        "result": [
+          {
+            "category": "no problem identified",
+            "problem": "The answer clearly and comprehensively describes the experimental and analytical approach used to answer the question, detailing the reanalysis of healthy donor data, the mapping analysis, in silico and in vitro assays for normal tissues, as well as the use of two independent tumor datasets, calculation of defined allelic ratios, and the statistical methods employed. This information is logically organized and meets the guidelines for describing design, data collection, and analytical methods.",
+            "solution": "No recommendations.",
+            "score": 0
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "sub-questions",
+      "question": "  What is the question you aimed to answer?   ",
+      "answer": "answer:\nWe aimed to test whether cis‐regulatory variation modulates the expression of PIK3CA in normal breast tissue. This question was pursued because by comparing allelic expression ratios—we can cancel out common trans effects—we can specifically assess the impact of cis‐acting variants on gene expression.",
+      "score": 10,
+      "relevant_sections": "Subresult, Subresult, Subresult, Subresult, Subresult",
+      "answerFeedback": {
+        "category": "no problem identified",
+        "problem": "No problem identified; the answer clearly states the question and its rationale as required.",
+        "solution": "No recommendations.",
+        "score": 10
+      }
+    },
+    {
+      "question_name": "finding",
+      "question": "What is the main finding on each of your Figures?",
+      "answer": "answer:\nFigure 1 shows that cis‐regulatory variation in normal breast tissue leads to differential allelic expression of six PIK3CA variants—most displaying a unilateral expression pattern and one variant (rs3729679) standing out by not being in strong LD.  \nFigure 2a illustrates the conceptual framework that cis‐regulatory modulation can drive preferential expression of gain‐of‐function PIK3CA mutations, thereby contributing to intertumor clinical heterogeneity.  \nFigure 2b demonstrates that net mutant allele expression imbalances (α ratios) are frequent in breast tumors (70.2% in METABRIC and 60.1% in TCGA) and that cis‐regulatory effects (γ ratios) are also common (27.7% in METABRIC and 11.8% in TCGA).  \nFigure 2c shows that net mutant allele expression correlates positively with both copy number variation (r² = 0.80) and cis‐regulatory variation (r² = 0.34), with the copy number effect being more marked.  \nFigure 2d reveals that a majority of tumors preferentially express the mutant allele despite its lower genomic copy number, highlighting the influence of cis‐regulatory mechanisms.  \nFigure 3a establishes that tumors with preferential mutant allele expression (γmut) have significantly poorer disease‐specific survival—with median overall survival of 5.88 years versus 12.46 years for balanced expression tumors.  \nFigure 3b demonstrates that preferential mutant allele expression is significantly associated with adverse prognostic markers, being higher in ER‐negative, PR‐negative, and (in METABRIC) HER2‐positive tumors.",
+      "score": 10,
+      "relevant_sections": "Subresult, Subresult, Subresult, Subresult, Subresult",
+      "answerFeedback": {
+        "feedback": [
+          {
+            "category": "off-scope content",
+            "problem": "Several of the main finding sentences (especially for Figures 2b, 2c, and 3a) include detailed quantitative information (percentages, correlation coefficients, median survival times) that should be reserved for the data section.",
+            "solution": "Revise these sentences to focus solely on a concise conceptual summary of the main finding, removing or simplifying the numerical details.",
+            "score": 7
+          },
+          {
+            "category": "lack of clarity",
+            "problem": "The answer lists each figure’s main finding separately even when some panels may be related, which could dilute the overall narrative flow.",
+            "solution": "Consider grouping related panels under a single unified main finding if they collectively support one conceptual result, thereby enhancing narrative clarity.",
+            "score": 3
+          }
+        ]
+      }
+    },
+    {
+      "question_name": "data",
+      "question": "What did you find out?",
+      "answer": "answer:\nIn normal breast tissue, we found that six cis‐regulatory variants (daeSNPs) affect PIK3CA expression—with rs3960984 showing differential allelic expression in 57% of heterozygotes (Fig. 1, Supplementary Table 1) and rs2699887 emerging as a candidate regulatory SNP (nominal P value ≤0.05; Supplementary Fig. 1A–E). In breast tumors, net mutant allele expression imbalances (α ratios) were evident in 70.2% of METABRIC samples (66/94) and 60.1% of TCGA samples (107/178), with mutant alleles being overexpressed up to 44.8-fold in METABRIC and 220-fold in TCGA compared to wild-type alleles (5.4-fold and 29-fold, respectively; Fig. 2b), while cis‐regulatory effects (γ ratios) revealed preferential mutant expression in 27.7% and 11.8% of tumors, corresponding to 10- and 4.2-fold differences and accounting for 20.6% (METABRIC) and 14.4% (TCGA) of expression variance (Supplementary Table 5). Additionally, net allelic expression correlated strongly with copy number (r² = 0.80) relative to cis‐regulatory variation (r² = 0.34), with most tumors showing positive γ and negative β values (70.2% in METABRIC, 54.5% in TCGA; Fig. 2c–d) and a subset (10.6% and 11.2%) overexpressing the mutant allele despite lower copy number. Finally, clinical analysis showed that tumors with preferential mutant allele expression (γ_mut group) had significantly poorer disease‐specific survival (median overall survival 5.88 vs. 12.46 years, P = 0.031; Fig. 3a) and were associated with adverse prognostic markers (ER-negative, PR-negative, and HER2-positive; Fig. 3b), with γ ratios also correlating with lower PR expression (P = 0.040), HER2 positivity (P = 0.025), and PAM50 subtype (q = 0.027 in METABRIC).",
+      "score": 10,
+      "relevant_sections": "Subresult, Subresult, Subresult, Subresult, Subresult",
+      "answerFeedback": {
+        "feedback": [
+          {
+            "category": "lack of clarity",
+            "problem": "The answer reports multiple detailed observations (from normal tissue, tumor allelic imbalances, correlations with copy number, and clinical outcomes) without an overarching summary of the key insight.",
+            "solution": "Begin with a brief summary statement that encapsulates the main finding (e.g., that cis‐regulatory variants modulate PIK3CA expression with consequential clinical impacts) before detailing the individual results.",
+            "score": 6
+          },
+          {
+            "category": "lack of clarity",
+            "problem": "The level of detail, while thorough, may overwhelm the reader by not clearly prioritizing which observation represents the most critical insight.",
+            "solution": "Emphasize the most impactful result—such as the association between preferential mutant allele expression and poorer survival—by clearly distinguishing it as the primary outcome and then outlining the supporting evidence.",
+            "score": 6
+          },
+          {
+            "category": "lack of clarity",
+            "problem": "The transition from findings in normal tissue to tumor data is not clearly signposted, which could confuse readers about the scope of each sub-finding.",
+            "solution": "Consider structuring the response with distinct segments or transitional phrases to separate the normal tissue findings from the tumor and clinical outcome observations.",
+            "score": 5
+          },
+          {
+            "category": "no problem identified",
+            "problem": "The answer successfully includes key evidence such as percentages, fold changes, p-values, and source pointers as required.",
+            "solution": "No recommendations; the inclusion of concrete numbers and figure/table references meets the guidelines.",
+            "score": 10
+          }
+        ]
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section_name": "Abstract",
+      "section_content": "PIK3CA mutations are the most common in breast cancer, particularly in the estrogen receptor-positive cohort, but the beneﬁt of PI3K inhibitors has had limited success compared with approaches targeting other less common mutations. We found a frequent allelic expression imbalance between the missense mutant and wild-type PIK3CA alleles in breast tumors from the METABRIC (70.2%) and the TCGA (60.1%) projects. When considering the mechanisms controlling allelic expression, 27.7% and 11.8% of tumors showed imbalance due to regulatory variants in cis, in the two studies respectively. Furthermore, preferential expression of the mutant allele due to cis-regulatory variation is associated with poor prognosis in the METABRIC tumors (P =0.031). Interestingly, ER−, PR−, and HER2+tumors showed signiﬁcant preferential expression of the mutated allele in both datasets. Our work provides compelling evidence to support the clinical utility of PIK3CA allelic expression in breast cancer in identifying patients of poorer prognosis, and those with low expression of the mutated allele, who will unlikely beneﬁt from PI3K inhibitors. Furthermore, our work proposes a model of differential regulation of a critical cancer-promoting gene in breast cancer.",
+      "section_words_count": 179,
+      "feedback": [
+        {
+          "category": "lack of clarity",
+          "problem": "The abstract does not explicitly state the study's research objective, which may leave readers unclear about the primary purpose of the work.",
+          "solution": "Introduce a clear opening sentence that outlines the main aim—such as elucidating the role of cis-regulatory variation in driving mutant allele expression and its clinical implications in breast cancer.",
+          "score": 5
+        },
+        {
+          "category": "absence of information",
+          "problem": "The methodology is only indirectly alluded to through the mention of METABRIC and TCGA datasets, without detailing how data were analyzed or how the allelic imbalances were measured.",
+          "solution": "Include brief methodological details, such as the type of data analysis performed or any selection criteria used, to help both specialist and non-specialist readers understand the approach.",
+          "score": 6
+        },
+        {
+          "category": "structure problems",
+          "problem": "The presentation of results, particularly the multiple percentages from different datasets, might appear disjointed, making it harder for readers to follow the narrative.",
+          "solution": "Reorganize the abstract by grouping related results together—for instance, start with overall findings on allelic imbalance, then describe the cis-regulatory effects, and finally outline prognostic outcomes. This restructuring will improve the flow and clarity of the narrative.",
+          "score": 5
+        }
+      ],
+      "units_report": [
+        {
+          "unit_name": "context",
+          "unit_present": true,
+          "unit_prescence": 8,
+          "unit_content": "PIK3CA mutations are the most common in breast cancer, particularly in the estrogen receptor-positive cohort, but the beneﬁt of PI3K inhibitors has had limited success compared with approaches targeting other less common mutations.",
+          "problem": "The context is provided but very brief; it does not explicitly state the research gap or the specific study purpose beyond noting mutation prevalence and therapeutic limitations.",
+          "solution": "Expand the context to clearly articulate what is unknown in the field and specify the study’s aim regarding allelic expression imbalance and its prognostic impact."
+        },
+        {
+          "unit_name": "methods",
+          "unit_present": true,
+          "unit_prescence": 6,
+          "unit_content": "from the METABRIC (70.2%) and the TCGA (60.1%) projects. When considering the mechanisms controlling allelic expression, 27.7% and 11.8% of tumors showed imbalance due to regulatory variants in cis, in the two studies respectively.",
+          "problem": "The methodological details are very limited and intermingled with results; key aspects such as sample selection, data processing, and statistical analysis are not described.",
+          "solution": "Include more explicit methodological information, such as criteria for dataset selection, the analytical techniques used to measure allelic imbalance, and the statistical methods applied."
+        },
+        {
+          "unit_name": "results",
+          "unit_present": true,
+          "unit_prescence": 9,
+          "unit_content": "We found a frequent allelic expression imbalance between the missense mutant and wild-type PIK3CA alleles in breast tumors. Furthermore, preferential expression of the mutant allele due to cis‐regulatory variation is associated with poor prognosis in the METABRIC tumors (P =0.031). Interestingly, ER−, PR−, and HER2+ tumors showed signiﬁcant preferential expression of the mutated allele in both datasets.",
+          "problem": "While the main findings are clearly presented, the results are somewhat interwoven with methodological statements.",
+          "solution": "Consider reorganizing the abstract to distinctly separate the results from the methodological details to enhance clarity."
+        },
+        {
+          "unit_name": "conclusion",
+          "unit_present": true,
+          "unit_prescence": 9,
+          "unit_content": "Our work provides compelling evidence to support the clinical utility of PIK3CA allelic expression in breast cancer in identifying patients of poorer prognosis, and those with low expression of the mutated allele, who will unlikely benefit from PI3K inhibitors. Furthermore, our work proposes a model of differential regulation of a critical cancer‐promoting gene in breast cancer.",
+          "problem": "The conclusion summarizes the findings but could more explicitly emphasize the novelty and distinct contributions of the work.",
+          "solution": "Enhance the conclusion by clearly stating the unique advances offered by the study and how they improve upon existing knowledge in the field."
+        },
+        {
+          "unit_name": "implications",
+          "unit_present": true,
+          "unit_prescence": 7,
+          "unit_content": "The study underscores the clinical potential of assessing PIK3CA allelic expression to identify patients with poorer prognosis and to predict which patients are unlikely to benefit from PI3K inhibitors, thereby proposing a model for differential gene regulation in breast cancer.",
+          "problem": "Implications are only implicit and mixed with the conclusion, lacking a dedicated discussion on broader impacts and practical applications.",
+          "solution": "Explicitly elaborate on the broader clinical and research implications, such as the potential for personalized therapy and improved patient stratification, to highlight the study’s impact."
+        }
+      ]
+    },
+    {
+      "section_name": "Introduction",
+      "section_content": "Activating oncogenic mutations are often characterized by gain-of-function single-base alterations or focal DNA copy-number ampliﬁcation, where the gain of just a single copy of a mutant allele is sufﬁcient for tumorigenesis1. These gains change the stoichiometric balance between mutant and wild-type alleles and are selected for in cancers, affecting approximately half of all oncogenic driver mutations1. Ultimately, they could dictate prognosis and therapeutic sensitivity. However, the impact of gene dosage differences of oncogenic mutations generated at the gene expression level has been largely unexplored. Genetic variation and mutations regulate gene expression in an allele-speciﬁc manner—known as cis-regulatory variation2—by altering protein and miRNA binding, for example.\n\nNormal cis-regulatory variation affects most of the human genome in all tissues and generates the wealth of phenotypic variation seen in species3–5. Moreover, an extensive contribution\n\nfrom noncoding variants to RNA alterations was recently observed in tumors6, including allelic imbalance of somatic mutations7.\n\nNevertheless, one unsolved aspect is how much each mechanism contributes to generating allelic imbalances in expression and whether they do it independently or in synergy. In breast tissue, germline regulatory variation is associated with disease risk8 and affects frequently mutated genes9. We and others have shown that variants affecting the expression levels of BRCA1 and BRCA2 modify the risk of breast cancer in germline mutation carriers10,11.\n\nWe found that carriers of germline nonsense mutations in the tumor suppressor gene BRCA2 were at a lower risk of developing breast cancer when the remaining wild-type allele was highly\n\nexpressed11.\n\nHere, we hypothesize that cis-regulatory variation also modulates the penetrance of oncogenic coding mutations. In the context of a gene cis-regulated by a genetic variant generating\n\nimbalanced allelic expression, we postulate that an oncogenic activating mutation in the same gene will have a different clinical impact depending upon whether it occurs in the preferentially\n\nexpressed allele or the less expressed one. We tested this model in the context of heterozygous mutations in PIK3CA, the most frequently mutated gene in breast cancer. First, we investigated\n\nwhether normal cis-regulatory variation regulated the expression of PIK3CA in normal breast tissue. Then, we calculated allelic expression ratios between mutant and wild-type copies in tumors\n\nfrom two large breast cancer datasets—METABRIC and TCGA— both normalized for DNA copy number or not. Finally, we correlated the allelic expression ratios with clinical data. This\n\napproach allows us to distinguish between expression imbalances generated from cis-regulatory variation alone, altered DNA copy number, or both mechanisms.",
+      "section_words_count": 391,
+      "feedback": [
+        {
+          "category": "absence of information",
+          "problem": "The introduction lacks a compelling impact hook that immediately captures the reader’s attention with a striking statistic or a clear problem statement regarding the clinical relevance of oncogenic mutations.",
+          "solution": "Begin the introduction with a strong, fact-based hook—such as a statistic on breast cancer incidence or the impact of oncogenic mutations—to immediately underline the study’s importance.",
+          "score": 7
+        },
+        {
+          "category": "lack of clarity",
+          "problem": "While a gap is mentioned regarding the contribution of different mechanisms to allelic imbalances, it is not clearly delineated as a standalone, explicit gap statement.",
+          "solution": "Add a clear sentence that explicitly states the gap in current knowledge, emphasizing why the contribution of cis-regulatory variation (versus DNA copy-number changes) to allelic expression imbalances remains unresolved.",
+          "score": 6
+        },
+        {
+          "category": "structure problems",
+          "problem": "The transition between background, gap, and aim is somewhat blended, making it harder for readers to follow the logical progression.",
+          "solution": "Reorganize the introduction so that the background information, identified gap, and research aim are clearly separated—perhaps using distinct paragraphs—to enhance the logical flow.",
+          "score": 6
+        },
+        {
+          "category": "incomplete content",
+          "problem": "The use of multiple gene examples (BRCA2 and PIK3CA) may dilute the central narrative of the hypothesis.",
+          "solution": "Consider focusing on one primary example or clearly articulating how each gene example contributes uniquely to your hypothesis to maintain a sharper focus.",
+          "score": 5
+        }
+      ],
+      "units_report": [
+        {
+          "unit_name": "impact",
+          "unit_present": true,
+          "unit_prescence": 7,
+          "unit_content": "Activating oncogenic mutations are often characterized by gain-of-function single-base alterations or focal DNA copy-number amplification, where the gain of just a single copy of a mutant allele is sufficient for tumorigenesis1. These gains change the stoichiometric balance between mutant and wild-type alleles and are selected for in cancers, affecting approximately half of all oncogenic driver mutations1. Ultimately, they could dictate prognosis and therapeutic sensitivity.",
+          "problem": "While the sentences introduce the topic and include a citation along with a key statistic, they lack a more striking attention-grabber. The content could be tighter to immediately hook the reader.",
+          "solution": "Revise the impact unit to start with a more compelling statistic or bold statement that clearly emphasizes the relevance of the issue, and streamline the language for greater immediacy."
+        },
+        {
+          "unit_name": "background",
+          "unit_present": true,
+          "unit_prescence": 9,
+          "unit_content": "Genetic variation and mutations regulate gene expression in an allele-specific manner—known as cis-regulatory variation2—by altering protein and miRNA binding, for example.\n\nNormal cis-regulatory variation affects most of the human genome in all tissues and generates the wealth of phenotypic variation seen in species3–5. Moreover, an extensive contribution from noncoding variants to RNA alterations was recently observed in tumors6, including allelic imbalance of somatic mutations7.\n\nIn breast tissue, germline regulatory variation is associated with disease risk8 and affects frequently mutated genes9. We and others have shown that variants affecting the expression levels of BRCA1 and BRCA2 modify the risk of breast cancer in germline mutation carriers10,11.\n\nWe found that carriers of germline nonsense mutations in the tumor suppressor gene BRCA2 were at a lower risk of developing breast cancer when the remaining wild-type allele was highly expressed11.",
+          "problem": "The background unit is comprehensive and includes multiple relevant citations, but it reads as somewhat dense and could benefit from clearer thematic grouping.",
+          "solution": "Streamline the background narrative by grouping related findings together and enhancing transitions to improve overall clarity."
+        },
+        {
+          "unit_name": "gap",
+          "unit_present": true,
+          "unit_prescence": 9,
+          "unit_content": "However, the impact of gene dosage differences of oncogenic mutations generated at the gene expression level has been largely unexplored. Nevertheless, one unsolved aspect is how much each mechanism contributes to generating allelic imbalances in expression and whether they do it independently or in synergy.",
+          "problem": "The gap is stated clearly but could further emphasize the significance of the unknown, tightening the link to the study’s rationale.",
+          "solution": "Consider expanding slightly on the implications of this gap to reinforce the urgency and importance of addressing it."
+        },
+        {
+          "unit_name": "aim",
+          "unit_present": true,
+          "unit_prescence": 9,
+          "unit_content": "Here, we hypothesize that cis-regulatory variation also modulates the penetrance of oncogenic coding mutations. In the context of a gene cis-regulated by a genetic variant generating imbalanced allelic expression, we postulate that an oncogenic activating mutation in the same gene will have a different clinical impact depending upon whether it occurs in the preferentially expressed allele or the less expressed one.",
+          "problem": "The aim is generally clear, though it could benefit from slightly more succinct phrasing to enhance readability.",
+          "solution": "Consider dividing the content into two clear sentences and refining the language to sharpen the focus of the research hypothesis."
+        },
+        {
+          "unit_name": "catch",
+          "unit_present": true,
+          "unit_prescence": 8,
+          "unit_content": "We tested this model in the context of heterozygous mutations in PIK3CA, the most frequently mutated gene in breast cancer. First, we investigated whether normal cis-regulatory variation regulated the expression of PIK3CA in normal breast tissue. Then, we calculated allelic expression ratios between mutant and wild-type copies in tumors from two large breast cancer datasets—METABRIC and TCGA— both normalized for DNA copy number or not. Finally, we correlated the allelic expression ratios with clinical data. This approach allows us to distinguish between expression imbalances generated from cis-regulatory variation alone, altered DNA copy number, or both mechanisms.",
+          "problem": "While the catch unit highlights the study’s unique approach by detailing the analysis steps and datasets, it is somewhat lengthy and includes procedural details that might belong in the Methods section.",
+          "solution": "Condense the catch unit to succinctly emphasize the unique contribution and novelty of the study without overly detailing the experimental roadmap."
+        }
+      ]
+    },
+    {
+      "section_name": "Results",
+      "section_content": "Normal cis-regulatory variation affects PIK3CA expression in healthy breast tissue\n\nTo investigate whether cis-regulatory variation modulates the expression of PIK3CA in normal breast tissue, we analyzed data from previous allelic expression analysis of normal breast tissue from 64 healthy donors12. We calculated the ratio of expression of one allele by the other in heterozygous variant positions, which is\n\na robust approach to detect cis-acting variant effects, as it cancels\n\nout the trans effects that act on the same gene and inﬂuence both\n\nalleles equally. We found six variants in PIK3CA displaying\n\ndifferential allelic expression (daeSNPs) (see “Methods”) (Fig. 1).\n\nOf these six, only rs3729679 is not in strong linkage\ndisequilibrium (LD) with the others (Supplementary Table 1).\n\nrs3960984 showed the largest proportion of heterozygotes\ndisplaying allelic differences (57%), while three other daeSNPs\n\nshared the smallest fraction (14%): rs12488074, rs4855093,\n\nand rs9838411.\n\nIn the daeSNPs rs7636454, rs3960984, rs12488074, and\n\nrs9838411, the ratios showed a unilateral distribution, with\n\nsamples displaying preferential expression towards the same\n\nallele. These patterns of allelic expression ratios’ distribution\n\nsuggest that the daeSNPs at which allelic expression is being\n\nmeasured and the possible functional regulatory variants (rSNPs)\n\nare in strong, yet incomplete, LD with each other13.\n\nWhile the mapping analysis carried out to identify candidate\n\nrSNPs did not ﬁnd a signiﬁcant association after multiple testing\n\ncorrection (Supplementary Table 2), one of the variants with\n\nnominal P value ≤0.05, rs2699887 (Wilcoxon two-sample test\n\nestimated difference of 0.22, 95% CI =[0.031-Inf]) (Supplementary\n\nFig. 1A), showed great regulatory potential. Namely, it is an eQTL\n\n(expression quantitative trait locus) for PIK3CA (P =0.011, Supple-\n\nmentary Fig. 1B) in tumors from METABRIC14, is located at its\n\npromotor region and at a DNAse I hypersensitivity site (Supple-\n\nmentary Fig. 1C), and is bound by POL2 in a breast cancer cell line\n\n(Supplementary Table 3). In-silico functional analysis of this variant\n\nsuggested a disruption of the binding motif of the transcription\n\nfactor NF-YA (Supplementary Fig. 1D), and in vitro studies revealed\n\na preferential protein::DNA binding to the minor T allele of rs2699887, which is associated with higher expression of PIK3CA\n\nin tumors (Supplementary Fig. 1E).\n\n\nPreferential expression of the PIK3CA mutated alleles is\n\nfrequent in breast tumors\n\nChanges in DNA copy number in tumors are associated with\n\nchanges in gene expression in cis1,14–17 leading to dosage\n\nimbalances of coding mutations7. However, these differences\n\ncan also be due to germline and somatic cis-regulatory variation,\n\nbut their effect on mutation dosage imbalance is underexplored.\n\nSo, we set out to assess whether PIK3CA somatic mutations would\n\nhave their functional effects, or penetrance, modiﬁed by\n\nimbalances in allelic expression generated by regulatory variants.\n\nWe hypothesized that preferential expression of a gain-of-function\n\nmutation would have a more substantial clinical impact than those\n\noccurring in lowly expressed alleles, thus generating intertumor\n\nclinical heterogeneity (Fig. 2a). To test this, we carried mutant vs.\n\nwild-type allelic expression analysis in breast tumor samples\n\ncarrying somatic PIK3CA missense mutations on two independent\n\nsets of data, the METABRIC (n =94) and the TCGA (n =178)\n\nprojects. Supplementary Table 4 presents a summary description\n\nof the two datasets and Supplementary Fig. 2 shows the number,\n\nlocation, and amino acid alterations of the mutations across the\n\ntwo datasets.\n\nNext, we calculated three allelic ratios from DNA-seq and RNA-\n\nseq data for each mutation:\n\n(1) α ¼ log2 (number of mutant RNA-seq reads/number of wild-\n\ntype RNA-seq reads), i.e., the net mutant allele expression\n\nimbalance;\n\n(2) β ¼ log2 (number of mutant DNA-seq reads/number of\n\nwild-type DNA-seq reads), i.e., the mutant allele relative\n\ncopy-number;\n\n\n(3) γ=α−β, i.e., the net mutant allele expression imbalance\n\nnormalized for the DNA allelic copy-number imbalances,\n\nwhich corresponds to a putative mutant allele expression\n\nimbalance due to cis-regulation.\n\nIn this way, α reports on the net allelic expression imbalance,\n\ngenerated by different mechanisms including copy-number\n\naberrations, cellularity differences, and cis-regulatory variation,\n\nwhile γ reports speciﬁcally on the contribution from cis-regulatory\n\nvariation (rVar in Fig. 2a), including normal genetic variation,\n\nsomatic noncoding mutations, and allelic epigenetic changes.\n\nFigure 2b displays the distributions of the different ratios.\n\nWe found that net mutant allele expression imbalances (α ratio)\n\nare frequent in breast tumors, at 70.2% in METABRIC (66 out of 94)\n\nand 60.1% in TCGA (107 out of 178). The same is true for γ ratios,\n\nat 27.7% for METABRIC (26 out of 94) and 11.8% for TCGA (21 out\n\nof 178), indicating that cis-regulatory effects acting on mutations\n\nare also frequent in breast tumors. In both sets, we found samples\n\nwith striking net preferential allelic expression for the mutant\n\nallele (maximum 44.8-fold and 220-fold in METABRIC and TCGA,\n\nrespectively), but not so for the preferential expression of the wild-\n\ntype allele (fold differences of 5.4 and 29 in METABRIC and TCGA,\n\nrespectively) (Fig. 2b). Similarly, the mutant allele’s most\n\npronounced preferential expression trend was found for the γ\n\nratio, 10- and 4.2-fold for METABRIC and TCGA, respectively, albeit\n\nwith smaller fold differences between alleles.\n\nInterestingly, we observed that within the samples with\n\nsigniﬁcant mutant allele expression imbalance due to cis-\n\nregulatory variation there was a signiﬁcant prevalence of samples\n\nthat preferentially expressed the mutated allele in both datasets\n\n(binomial test Prob. =1, 89%−CI =[0.89, 1.00], P =3 × 10−8 for\n\nMETABRIC and Prob. =0.90, 89%−CI =[0.73, 0.98], P =2 × 10−4\n\nfor TCGA).\n\n\nCis-regulatory variants contribute signiﬁcantly to imbalances\n\nin the expression of mutant alleles\n\nNext, hypothesizing that both copy number and cis-regulatory\n\nvariants are the major contributors to allelic expression, we set out\n\nto assess the contribution of each mechanism toward the net\n\nmutant allele expression imbalances detected in these tumors.\n\nFirst, we found positive correlations between net allelic expression\n\nand both copy number and cis-regulatory variation (Fig. 2c), albeit\n\nwith an effect for the copy number over the double the size of\n\nthat found for cis-regulatory variation (average Pearson correlation\n\nr2 =0.80 and 0.34, respectively). Next, we considered the variance\n\n(Var) of the net allelic expression as the sum of the effects of both\n\nmechanisms, plus the covariance (Cov) accounting for predicted\n\nnon-mutual exclusion of mechanisms acting on any given allele:\n\nVarðαÞ ¼ VarðβÞ þ VarðγÞ þ 2 Covðβ; γÞ; (1)\n\nwe calculated the contribution of cis-regulatory variation to the\n\nvariance of net allelic expression as ðVarðγÞ þ Covðβ; γÞÞ=VarðαÞ.\n\nHere, we found that cis-regulatory variants explain 20.6% and\n\n14.4% of the variability of net mutant allelic expression seen in\n\nMETABRIC and TCGA, respectively (Supplementary Table 5).\n\nFinally, assessing how the two mechanisms act simultaneously\n\non each tumor, we found that the majority of samples (70.2% and\n\n54.5% for the METABRIC and TCGA, respectively) had positive γ\n\nand negative β values (Fig. 2d), suggesting that although the\n\nmutant allele was in lower genomic quantity, it was nevertheless\n\npreferentially expressed compared to the wild-type allele. Inter-\n\nestingly, there were 10.6% and 11.2% samples with positive α and\n\nnegative β values, in METABRIC and TCGA respectively. This shows\n\nthat these tumors overexpress the mutant allele despite this allele\n\nbeing in lower copy number.\n\n\nPreferential expression of mutant alleles by cis-regulatory variation associates with poor prognosis\n\nTo investigate the impact of differential cis-regulation of PIK3CA’s\n\nmutations on clinical outcome (overall and disease-speciﬁc\n\nsurvival), we performed univariate survival analysis with γ ratios\n\ncategorized in three groups, based on the existence of imbalance\n\nand its direction, i.e. whether there was signiﬁcant predominance of\n\nexpression of the mutated allele γmut, of the wild-type allele γwt, or\n\nbalanced allelic expression γbalanced. We uncovered that the group\n\nγmut had a poorer disease-speciﬁc survival rate (P =0.031, Fig. 3a)\n\n\n\nthan the γbalanced group for METABRIC. The median overall survival\n\nfor the γmut group was 5.88 years and for the γbalanced group was\n\n12.46 years (Supplementary Fig. 4B), whereas, in the disease-\n\nspeciﬁc analysis, the mean survival of the γmut patients was 7.07\n\nyears, and 41% of patients died during the length of the follow-up,\n\nin comparison with 25.3% deaths in the γbalanced group (Fig. 3a).\n\nThe categorized γ ratios were not signiﬁcantly associated with\n\noverall survival in the multivariate analysis (Supplementary Fig. 5).\n\nHowever, some of the variables that are usually independent\n\nprognosis factors, such as PR and HER2 statuses, were not\n\nsigniﬁcantly associated with survival either in this analysis. In the\n\nTCGA set, there was a trend toward a worse disease-speciﬁc\n\nsurvival of those patients whose tumors preferentially express the\n\nmutated allele (Supplementary Fig. 6). However, due to the\n\nrelatively shorter follow-up time of this dataset (median ~1 year)\n\nand the fact that tumors were mainly Luminal A (~61.2% of\n\nsamples)18, the power to detect signiﬁcant differences is smaller\n\nthan that of METABRIC. Nevertheless, the joint analysis of the two\n\ndatasets showed a signiﬁcantly worse disease-speciﬁc survival of\n\nthe αmut group of patients, with a concordant trend in the γmut\n\ngroup (Supplementary Fig. 7).\n\n\nPIK3CA preferential mutant allele expression associates with\n\nclinicopathological variables\n\nNext, we sought to investigate whether PIK3CA’s differential\n\nmutant allele was associated with known prognostic clinicopatho-\n\nlogical variables, namely hormone receptors (ER, PR) and HER2\n\nampliﬁcation, which are directly and indirectly connected to gene\n\nexpression regulation, respectively.\n\nFor both datasets, we observed that preferential mutant allele\n\nexpression driven by cis-regulatory variation (γ) was associated\n\nwith markers of worse prognosis, namely it was signiﬁcantly\n\nhigher in ER-negative tumors and PR-negative tumors, and in\n\nHER2-positive tumors only in METABRIC (Fig. 3b). When evaluating\n\nthe contribution of cis-regulatory variation to this association, we\n\nalso found that higher average γ values associated with lower PR\n\nexpression (P =0.040) and HER2-positive tumors (P =0.025), but\n\nwe did not ﬁnd a signiﬁcant association with ER expression\n\n(P =0.129) (Supplementary Fig. 8).\n\nGiven these results, we took γ into consideration in the survival\n\nanalysis within the expression subgroups of ER, PR, and HER2, but\n\ndid not ﬁnd signiﬁcant differences in overall and disease-speciﬁc\n\nsurvival in METABRIC (Supplementary Fig. 4).\n\nConsidering other known prognostic variables, including\n\ntumor size, grade, and molecular subtypes (PAM5019 and\n\nIntClust14, we found a signiﬁcant association between γ ratios\n\nand PAM50 subtypes only in METABRIC (q =0.027) (Supplemen-\n\ntary Table 6 and Supplementary Fig. 9).\n\nFinally, we did not ﬁnd an association between the candidate\n\ngermline regulatory variant rs2699887 and γ or clinical out-\n\ncome, suggesting germline variants are unlikely to be involved in\n\nthe signiﬁcant associations described above (data not shown).\n\nHowever, supporting the involvement of somatic cis-regulatory\n\nvariants instead, we found smaller fold changes and less samples\n\nwith imbalances measured at common PIK3CA variants in normal-\n\nmatched tissue data than those measured at mutations in tumor\n\ntissue (Supplementary Fig. 10).",
+      "section_words_count": 1549,
+      "feedback": [
+        {
+          "category": "Structure problems",
+          "problem": "The section is written as one long narrative rather than being organized into distinct sub-result narratives that follow the purpose–strategy–result triplet format with explicit titles and group headings.",
+          "solution": "Reorganize the Results into clearly defined sub-results, with main titles derived from each heading and group titles when multiple headings share the same sub-result number. Ensure each narrative segment explicitly states its purpose, strategy, and result, with appropriate figure and table references as required.",
+          "score": 8
+        },
+        {
+          "category": "Lack of clarity",
+          "problem": "The linkage between textual statements and cited figures/sub-figures is inconsistent—some figures are mentioned multiple times or without clear connection to a specific purpose, strategy, or result.",
+          "solution": "Review the figure and table citations to ensure that each is referenced exactly once in the text and explicitly tied to the corresponding analysis, following the guidelines for clear, traceable reporting.",
+          "score": 7
+        },
+        {
+          "category": "Lack of clarity",
+          "problem": "Some sentences are overly long and complex, making it difficult to follow the sequential logic of the analyses.",
+          "solution": "Break overly complex sentences into concise, interconnected statements that each clearly state the purpose, strategy, and quantitative results, using appropriate transitional phrases.",
+          "score": 6
+        },
+        {
+          "category": "Structure problems",
+          "problem": "There is redundancy in describing similar analyses and outcomes, which can obscure distinct contributions within each sub-result.",
+          "solution": "Eliminate redundant descriptions by indicating shared strategies or purposes only once and then listing the unique quantitative outcomes for each analysis, as per the guidelines.",
+          "score": 6
+        },
+        {
+          "category": "Incomplete content",
+          "problem": "Some statistical details (e.g., p-values, confidence intervals) and ambiguous references (such as 'data not shown') lack sufficient context for the reader.",
+          "solution": "Include complete quantitative details and ensure that all references are clearly documented (or moved to supplementary materials if necessary) to enhance transparency and reproducibility.",
+          "score": 5
+        }
+      ]
+    },
+    {
+      "section_name": "Discussion",
+      "section_content": "Our work reveals the role of cis-regulatory variation acting on\n\nPIK3CA somatic mutations as modiﬁers of mutation penetrance.\n\nWe show for the ﬁrst time that allelic expression imbalance\n\nbetween PIK3CA’s mutant and wild-type alleles is common and\n\nprognostic in breast cancer.\n\nParticularly, preferential expression of the mutant allele is\n\nsigniﬁcantly more common than that of the wild-type allele, and considering that PIK3CA is an oncogene, one possibility is that\n\npositive selection could have a role in generating this difference,\n\nwhich should be further investigated. Furthermore, we also\n\nfound that allelic imbalance in expression observed for the\n\nmutant alleles in the tumors was greater than that observed for\n\nsingle-nucleotide polymorphisms in the normal-matched tissue\n\nof patients. These ﬁndings support the hypothesis of somatic\n\nregulatory mutations involvement in generating the imbalances\n\nobserved in the tumors. While genomic allelic imbalance remains\n\nthe largest determinant of allelic expression dosage (showing the\n\nhighest correlation with and contributing the most to the\n\nvariability observed in net allelic expression), cis-regulatory\n\nvariation is also signiﬁcantly correlated with net allelic expression\n\nand explains ~16% of its variability across samples in these sets\n\nof tumors.\n\nThe analysis of RNA-seq data from two independent cohorts of\n\ntumor samples, the METABRIC and TCGA projects, strongly\n\nsupports our ﬁndings.\n\nMoreover, we show that preferential expression of the mutant\n\nallele due to cis-variation is associated with poor prognosis\n\nvariables, such as ER-negative, PR-negative, and Her2-positive\n\nstatuses20,21. In the METABRIC dataset, we also found that\n\npreferential expression of the mutant allele was associated with\n\nworse overall and disease-speciﬁc survival. The high stringency\n\nin calling imbalance and the focus on a speciﬁc type of mutation\n\nin one gene, limits this study in terms of the sample size\n\nanalyzed, but on the other hand it provides the simplest scenario\n\nfor testing our hypothesis. Interestingly, the joint analysis of the\n\ndatasets revealed some level of association between disease-\n\nspeciﬁc survival and the preferential expression of the mutant\n\nallele, both net and due to cis-regulation, reafﬁrming the clinical\n\nimportance of the expression level of a mutation commonly\n\nassociated with aggressive tumors. In addition, some tumors\n\npresented preferential expression of the wild-type allele of\n\nPIK3CA, suggesting that these mutations are lowly expressed and\n\npossibly passenger events.\n\nBesides the potential use of our ﬁndings as a prognosis\n\nbiomarker in the clinic, these results may also have therapeutic\n\nimplications. Some of the major clinical challenges in cancer\n\ntreatment are identifying biomarkers of prognosis and deﬁning\n\nwhich patients will beneﬁt from a given therapy. Particularly, it is\n\ncrucial to identify patients unlikely to respond to speciﬁc therapies\n\nto prevent unnecessary drug cytotoxicity without any therapeutic\n\nbeneﬁts. Our results reveal the importance of considering allelic\n\nexpression in somatic mutation screens in these two aspects of\n\npatient management. Despite the high frequency of PIK3CA\n\nmutations in breast cancers, the response to PI3K inhibitor therapy\n\nhas been more challenging than expected, and the prognostic\n\nsigniﬁcance of detecting somatic PIK3CA mutations in breast\n\ntumors is unclear22. Relevant to this discussion, we have\n\npreviously shown that the presence of PIK3CA mutations confer\n\na poorer prognosis in patients with ER-positive breast cancer\n\nonly when stratiﬁed into copy-number driven subgroups (IntClust\n\n1+, 2+, 9+)23.\n\nIn this study, we provide new evidence for the prognostic\n\nsigniﬁcance of these mutations at the expression level in breast\n\ntumors. Particularly for tumors with signiﬁcant preferential\n\nexpression of the wild-type allele, this prognostic signiﬁcance\n\nhas a potential impact on therapy response and clinical manage-\n\nment since one may hypothesize that little to no beneﬁt would\n\ncome from treatment in the cases not expressing the targetable\n\nmutation.\n\nFurther studies evaluating the allelic expression of mutant\n\noncogenes in the tumors of patients enrolled in molecular-driven\n\ntrials will clarify this impact.\n\nMore challenging is determining which cis-regulatory mechan-\n\nisms are promoting allelic expression imbalances. Both inherited11,2 manner28,29.\n\nHere we show that normal cis-regulatory variation regulates\n\nPIK3CA’s expression in normal breast tissue, with the possible\n\ncontribution of rs2699887as a regulatory variant. We also found\n\nthat the heterozygotes for “rs2699887” were associated with\n\nhigher expression of the PIK3CA gene compared to the common\n\nhomozygotes. Although there is published data supporting the\n\nclinical association of rs2699887 with poor prognosis in other\n\ncancers30,31, linked to an increase in PI3K signaling, there is still\n\nsome data supporting the opposite association32,33. We did not\n\nﬁnd an association between rs2699887 and survival, which\n\nopens the possibility for other mechanisms besides normal cis-\n\nregulatory variation to be considered as contributors to the\n\npreferential allelic expression in these tumors (data not shown).\n\nDouble PIK3CA mutations in the same allele are frequent in\n\nbreast tumors34, and the impact of noncoding mutations in cancer\n\nis just starting to be explored6. So, a possibility is that the\n\ncombination of noncoding and coding mutations in the same\n\ngene might be underlying the allelic expression imbalances we\n\nare detecting.\n\nFurther studies on allelic expression imbalances of activating\n\nmutations, and even inactivating ones, should further reveal the\n\ncontribution of cis-regulatory mechanisms in tumor develop-\n\nment and progression. Particularly interesting to determine is\n\nwhether the coding mutation originates in an allele predis-\n\nposed with higher expression, or whether a sequence of\n\nsomatic events introduces the coding activating mutation and\n\nadditional cis-regulatory noncoding mutations. The answers\n\ncould have signiﬁcant repercussions on our understanding of\n\ntumor evolution.\n\nIn summary, we show that differential expression between the\n\nmutant and wild-type alleles of PIK3CA is common in breast cancer\n\nand with a signiﬁcant contribution from allele-speciﬁc cis-\n\nregulatory effects. We further show that mutant allele differential\n\nexpression is associated with clinical parameters such as ER, PR,\n\nand HER2 statuses and is prognostically signiﬁcant.\n\nCollectively, our work establishes the prognostic relevance of\n\nallele-speciﬁc transcriptional regulation of PIK3CA somatic muta-\n\ntions. It also supports a shift in the mutation testing in patient\n\nmanagement, where the level of expression of these mutations\n\nshould be considered, besides the detection at the DNA level.",
+      "section_words_count": 859,
+      "feedback": [
+        {
+          "category": "Structure problems",
+          "problem": "The original discussion was segmented, making it challenging for readers to discern the response, context, detailed findings, limitations, contributions, and next steps in a cohesive flow.",
+          "solution": "Reorganize the narrative to follow a clear sequence—beginning with the response and context, then elaborating on the main findings in separate yet interconnected segments before briefly acknowledging limitations, emphasizing contributions, and outlining future directions.",
+          "score": 6
+        },
+        {
+          "category": "Lack of clarity",
+          "problem": "The interplay between detailed results and clinical implications sometimes obscures key points and disrupts the overall readability.",
+          "solution": "Streamline the discussion by focusing each segment on a single idea and ensuring smooth transitions between them, thereby clarifying how the findings advance current knowledge.",
+          "score": 5
+        },
+        {
+          "category": "Incomplete content",
+          "problem": "The initial version does not explicitly highlight how these findings advance the field or clearly define the next steps for future research.",
+          "solution": "Emphasize the novel contributions of your work and explicitly articulate future research directions, linking your discoveries to potential clinical applications.",
+          "score": 5
+        }
+      ],
+      "units_report": [
+        {
+          "unit_name": "response",
+          "unit_present": true,
+          "unit_prescence": 9,
+          "unit_content": "Our work reveals the role of cis‐regulatory variation acting on PIK3CA somatic mutations as modifiers of mutation penetrance. We show for the first time that allelic expression imbalance between PIK3CA’s mutant and wild‐type alleles is common and prognostic in breast cancer. Particularly, preferential expression of the mutant allele is significantly more common than that of the wild‐type allele, and considering that PIK3CA is an oncogene, one possibility is that positive selection could have a role in generating this difference, which should be further investigated. Furthermore, we also found that allelic imbalance in expression observed for the mutant alleles in the tumors was greater than that observed for single‐nucleotide polymorphisms in the normal‐matched tissue of patients. These findings support the hypothesis of somatic regulatory mutations involvement in generating the imbalances observed in the tumors. While genomic allelic imbalance remains the largest determinant of allelic expression dosage (showing the highest correlation with and contributing the most to the variability observed in net allelic expression), cis‐regulatory variation is also significantly correlated with net allelic expression and explains ~16% of its variability across samples in these sets of tumors.",
+          "problem": "The response unit effectively summarizes the main findings; however, it could be even more concise in linking the results directly to the original research question.",
+          "solution": "Refine the language to tighten the link between the described results and the research aim, without compromising essential details."
+        },
+        {
+          "unit_name": "context",
+          "unit_present": true,
+          "unit_prescence": 8,
+          "unit_content": "The analysis of RNA‐seq data from two independent cohorts of tumor samples, the METABRIC and TCGA projects, strongly supports our findings. Besides the potential use of our findings as a prognosis biomarker in the clinic, these results may also have therapeutic implications. Some of the major clinical challenges in cancer treatment are identifying biomarkers of prognosis and defining which patients will benefit from a given therapy. Particularly, it is crucial to identify patients unlikely to respond to speciﬁc therapies to prevent unnecessary drug cytotoxicity without any therapeutic benefits. Despite the high frequency of PIK3CA mutations in breast cancers, the response to PI3K inhibitor therapy has been more challenging than expected, and the prognostic significance of detecting somatic PIK3CA mutations in breast tumors is unclear. Relevant to this discussion, we have previously shown that the presence of PIK3CA mutations confer a poorer prognosis in patients with ER‐positive breast cancer only when stratified into copy‐number driven subgroups (IntClust 1+, 2+, 9+).",
+          "problem": "The context unit is somewhat diffuse, blending supporting data with broader clinical challenges without a clear transition from the response.",
+          "solution": "Integrate a more explicit connection between the results and the existing literature, clarifying how our findings fit within current clinical challenges."
+        },
+        {
+          "unit_name": "limitation",
+          "unit_present": true,
+          "unit_prescence": 7,
+          "unit_content": "The high stringency in calling imbalance and the focus on a speciﬁc type of mutation in one gene, limits this study in terms of the sample size analyzed, but on the other hand it provides the simplest scenario for testing our hypothesis.",
+          "problem": "The limitation unit mostly highlights sample size constraints and does not discuss other potential methodological weaknesses such as bias or data heterogeneity.",
+          "solution": "Briefly acknowledge additional limitations and suggest ways that future research could address these methodological concerns."
+        },
+        {
+          "unit_name": "contribution",
+          "unit_present": true,
+          "unit_prescence": 9,
+          "unit_content": "In summary, we show that differential expression between the mutant and wild‐type alleles of PIK3CA is common in breast cancer and with a signiﬁcant contribution from allele‐speciﬁc cis‐regulatory effects. We further show that mutant allele differential expression is associated with clinical parameters such as ER, PR, and HER2 statuses and is prognostically signiﬁcant. Collectively, our work establishes the prognostic relevance of allele‐speciﬁc transcriptional regulation of PIK3CA somatic mutations. It also supports a shift in the mutation testing in patient management, where the level of expression of these mutations should be considered, besides the detection at the DNA level.",
+          "problem": "While the contribution unit is robust, the novel aspects of the study could be emphasized more explicitly to underscore their significance.",
+          "solution": "Enhance this section by clearly highlighting the 'first time' findings and the potential clinical impact, distinguishing these contributions from previous research."
+        },
+        {
+          "unit_name": "next",
+          "unit_present": true,
+          "unit_prescence": 9,
+          "unit_content": "Further studies evaluating the allelic expression of mutant oncogenes in the tumors of patients enrolled in molecular‐driven trials will clarify this impact. Further studies on allelic expression imbalances of activating mutations, and even inactivating ones, should further reveal the contribution of cis‐regulatory mechanisms in tumor development and progression. Particularly interesting to determine is whether the coding mutation originates in an allele predisposed with higher expression, or whether a sequence of somatic events introduces the coding activating mutation and additional cis‐regulatory noncoding mutations. The answers could have significant repercussions on our understanding of tumor evolution.",
+          "problem": "The future directions are articulated clearly but suffer from some repetitive phrasing.",
+          "solution": "Streamline the text to consolidate similar ideas and avoid repetition, while retaining the key points about further research."
+        },
+        {
+          "unit_name": "novelty",
+          "unit_present": true,
+          "unit_prescence": 8,
+          "unit_content": "Our work reveals the role of cis‐regulatory variation acting on PIK3CA somatic mutations as modiﬁers of mutation penetrance. We show for the ﬁrst time that allelic expression imbalance between PIK3CA’s mutant and wild‐type alleles is common and prognostic in breast cancer.",
+          "problem": "The novelty unit, while clearly stating the unique contributions, is embedded within the broader discussion and could be more distinctly isolated.",
+          "solution": "Consider emphasizing these points in a standalone manner or using more explicit language to delineate the innovative aspects of the study from the general results."
+        }
+      ]
+    },
+    {
+      "section_name": "Subresult",
+      "section_content": "To investigate whether cis‐regulatory variation modulates the expression of PIK3CA in normal breast tissue, we analyzed data from previous allelic expression analysis of normal breast tissue from 64 healthy donors12. We calculated the ratio of expression of one allele by the other in heterozygous variant positions, which is\n\na robust approach to detect cis‐acting variant effects, as it cancels\n\nout the trans effects that act on the same gene and inﬂuence both\n\nalleles equally. We found six variants in PIK3CA displaying\n\ndifferential allelic expression (daeSNPs) (see “Methods”) (Fig. 1).\n\nOf these six, only rs3729679 is not in strong linkage\ndisequilibrium (LD) with the others (Supplementary Table 1).\n\nrs3960984 showed the largest proportion of heterozygotes\ndisplaying allelic differences (57%), while three other daeSNPs\n\nshared the smallest fraction (14%): rs12488074, rs4855093,\n\nand rs9838411.\n\nIn the daeSNPs rs7636454, rs3960984, rs12488074, and\n\nrs9838411, the ratios showed a unilateral distribution, with\n\nsamples displaying preferential expression towards the same\n\nallele. These patterns of allelic expression ratios’ distribution\n\nsuggest that the daeSNPs at which allelic expression is being\n\nmeasured and the possible functional regulatory variants (rSNPs)\n\nare in strong, yet incomplete, LD with each other13.\n\nWhile the mapping analysis carried out to identify candidate\n\nrSNPs did not ﬁnd a signiﬁcant association after multiple testing\n\ncorrection (Supplementary Table 2), one of the variants with\n\nnominal P value ≤0.05, rs2699887 (Wilcoxon two-sample test\n\nestimated difference of 0.22, 95% CI =[0.031-Inf]) (Supplementary\n\nFig. 1A), showed great regulatory potential. Namely, it is an eQTL\n\n(expression quantitative trait locus) for PIK3CA (P =0.011, Supple-\n\nmentary Fig. 1B) in tumors from METABRIC14, is located at its\n\npromotor region and at a DNAse I hypersensitivity site (Supple-\n\nmentary Fig. 1C), and is bound by POL2 in a breast cancer cell line\n\n(Supplementary Table 3). In-silico functional analysis of this variant\n\nsuggested a disruption of the binding motif of the transcription\n\nfactor NF-YA (Supplementary Fig. 1D), and in vitro studies revealed\n\na preferential protein::DNA binding to the minor T allele of rs2699887, which is associated with higher expression of PIK3CA\n\nin tumors (Supplementary Fig. 1E).",
+      "section_words_count": 308,
+      "subresult_title": "Normal cis‐regulatory variation affects PIK3CA expression in healthy breast tissue",
+      "feedback": [
+        {
+          "category": "Structure problems",
+          "problem": "The sub-result narrative does not follow the required explicit structure with a clear sub-result title, group title (if applicable), and distinct purpose–strategy–result triplets.",
+          "solution": "Reorganize the section by introducing a main sub-result title (and a group title if multiple headings exist) and then break the narrative into clearly demarcated sentences for purpose, strategy, and quantitative results, each linked with the appropriate figure or table reference.",
+          "score": 7
+        },
+        {
+          "category": "lack of clarity",
+          "problem": "The transition between the analyses of cis‐regulatory impacts in normal tissue and the mapping analysis for candidate rSNPs is not clearly delineated, which may confuse the reader.",
+          "solution": "Introduce clear transitional phrases and consider dividing the text into separate, internally coherent paragraphs or sub-sections that distinctly address the initial daeSNP analysis in normal tissue and then the mapping and functional testing of rs2699887.",
+          "score": 6
+        },
+        {
+          "category": "lack of clarity",
+          "problem": "Some descriptions blend qualitative statements (e.g., 'great regulatory potential') with quantitative measures, and the methodological details (like cancellation of trans effects) are embedded without clear reference to related purpose and strategy.",
+          "solution": "Rephrase with a consistent, quantitative approach: explicitly state the purpose, detail the method (strategy) clearly, and then report results with precise figures and statistical measures linked to the corresponding supplementary materials.",
+          "score": 5
+        }
+      ],
+      "units_report": [
+        {
+          "unit_name": "heading",
+          "unit_present": false,
+          "unit_prescence": 0,
+          "unit_content": "",
+          "problem": "A heading that summarizes the main finding in a single, present-tense sentence is missing.",
+          "solution": "Include a concise, present-tense heading that highlights the core finding of the figure without numbers, statistics, or citations."
+        },
+        {
+          "unit_name": "purpose",
+          "unit_present": true,
+          "unit_prescence": 10,
+          "unit_content": "To investigate whether cis‐regulatory variation modulates the expression of PIK3CA in normal breast tissue, we analyzed data from previous allelic expression analysis of normal breast tissue from 64 healthy donors12.",
+          "problem": "unit is complete",
+          "solution": "unit is complete"
+        },
+        {
+          "unit_name": "strategy",
+          "unit_present": true,
+          "unit_prescence": 10,
+          "unit_content": "We analyzed data from previous allelic expression analysis of normal breast tissue from 64 healthy donors12. We calculated the ratio of expression of one allele by the other in heterozygous variant positions, which is a robust approach to detect cis‐acting variant effects, as it cancels out the trans effects that act on the same gene and influence both alleles equally. While the mapping analysis carried out to identify candidate rSNPs did not ﬁnd a signiﬁcant association after multiple testing correction (Supplementary Table 2).",
+          "problem": "unit is complete",
+          "solution": "unit is complete"
+        },
+        {
+          "unit_name": "result",
+          "unit_present": true,
+          "unit_prescence": 10,
+          "unit_content": "We found six variants in PIK3CA displaying differential allelic expression (daeSNPs) (see “Methods”) (Fig. 1). Of these six, only rs3729679 is not in strong linkage disequilibrium (LD) with the others (Supplementary Table 1). rs3960984 showed the largest proportion of heterozygotes displaying allelic differences (57%), while three other daeSNPs shared the smallest fraction (14%): rs12488074, rs4855093, and rs9838411. In the daeSNPs rs7636454, rs3960984, rs12488074, and rs9838411, the ratios showed a unilateral distribution, with samples displaying preferential expression towards the same allele. These patterns of allelic expression ratios’ distribution suggest that the daeSNPs at which allelic expression is being measured and the possible functional regulatory variants (rSNPs) are in strong, yet incomplete, LD with each other13. While the mapping analysis carried out to identify candidate rSNPs did not ﬁnd a signiﬁcant association after multiple testing correction (Supplementary Table 2), one of the variants with nominal P value ≤0.05, rs2699887 (Wilcoxon two-sample test estimated difference of 0.22, 95% CI =[0.031-Inf]) (Supplementary Fig. 1A), showed great regulatory potential. Namely, it is an eQTL (expression quantitative trait locus) for PIK3CA (P =0.011, Supplementary Fig. 1B) in tumors from METABRIC14, is located at its promotor region and at a DNAse I hypersensitivity site (Supplementary Fig. 1C), and is bound by POL2 in a breast cancer cell line (Supplementary Table 3). In-silico functional analysis of this variant suggested a disruption of the binding motif of the transcription factor NF-YA (Supplementary Fig. 1D), and in vitro studies revealed a preferential protein::DNA binding to the minor T allele of rs2699887, which is associated with higher expression of PIK3CA in tumors (Supplementary Fig. 1E).",
+          "problem": "unit is complete",
+          "solution": "unit is complete"
+        }
+      ]
+    },
+    {
+      "section_name": "Subresult",
+      "section_content": "Changes in DNA copy number in tumors are associated with\n\nchanges in gene expression in cis1,14–17 leading to dosage\n\nimbalances of coding mutations7. However, these differences\n\ncan also be due to germline and somatic cis‐regulatory variation,\n\nbut their effect on mutation dosage imbalance is underexplored.\n\nSo, we set out to assess whether PIK3CA somatic mutations would\n\nhave their functional effects, or penetrance, modiﬁed by\n\nimbalances in allelic expression generated by regulatory variants.\n\nWe hypothesized that preferential expression of a gain-of-function\n\nmutation would have a more substantial clinical impact than those\n\noccurring in lowly expressed alleles, thus generating intertumor\n\nclinical heterogeneity (Fig. 2a). To test this, we carried mutant vs.\n\nwild-type allelic expression analysis in breast tumor samples\n\ncarrying somatic PIK3CA missense mutations on two independent\n\nsets of data, the METABRIC (n =94) and the TCGA (n =178)\n\nprojects. Supplementary Table 4 presents a summary description\n\nof the two datasets and Supplementary Fig. 2 shows the number,\n\nlocation, and amino acid alterations of the mutations across the\n\ntwo datasets.\n\nNext, we calculated three allelic ratios from DNA-seq and RNA-\n\nseq data for each mutation:\n\n(1) α ¼ log2 (number of mutant RNA-seq reads/number of wild-\n\ntype RNA-seq reads), i.e., the net mutant allele expression\n\nimbalance;\n\n(2) β ¼ log2 (number of mutant DNA-seq reads/number of\n\nwild-type DNA-seq reads), i.e., the mutant allele relative\n\ncopy-number;\n\n(3) γ=α−β, i.e., the net mutant allele expression imbalance\n\nnormalized for the DNA allelic copy-number imbalances,\n\nwhich corresponds to a putative mutant allele expression\n\nimbalance due to cis-regulation.\n\nIn this way, α reports on the net allelic expression imbalance,\n\ngenerated by different mechanisms including copy-number\n\naberrations, cellularity differences, and cis‐regulatory variation,\n\nwhile γ reports speciﬁcally on the contribution from cis‐regulatory\n\nvariation (rVar in Fig. 2a), including normal genetic variation,\n\nsomatic noncoding mutations, and allelic epigenetic changes.\n\nFigure 2b displays the distributions of the different ratios.\n\nWe found that net mutant allele expression imbalances (α ratio)\n\nare frequent in breast tumors, at 70.2% in METABRIC (66 out of 94)\n\nand 60.1% in TCGA (107 out of 178). The same is true for γ ratios,\n\nat 27.7% for METABRIC (26 out of 94) and 11.8% for TCGA (21 out\n\nof 178), indicating that cis‐regulatory effects acting on mutations\n\nare also frequent in breast tumors. In both sets, we found samples\n\nwith striking net preferential allelic expression for the mutant\n\nallele (maximum 44.8-fold and 220-fold in METABRIC and TCGA,\n\nrespectively), but not so for the preferential expression of the wild-\n\ntype allele (fold differences of 5.4 and 29 in METABRIC and TCGA,\n\nrespectively) (Fig. 2b). Similarly, the mutant allele’s most\n\npronounced preferential expression trend was found for the γ\n\nratio, 10- and 4.2-fold for METABRIC and TCGA, respectively, albeit\n\nwith smaller fold differences between alleles.\n\nInterestingly, we observed that within the samples with\n\nsigniﬁcant mutant allele expression imbalance due to cis‐\n\nregulatory variation there was a signiﬁcant prevalence of samples\n\nthat preferentially expressed the mutated allele in both datasets\n\n(binomial test Prob. =1, 89%−CI =[0.89, 1.00], P =3 × 10−8 for\n\nMETABRIC and Prob. =0.90, 89%−CI =[0.73, 0.98], P =2 × 10−4\n\nfor TCGA).",
+      "section_words_count": 456,
+      "subresult_title": "Preferential expression of the PIK3CA mutated alleles is frequent in breast tumors",
+      "feedback": [
+        {
+          "category": "Structure problems",
+          "problem": "The section does not follow the prescribed sub-result narrative structure; it lacks distinct headings and the explicit purpose‐strategy‐result triplet format required by the guidelines.",
+          "solution": "Reorganize the content by adding a clear sub-result title that summarizes the key takeaway, followed by structured sentences for each heading that state the objective, describe the analytical strategy (including how the ratios were calculated and the rationale behind them), and then report the corresponding quantitative results with linked figure/table references (e.g., Fig. 2a, Fig. 2b, Supplementary Table 4, Supplementary Fig. 2).",
+          "score": 8
+        },
+        {
+          "category": "Lack of clarity",
+          "problem": "The integration of multiple data references and numerical details is dense, which may hinder readability and traceability.",
+          "solution": "Introduce a group title if multiple headings are used and ensure each figure/sub-figure appears exactly once. Streamline the narrative by grouping related results (for instance, clearly differentiating between the overall allelic imbalance captured by the α ratio and the cis-regulatory contribution captured by the γ ratio), so that readers can easily follow how each metric contributes to the overall conclusion.",
+          "score": 7
+        }
+      ],
+      "units_report": [
+        {
+          "unit_name": "heading",
+          "unit_present": false,
+          "unit_prescence": 2,
+          "unit_content": "",
+          "problem": "No distinct heading is provided. The section does not include a separate, single-sentence title summarizing the main finding in present tense as required by the guidelines.",
+          "solution": "Include a clear and concise heading that summarizes the core finding as a single present-tense sentence, avoiding extraneous details such as numbers or citations."
+        },
+        {
+          "unit_name": "purpose",
+          "unit_present": true,
+          "unit_prescence": 10,
+          "unit_content": "So, we set out to assess whether PIK3CA somatic mutations would have their functional effects, or penetrance, modiﬁed by imbalances in allelic expression generated by regulatory variants. We hypothesized that preferential expression of a gain-of-function mutation would have a more substantial clinical impact than those occurring in lowly expressed alleles, thus generating intertumor clinical heterogeneity (Fig. 2a).",
+          "problem": "Unit is complete.",
+          "solution": "Unit is complete."
+        },
+        {
+          "unit_name": "strategy",
+          "unit_present": true,
+          "unit_prescence": 10,
+          "unit_content": "To test this, we carried mutant vs. wild-type allelic expression analysis in breast tumor samples carrying somatic PIK3CA missense mutations on two independent sets of data, the METABRIC (n =94) and the TCGA (n =178) projects. Supplementary Table 4 presents a summary description of the two datasets and Supplementary Fig. 2 shows the number, location, and amino acid alterations of the mutations across the two datasets. Next, we calculated three allelic ratios from DNA-seq and RNA-seq data for each mutation: (1) α ¼ log2 (number of mutant RNA-seq reads/number of wild-type RNA-seq reads), i.e., the net mutant allele expression imbalance; (2) β ¼ log2 (number of mutant DNA-seq reads/number of wild-type DNA-seq reads), i.e., the mutant allele relative copy-number; (3) γ=α−β, i.e., the net mutant allele expression imbalance normalized for the DNA allelic copy-number imbalances, which corresponds to a putative mutant allele expression imbalance due to cis-regulation. In this way, α reports on the net allelic expression imbalance, generated by different mechanisms including copy-number aberrations, cellularity differences, and cis‐regulatory variation, while γ reports speciﬁcally on the contribution from cis‐regulatory variation (rVar in Fig. 2a), including normal genetic variation, somatic noncoding mutations, and allelic epigenetic changes. Figure 2b displays the distributions of the different ratios.",
+          "problem": "Unit is complete.",
+          "solution": "Unit is complete."
+        },
+        {
+          "unit_name": "result",
+          "unit_present": true,
+          "unit_prescence": 10,
+          "unit_content": "We found that net mutant allele expression imbalances (α ratio) are frequent in breast tumors, at 70.2% in METABRIC (66 out of 94) and 60.1% in TCGA (107 out of 178). The same is true for γ ratios, at 27.7% for METABRIC (26 out of 94) and 11.8% for TCGA (21 out of 178), indicating that cis‐regulatory effects acting on mutations are also frequent in breast tumors. In both sets, we found samples with striking net preferential allelic expression for the mutant allele (maximum 44.8-fold and 220-fold in METABRIC and TCGA, respectively), but not so for the preferential expression of the wild-type allele (fold differences of 5.4 and 29 in METABRIC and TCGA, respectively) (Fig. 2b). Similarly, the mutant allele’s most pronounced preferential expression trend was found for the γ ratio, 10- and 4.2-fold for METABRIC and TCGA, respectively, albeit with smaller fold differences between alleles. Interestingly, we observed that within the samples with signiﬁcant mutant allele expression imbalance due to cis‐regulatory variation there was a signiﬁcant prevalence of samples that preferentially expressed the mutated allele in both datasets (binomial test Prob. =1, 89%−CI =[0.89, 1.00], P =3 × 10^−8 for METABRIC and Prob. =0.90, 89%−CI =[0.73, 0.98], P =2 × 10^−4 for TCGA).",
+          "problem": "Unit is complete.",
+          "solution": "Unit is complete."
+        }
+      ]
+    },
+    {
+      "section_name": "Subresult",
+      "section_content": "Next, hypothesizing that both copy number and cis‐regulatory\n\nvariants are the major contributors to allelic expression, we set out\n\nto assess the contribution of each mechanism toward the net\n\nmutant allele expression imbalances detected in these tumors.\n\nFirst, we found positive correlations between net allelic expression\n\nand both copy number and cis‐regulatory variation (Fig. 2c), albeit\n\nwith an effect for the copy number over the double the size of\n\nthat found for cis‐regulatory variation (average Pearson correlation\n\nr2 =0.80 and 0.34, respectively). Next, we considered the variance\n\n(Var) of the net allelic expression as the sum of the effects of both\n\nmechanisms, plus the covariance (Cov) accounting for predicted\n\nnon-mutual exclusion of mechanisms acting on any given allele:\n\nVarðαÞ ¼ VarðβÞ þ VarðγÞ þ 2 Covðβ; γÞ; (1)\n\nwe calculated the contribution of cis‐regulatory variation to the\n\nvariance of net allelic expression as ðVarðγÞ þ Covðβ; γÞÞ=VarðαÞ.\n\nHere, we found that cis‐regulatory variants explain 20.6% and\n\n14.4% of the variability of net mutant allelic expression seen in\n\nMETABRIC and TCGA, respectively (Supplementary Table 5).\n\nFinally, assessing how the two mechanisms act simultaneously\n\non each tumor, we found that the majority of samples (70.2% and\n\n54.5% for the METABRIC and TCGA, respectively) had positive γ\n\nand negative β values (Fig. 2d), suggesting that although the\n\nmutant allele was in lower genomic quantity, it was nevertheless\n\npreferentially expressed compared to the wild-type allele. Inter-\n\nestingly, there were 10.6% and 11.2% samples with positive α and\n\nnegative β values, in METABRIC and TCGA respectively. This shows\n\nthat these tumors overexpress the mutant allele despite this allele\n\nbeing in lower copy number.",
+      "section_words_count": 241,
+      "subresult_title": "Cis‐regulatory variants contribute signiﬁcantly to imbalances in the expression of mutant alleles",
+      "feedback": [
+        {
+          "category": "Structure problems",
+          "problem": "The narrative does not adhere to the required structured format; it lacks explicit sub-result titles and the clear division into purpose, strategy, and result triplets as specified in the guidelines.",
+          "solution": "Restructure the section by inserting a sub-result title (and a group title if needed) and reframe each finding into distinct sentences that clearly state the purpose, the approach/strategy, and the quantitative results with proper figure/table references.",
+          "score": 8
+        },
+        {
+          "category": "Lack of clarity",
+          "problem": "The equation used to estimate the contribution of cis‐regulatory variation is ambiguous—the notation appears to lack a clear ratio (e.g., using an equality sign instead of a division), which may confuse readers about the intended calculation.",
+          "solution": "Revise the equation notation by explicitly stating the formula as a fraction (e.g., '(Var(γ) + Cov(β, γ)) / Var(α)') and ensure all symbols and terms are defined consistently.",
+          "score": 7
+        }
+      ],
+      "units_report": [
+        {
+          "unit_name": "heading",
+          "unit_present": false,
+          "unit_prescence": 0,
+          "unit_content": "",
+          "problem": "No distinct heading unit is provided. The guidelines require a single-sentence, present‐tense title summarizing the core finding.",
+          "solution": "Include a dedicated heading sentence that states the core result in present tense (without numbers or statistics) to clearly delineate the sub-result."
+        }
+      ]
+    },
+    {
+      "section_name": "Subresult",
+      "section_content": "To investigate the impact of differential cis‐regulation of PIK3CA’s\n\nmutations on clinical outcome (overall and disease-speciﬁc\n\nsurvival), we performed univariate survival analysis with γ ratios\n\ncategorized in three groups, based on the existence of imbalance\n\nand its direction, i.e. whether there was signiﬁcant predominance of\n\nexpression of the mutated allele γmut, of the wild-type allele γwt, or\n\nbalanced allelic expression γbalanced. We uncovered that the group\n\nγmut had a poorer disease-speciﬁc survival rate (P =0.031, Fig. 3a)\n\n\n\nthan the γbalanced group for METABRIC. The median overall survival\n\nfor the γmut group was 5.88 years and for the γbalanced group was\n\n12.46 years (Supplementary Fig. 4B), whereas, in the disease-\n\nspeciﬁc analysis, the mean survival of the γmut patients was 7.07\n\nyears, and 41% of patients died during the length of the follow-up,\n\nin comparison with 25.3% deaths in the γbalanced group (Fig. 3a).\n\nThe categorized γ ratios were not signiﬁcantly associated with\n\noverall survival in the multivariate analysis (Supplementary Fig. 5).\n\nHowever, some of the variables that are usually independent\n\nprognosis factors, such as PR and HER2 statuses, were not\n\nsigniﬁcantly associated with survival either in this analysis. In the\n\nTCGA set, there was a trend toward a worse disease-speciﬁc\n\nsurvival of those patients whose tumors preferentially express the\n\nmutated allele (Supplementary Fig. 6). However, due to the\n\nrelatively shorter follow-up time of this dataset (median ~1 year)\n\nand the fact that tumors were mainly Luminal A (~61.2% of\n\nsamples)18, the power to detect signiﬁcant differences is smaller\n\nthan that of METABRIC. Nevertheless, the joint analysis of the two\n\ndatasets showed a signiﬁcantly worse disease-speciﬁc survival of\n\nthe αmut group of patients, with a concordant trend in the γmut\n\ngroup (Supplementary Fig. 7).",
+      "section_words_count": 255,
+      "subresult_title": "Preferential expression of mutant alleles by cis‐regulatory variation associates with poor prognosis",
+      "feedback": [
+        {
+          "category": "Structure problems",
+          "problem": "The section does not follow the recommended sub-result narrative structure. It lacks an overarching sub-result title (or group title if multiple headings are intended) and does not delineate the purpose, strategy, and result triplets as required.",
+          "solution": "Reorganize the section by introducing a concise sub-result title that encapsulates the key takeaway. Then, break the narrative into clear segments where each analytical step starts with a statement of purpose, followed by a description of the strategy and a presentation of the results (including precise figure/sub-figure references).",
+          "score": 8
+        },
+        {
+          "category": "Lack of clarity",
+          "problem": "Multiple analyses (univariate survival analysis, multivariate analysis, TCGA dataset, joint analysis) are merged into one dense paragraph, making it difficult to follow the logical flow and assign figures to specific results.",
+          "solution": "Introduce concise transitions between each analysis. Group similar analyses together and clearly state the distinct purpose, strategy, and result for each, linking each quantitative outcome (such as p-values and survival metrics) directly to its corresponding figure (e.g., Fig. 3a, Supplementary Fig. 4B, etc.).",
+          "score": 7
+        },
+        {
+          "category": "Incomplete content",
+          "problem": "The narrative does not explicitly articulate the experimental purpose and methodological strategy preceding each presented result, and as a consequence, some quantitative details (for example, statistical significance and data breakdown) are not well integrated into a unified framework.",
+          "solution": "Ensure each result is preceded by a brief statement of the purpose and an overview of the strategy applied for that subset of data. Explicitly integrate all quantitative details (like the median survival times, percentage differences, and significance levels) with their appropriate figure/sub-figure labels to make the sub-result narrative fully traceable.",
+          "score": 7
+        }
+      ],
+      "units_report": [
+        {
+          "unit_name": "heading",
+          "unit_present": false,
+          "unit_prescence": 0,
+          "unit_content": "",
+          "problem": "The section lacks an explicit heading that succinctly states the core finding. There is no single-sentence title summarizing the main result.",
+          "solution": "Include a one-sentence, present-tense title that clearly states the key finding without numbers, statistics, or interpretative language."
+        },
+        {
+          "unit_name": "purpose",
+          "unit_present": true,
+          "unit_prescence": 7,
+          "unit_content": "To investigate the impact of differential cis‐regulation of PIK3CA’s mutations on clinical outcome (overall and disease-speciﬁc survival)",
+          "problem": "The purpose statement is merged with methodological details, which may reduce its clarity as a standalone rationale.",
+          "solution": "Separate the purpose from the methods by isolating a clear, stand-alone sentence that states why the experiment was conducted."
+        },
+        {
+          "unit_name": "strategy",
+          "unit_present": true,
+          "unit_prescence": 9,
+          "unit_content": "we performed univariate survival analysis with γ ratios categorized in three groups, based on the existence of imbalance and its direction, i.e. whether there was signiﬁcant predominance of expression of the mutated allele γmut, of the wild-type allele γwt, or balanced allelic expression γbalanced.",
+          "problem": "The strategy details appear to be embedded in the same sentence as the purpose, which can hinder clear segmentation of the experimental approach.",
+          "solution": "Isolate the strategy details in a separate sentence to explicitly convey the experimental design and analytic approach."
+        },
+        {
+          "unit_name": "result",
+          "unit_present": true,
+          "unit_prescence": 10,
+          "unit_content": "We uncovered that the group γmut had a poorer disease-speciﬁc survival rate (P =0.031, Fig. 3a) than the γbalanced group for METABRIC. The median overall survival for the γmut group was 5.88 years and for the γbalanced group was 12.46 years (Supplementary Fig. 4B), whereas, in the disease-speciﬁc analysis, the mean survival of the γmut patients was 7.07 years, and 41% of patients died during the length of the follow-up, in comparison with 25.3% deaths in the γbalanced group (Fig. 3a). The categorized γ ratios were not signiﬁcantly associated with overall survival in the multivariate analysis (Supplementary Fig. 5). However, some of the variables that are usually independent prognosis factors, such as PR and HER2 statuses, were not signiﬁcantly associated with survival either in this analysis. In the TCGA set, there was a trend toward a worse disease-speciﬁc survival of those patients whose tumors preferentially express the mutated allele (Supplementary Fig. 6). However, due to the relatively shorter follow-up time of this dataset (median ~1 year) and the fact that tumors were mainly Luminal A (~61.2% of samples)18, the power to detect signiﬁcant differences is smaller than that of METABRIC. Nevertheless, the joint analysis of the two datasets showed a signiﬁcantly worse disease-speciﬁc survival of the αmut group of patients, with a concordant trend in the γmut group (Supplementary Fig. 7).",
+          "problem": "The results section aggregates findings from different analyses and datasets without clear segmentation, which might impede reader comprehension.",
+          "solution": "Restructure the results by breaking them into clearly segmented parts that correspond to each analysis and dataset, with explicit references to the associated figures."
+        }
+      ]
+    },
+    {
+      "section_name": "Subresult",
+      "section_content": "Next, we sought to investigate whether PIK3CA’s differential\n\nmutant allele was associated with known prognostic clinicopatho-\n\nlogical variables, namely hormone receptors (ER, PR) and HER2\n\nampliﬁcation, which are directly and indirectly connected to gene\n\nexpression regulation, respectively.\n\nFor both datasets, we observed that preferential mutant allele\n\nexpression driven by cis‐regulatory variation (γ) was associated\n\nwith markers of worse prognosis, namely it was signiﬁcantly\n\nhigher in ER-negative tumors and PR-negative tumors, and in\n\nHER2-positive tumors only in METABRIC (Fig. 3b). When evaluating\n\nthe contribution of cis‐regulatory variation to this association, we\n\nalso found that higher average γ values associated with lower PR\n\nexpression (P =0.040) and HER2-positive tumors (P =0.025), but\n\nwe did not ﬁnd a signiﬁcant association with ER expression\n\n(P =0.129) (Supplementary Fig. 8).\n\nGiven these results, we took γ into consideration in the survival\n\nanalysis within the expression subgroups of ER, PR, and HER2, but\n\ndid not ﬁnd signiﬁcant differences in overall and disease-speciﬁc\n\nsurvival in METABRIC (Supplementary Fig. 4).\n\nConsidering other known prognostic variables, including\n\ntumor size, grade, and molecular subtypes (PAM5019 and\n\nIntClust14, we found a signiﬁcant association between γ ratios\n\nand PAM50 subtypes only in METABRIC (q =0.027) (Supplemen-\n\ntary Table 6 and Supplementary Fig. 9).\n\nFinally, we did not ﬁnd an association between the candidate\n\ngermline regulatory variant rs2699887 and γ or clinical out-\n\ncome, suggesting germline variants are unlikely to be involved in\n\nthe signiﬁcant associations described above (data not shown).\n\nHowever, supporting the involvement of somatic cis‐regulatory\n\nvariants instead, we found smaller fold changes and less samples\n\nwith imbalances measured at common PIK3CA variants in normal-\n\nmatched tissue data than those measured at mutations in tumor\n\ntissue (Supplementary Fig. 10).",
+      "section_words_count": 246,
+      "subresult_title": "PIK3CA preferential mutant allele expression associates with clinicopathological variables",
+      "feedback": [
+        {
+          "category": "Structure problems",
+          "problem": "The section does not adhere to the required purpose-strategy-result triplet structure. There is no distinct sub-result title or a clear group title, which makes it difficult for readers to trace the logical flow of the findings.",
+          "solution": "Reorganize the narrative by introducing a main title summarizing the key finding, followed by distinct sentences that clearly state the purpose, detail the analytical strategy, and report the result, with each corresponding figure/sub-figure precisely referenced.",
+          "score": 7
+        },
+        {
+          "category": "Lack of clarity",
+          "problem": "Certain terms and phrases (e.g., 'PIK3CA’s differential mutant allele' and 'γ ratios') are used without sufficient clarification, and the narrative occasionally lacks smooth transitions between different results.",
+          "solution": "Clarify technical terms either by rephrasing them in more accessible language or by briefly defining them, and improve sentence transitions to ensure a logical and succinct flow between each result.",
+          "score": 6
+        },
+        {
+          "category": "Incomplete content",
+          "problem": "Key details, such as sample sizes, exact statistical tests performed, and additional context for the supplementary data references, are missing. This lessens the traceability of the presented results.",
+          "solution": "Include succinct details regarding sample sizes or methodological context where possible, or ensure that supplementary materials are clearly referenced such that each result can be independently verified.",
+          "score": 5
+        },
+        {
+          "category": "Structure problems",
+          "problem": "The narrative currently contains some redundant phrases and scattered figure references that detract from its overall coherence.",
+          "solution": "Eliminate repetitive statements and ensure that each figure/sub-figure is referenced only once in a dedicated sentence that follows the triplet format. Consolidate shared purposes or strategies to avoid redundancy.",
+          "score": 6
+        }
+      ],
+      "units_report": [
+        {
+          "unit_name": "heading",
+          "unit_present": false,
+          "unit_prescence": 0,
+          "unit_content": "",
+          "problem": "The sub-result section lacks a clear, standalone heading in present-tense that summarizes the core finding.",
+          "solution": "Include a dedicated heading such as 'PIK3CA Mutant Allele Expression Associates with Adverse Prognostic Markers' to concisely state the key finding."
+        }
+      ]
+    }
+  ]
+}

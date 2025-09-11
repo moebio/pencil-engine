@@ -1,0 +1,45 @@
+include:
+  - project: kirigami2/cloud/ops/cicd
+    file: /templates/.ci_kit.yml
+    ref: dev
+
+deploy-package:dev:
+  image: node:latest
+  stage: deploy
+  # when: manual
+  only:
+    - dev
+  variables:
+    npm_config_registry: $CI_API_V4_URL/projects/${CI_PROJECT_ID}/packages/npm/
+    NPM_TOKEN: $CI_JOB_TOKEN
+  before_script:
+    - echo "@kirigami-pencil:registry=https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
+    - echo "//gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
+  script:
+     - cp -r ./src/* ./
+     - npm publish
+# -----------------------------------------------------------------------
+
+# image: node:latest
+# deploy:
+#   stage: deploy
+#   when: manual
+#   only:
+#     - dev
+#   before_script:
+#     - echo "@products:registry=http://${CI_SERVER_HOST}:${CI_SERVER_PORT}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
+#     - echo "//${CI_SERVER_HOST}:${CI_SERVER_PORT}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
+
+#   script:
+#      - npm publish
+
+# -----------------------------------------------------------------------
+# Ordered stages
+# ------------------------------------------------------------------------
+stages:
+  - lint
+  - plan
+  - deploy
+  - tag
+  - release
+  - post-deploy
