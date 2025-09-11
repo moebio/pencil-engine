@@ -214,7 +214,7 @@ let llm_completion_proxy2 = function(promptObject){
             if (typeof global !== 'undefined') {
                 global.nPromptsActive = nPromptsActive;
             }
-            console.log("--[LLMp] nPromptsActive:", nPromptsActive)
+            console.log("--[LLMp] (then) nPromptsActive:", nPromptsActive)
             activePrompts = activePrompts.filter(p=>p!=promptObject)
             concludedPrompts.push(promptObject)
             //console.log("[LLMp] activePrompts:", activePrompts)
@@ -344,7 +344,7 @@ let llm_completion_proxy2 = function(promptObject){
             if (typeof global !== 'undefined') {
                 global.nPromptsActive = nPromptsActive;
             }
-            console.log("error --[LLMp] nPromptsActive:", nPromptsActive)
+            //console.log("--[LLMp] (catch) nPromptsActive:", nPromptsActive)
 
             console.error("[LLMp] Error in prompt, description:", promptObject.description)
             console.error("[LLMp] Error with LLM proxy:", error)

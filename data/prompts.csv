@@ -401,7 +401,7 @@ HARD CONSTRAINTS
 • Focus only on scientific clarity, completeness, and accuracy for the current question.  
 • No feedback on grammar, style, or formatting.  
 • Allowed categories: absence of information, lack of clarity, incomplete content, off-scope content.  
-• Use high scores (8–10) only for truly critical problems.
+• Use high scores (0-2) for truly critical problems.
 
 HIGH-LEVEL TASK  
 Provide balanced, actionable feedback on the author’s answer, or confirm it is complete.
@@ -426,15 +426,15 @@ integer 0–10 using the rubric below
  
 
 SCORING GUIDE  
-• **9–10 (Critical)** – The answer fails its purpose: essential content absent, factually wrong, or severely unclear; must be rewritten.  
+• **0-2 (Critical)** – The answer fails its purpose: essential content absent, factually wrong, or severely unclear; must be rewritten.  
   Example: Gap section gives no explicit gap; Aim section lacks a research question.  
-• **7–8 (Important)** – Major weakness: core point present but incomplete or ambiguous; fixing greatly improves the answer.  
+• **3-4 (Important)** – Major weakness: core point present but incomplete or ambiguous; fixing greatly improves the answer.  
   Example: Key statistic or citation missing; Background lists studies without synthesis.  
 • **5–6 (Useful)** – Moderate issue: answer acceptable but could be clearer, better supported, or more precise.  
   Example: Some citations missing; minor logical jump.  
-• **3–4 (Minor)** – Small, optional improvement.  
+• **7-8 (Minor)** – Small, optional improvement.  
   Example: Re-order bullets for flow; clarify an acronym.  
-• **1–2 (Trivial)** – Very minor suggestion; low priority.  
+• **9-10 (Trivial)** – Very minor suggestion; low priority.  
   Example: Shorten one phrase.
 • **No problem was found. The answer is complete!
 
@@ -508,22 +508,22 @@ answer
 >
 score
 <
-integer 1–10 using the rubric below 
+integer 0–10 using the rubric below 
 >
 >>
  
 5. If no issues exist, output the completion message.
 
 SCORING GUIDE  
-• **9–10 (Critical)** – The answer fails its purpose: essential content absent, factually wrong, or severely unclear; must be rewritten.  
+• **0-2 (Critical)** – The answer fails its purpose: essential content absent, factually wrong, or severely unclear; must be rewritten.  
   Example: Gap section gives no explicit gap; Aim section lacks a research question.  
-• **7–8 (Important)** – Major weakness: core point present but incomplete or ambiguous; fixing greatly improves the answer.  
+• **3–4 (Important)** – Major weakness: core point present but incomplete or ambiguous; fixing greatly improves the answer.  
   Example: Key statistic or citation missing; Background lists studies without synthesis.  
 • **5–6 (Useful)** – Moderate issue: answer acceptable but could be clearer, better supported, or more precise.  
   Example: Some citations missing; minor logical jump.  
-• **3–4 (Minor)** – Small, optional improvement.  
+• **7–8 (Minor)** – Small, optional improvement.  
   Example: Re-order bullets for flow; clarify an acronym.  
-• **1–2 (Trivial)** – Very minor suggestion; low priority.  
+• **9–10 (Trivial)** – Very minor suggestion; low priority.  
   Example: Shorten one phrase.
 
 
@@ -535,7 +535,7 @@ return exactly a JSON array:
     ""category"": ""<absence of information|lack of clarity|wrong input|need to expand>"",
     ""problem"": ""<issue description>"",
     ""solution"": ""<actionable recommendation>"",
-    ""score"": <1–10>
+    ""score"": <0–10>
   },
 …
 
@@ -569,9 +569,9 @@ TASK:
         Based on the guidelines, build a unit report, indicating:
 
 1 - wether is present (unit_present);
-2-  to what extend or how much it is present measured 0-10 (unit_prescence); 
+2-  to what extend or how much it is present measured 0-10: [0=unit absence; 1=low quality according to unit explanation and guidelines; 10=Excelent quality according to unit explanation and guidelines] (unit_prescence); 
 3- the unit content verbatim  (unit_content);
-4- if you found a problem, state the problems you found (or ""unit is complete"" in case it is)
+4- if you found problems, state the problems you found (or ""unit is complete"" in case it is)
 5- …and propose actionable feedbacks (or ""unit is complete"" in case it is)
  
 The output is a simple JSON (without any previous or further comments, just the plain JSON):

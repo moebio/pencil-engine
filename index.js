@@ -16,9 +16,10 @@ import './engine/PencilReport.js';
 //let confluencePencilReport = null;
 
 
-
+//mode comment for testing
 
 // Use an immediately invoked async function to handle the async operations
+// Test comment for dev branch
 (async function initialize() {
     try {
         console.log('🚀 Starting initialization...');
