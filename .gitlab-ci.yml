@@ -6,7 +6,7 @@ include:
 deploy-package:dev:
   image: node:latest
   stage: deploy
-  # when: manual
+  when: manual
   only:
     - dev
   variables:
