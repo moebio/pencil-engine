@@ -7,7 +7,7 @@ openai,o3m,o3-mini-2025-01-31,OpenAI o3 mini model,"0,0.3,0.6",,200000,100000,1.
 openai,o3m-l,o3-mini-2025-01-31,o3-mini - low reasoning,"0,0.3,0.6",,200000,100000,1.1,4.4,,,,,,,,,,,,,,,,,
 openai,o3m-m,o3-mini-2025-01-31,o3-mini - medium reasoning,"0,0.3,0.6",,200000,100000,1.1,4.4,,,,,,,,,,,,,,,,,
 openai,o3m-h,o3-mini-2025-01-31,o3-mini - high reasoning,,,200000,100000,1.1,4.4,,,,,,,,,,,,,,,,,
-openai,o3m-h-100k,o3-mini-2025-01-31,o3-mini - high reasoning with max_tokens = 100k,"0,0.3,0.6",,200000,100000,1.1,4.4,,YES,,,A,,,,A,,,,,,,,"best at general tasks, good at structured (json)"
+openai,o3m-h-100k,o3-mini-2025-01-31,o3-mini - high reasoning with max_tokens = 100k,"0,0.3,0.6",,200000,100000,1.1,4.4,,YES,,,A,,,,A,,A,A,A,A,A,A,"best at general tasks, good at structured (json)"
 openai,gpt4o,gpt-4o,OpenAI GPT-4o model,"0,0.3,0.6",,128000,16000,2.5,10,,,,,,,,,,,,,,,,,
 openai,gpt4o-16k,gpt-4o,GPT-4o with max_tokens = 32k,"0,0.3,0.6",,128000,16000,2.5,10,,,,,,,,,,,,,,,,,
 openai,gpt4om,gpt-4o-mini,OpenAI GPT-4o mini model,,,128000,16000,0.15,0.6,,,,,,,,,,,,,,,,,
@@ -17,7 +17,7 @@ openai,o3-h,o3-2025-04-16,o3 - high reasoning,,,200000,100000,2,8,,,,,,,,,,,,,,,
 openai,o4m,o4-mini-2025-04-16,o4-mini,,,200000,100000,1.1,4.4,,,,,,,,,,,,,,,,,
 openai,o4m-h,o4-mini-2025-04-16,o4-mini - high reasoning,,,200000,100000,1.1,4.4,,,,,,,,,,,,,,,,,
 openai,gpt5,gpt-5,OpenAI GPT-5 model,,,272000,400000,1.25,10,,,,,,,,,,,,,,,,,
-openai,gpt5-mini,gpt-5-mini,OpenAI GPT-5 mini model,,,272000,400000,0.25,2,,,,,,,,,,,A,A,A,A,A,A,
+openai,gpt5-mini,gpt-5-mini,OpenAI GPT-5 mini model,,,272000,400000,0.25,2,,,,,,,,,,,,,,,,,
 openai,gpt5-nano,gpt-5-nano,OpenAI GPT-5 nano model,,,272000,400000,0.05,0.4,,,,,,,,,,,,,,,,,
 anthropic,cl35-h,us.anthropic.claude-3-5-haiku-20241022-v1:0,Anthropic Claude 3.5 Haiku model,,,200000,8000,0.8,4,,,,,,,,,,,,,,,,,
 anthropic,cl35-s,us.anthropic.claude-3-5-sonnet-20241022-v2:0,Anthropic Claude 3.5 Sonnet model,,,200000,8000,3,15,,,,,,,,,,,,,,,,,
