@@ -27,17 +27,18 @@ deploy-package:dev:
 # ------------------------------------------------------------------------
 # Run_apps_pipeline
 # -----------------------------------------------------------------------
-# run_apps_pipeline:
-#   stage: apps_pipeline
-#   inherit:
-#     variables: false
-#   trigger:
-#     strategy: depend
-#     include:
-#       - artifact: out.yml
-#         job: build_ci
-#   extends: 
-#     - .only_in_mr_to_dev
+deploy_to_cloud:dev:
+  stage: post-deploy
+  inherit:
+    variables: false
+  trigger:
+    project: kirigami2/cloud/application/backend/engine-wrapper-js
+    strategy: depend
+    include:
+      - artifact: VERSION
+        job: deploy-package:dev
+  extends: 
+    - .only_in_mr_to_dev
 
 
 # -----------------------------------------------------------------------
