@@ -23,8 +23,8 @@ deploy-package:dev:
   artifacts:
     paths:
       - VERSION
-  extends: 
-    - .only_in_mr_to_dev
+  # extends: 
+  #   - .only_in_mr_to_dev
      
 # ------------------------------------------------------------------------
 # Run_apps_pipeline
