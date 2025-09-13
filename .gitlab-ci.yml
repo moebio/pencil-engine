@@ -29,14 +29,15 @@ deploy-package:dev:
 # -----------------------------------------------------------------------
 deploy_to_cloud:dev:
   stage: post-deploy
-  inherit:
-    variables: false
+  variables:
+    UPSTREAM_REF: $CI_MERGE_REQUEST_REF_PATH
   trigger:
     project: kirigami2/cloud/application/backend/engine-wrapper-js
-    strategy: depend
-    include:
-      - artifact: VERSION
-        job: deploy-package:dev
+    # strategy: depend
+    # include:
+    #   - artifact: VERSION
+    #     job: deploy-package:dev
+      
   extends: 
     - .only_in_mr_to_dev
 
