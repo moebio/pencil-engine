@@ -15,17 +15,16 @@ deploy-package:dev:
   before_script:
     - echo "@kirigami-pencil:registry=https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
     - echo "//gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
-    - echo $(node -p "require('./package.json').version") >> VERSION
+    - echo $(node -p "require('./package.json').version") >> VERSION_R
     - echo "Deploying version $VERSION_NUMBER to GitLab Package Registry"
   script:
      - npm publish
   artifacts:
     paths:
-      - VERSION
+      - VERSION_NUMBER
   extends: 
     - .only_in_mr_to_dev
      
-# ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
 # Run_apps_pipeline
 # -----------------------------------------------------------------------
