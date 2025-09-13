@@ -7,8 +7,6 @@ deploy-package:dev:
   image: node:latest
   stage: deploy
   when: manual
-  only:
-    - dev
   variables:
     npm_config_registry: $CI_API_V4_URL/projects/${CI_PROJECT_ID}/packages/npm/
     NPM_TOKEN: $CI_JOB_TOKEN
