@@ -16,7 +16,7 @@ deploy-package:dev:
     - echo $(node -p "require('./package.json').version") >> VERSION
     - echo "Deploying version $(cat VERSION) to GitLab Package Registry"
   script:
-    #  - npm publish
+     - npm publish
      - echo "Deploying version $(cat VERSION) to GitLab Package Registry"
   artifacts:
     paths:
@@ -32,21 +32,12 @@ deploy_to_cloud:dev:
   # inherit:
     # variables: false
   variables:
-    UPSTREAM_REF: $CI_MERGE_REQUEST_REF_PATH
-    # load from VERSION file
-    #PACKAGE_VERSION: $(cat VERSION)
+    PACKAGE_VERSION: "1.0.6"
   needs:
     - job: deploy-package:dev
       artifacts: true
-  # script:
-  #   - export PACKAGE_VERSION=$(cat VERSION)
   trigger:
     project: kirigami2/cloud/application/backend/engine-wrapper-js
-    # strategy: depend
-    # include:
-    #   - artifact: VERSION
-    #     job: deploy-package:dev
-      
   extends: 
     - .only_in_mr_to_dev
 
