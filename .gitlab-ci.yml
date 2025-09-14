@@ -29,10 +29,10 @@ deploy-package:dev:
 # -----------------------------------------------------------------------
 deploy_to_cloud:dev:
   stage: post-deploy
-  inherit:
-    variables: false
-  # variables:
-  #   UPSTREAM_REF: $CI_MERGE_REQUEST_REF_PATH
+  # inherit:
+    # variables: false
+  variables:
+    UPSTREAM_REF: $CI_MERGE_REQUEST_REF_PATH
   needs:
     - job: deploy-package:dev
       artifacts: true
