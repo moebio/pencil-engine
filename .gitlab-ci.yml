@@ -39,9 +39,9 @@ deploy_to_cloud:dev:
   trigger:
     project: kirigami2/cloud/application/backend/engine-wrapper-js
     # strategy: depend
-    # include:
-    #   - artifact: VERSION
-    #     job: deploy-package:dev
+    include:
+      - artifact: VERSION
+        job: deploy-package:dev
       
   extends: 
     - .only_in_mr_to_dev
