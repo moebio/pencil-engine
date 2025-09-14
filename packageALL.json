@@ -1,0 +1,41 @@
+{
+  "name": "@kirigami-pencil/engine",
+  "version": "1.0.1",
+  "description": "A simple JavaScript module that processes text with callbacks",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node run-repl.js",
+    "repl": "node run-repl.js",
+    "dev": "node run-dev.js",
+    "prepublishOnly": "npm version patch --no-git-tag-version --no-commit-hooks --yes"
+  },
+  
+  "keywords": [
+    "module",
+    "text-processing",
+    "callback",
+    "analysis"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moebio/pencil-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moebio/pencil-engine/issues"
+  },
+  "homepage": "https://github.com/moebio/pencil-engine#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "npmconfigset":{
+    "@kirigami2:registry": "https://gitlab.com/api/v4/projects/CI_PROJECT_ID/packages/npm/"
+  },
+  "publishConfig": {
+    "directory": "src" 
+  },
+  "files": [ "*" ]
+}
