@@ -6,32 +6,41 @@ include:
 deploy-package:dev:
   image: node:latest
   stage: deploy
-  when: manual
-  only:
-    - dev
+  # when: manual
   variables:
     npm_config_registry: $CI_API_V4_URL/projects/${CI_PROJECT_ID}/packages/npm/
     NPM_TOKEN: $CI_JOB_TOKEN
   before_script:
     - echo "@kirigami-pencil:registry=https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
     - echo "//gitlab.com/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
+    - echo $(node -p "require('./package.json').version") >> VERSION
+    - echo "Deploying version $(cat VERSION) to GitLab Package Registry"
   script:
-    #  - cp -r ./src/* ./
      - npm publish
+     - echo "Deploying version $(cat VERSION) to GitLab Package Registry"
+  artifacts:
+    paths:
+      - VERSION
+  extends: 
+    - .only_in_mr_to_dev
+     
+# ------------------------------------------------------------------------
+# Run_apps_pipeline
 # -----------------------------------------------------------------------
+deploy_to_cloud:dev:
+  stage: post-deploy
+  # inherit:
+    # variables: false
+  variables:
+    PACKAGE_VERSION: "1.0.2"
+  needs:
+    - job: deploy-package:dev
+      artifacts: true
+  trigger:
+    project: kirigami2/cloud/application/backend/engine-wrapper-js
+  extends: 
+    - .only_in_mr_to_dev
 
-# image: node:latest
-# deploy:
-#   stage: deploy
-#   when: manual
-#   only:
-#     - dev
-#   before_script:
-#     - echo "@products:registry=http://${CI_SERVER_HOST}:${CI_SERVER_PORT}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/">.npmrc
-#     - echo "//${CI_SERVER_HOST}:${CI_SERVER_PORT}/api/v4/projects/${CI_PROJECT_ID}/packages/npm/:_authToken=${CI_JOB_TOKEN}">>.npmrc
-
-#   script:
-#      - npm publish
 
 # -----------------------------------------------------------------------
 # Ordered stages
