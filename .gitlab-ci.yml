@@ -43,3 +43,5 @@ stages:
   - tag
   - release
   - post-deploy
+variables:
+  PACKAGE_VERSION: "1.0.3"
