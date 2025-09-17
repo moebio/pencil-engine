@@ -599,7 +599,6 @@ function _extractArrayFromObject(obj){
 
     return obj
 }
-
 let sortPencilReport = () => {
     let question_nodes = net.nodes.filter(node=>node.type=="question")
     
