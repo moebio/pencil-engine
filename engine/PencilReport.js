@@ -42,7 +42,7 @@ function initPencilMode(paper, callBackEach, callBackAll){
 }
 
 function _buildPencil(){
-    console.log(JSON.stringify(PENCIL_REPORT_OBJECT, null, 2))
+    //console.log(JSON.stringify(PENCIL_REPORT_OBJECT, null, 2))
 }
 
 function sendReport(callBackEach,step, next_steps, actor_type="", actor=""){
@@ -89,14 +89,14 @@ if (typeof window !== 'undefined') {
     window.initPencilMode = initPencilMode;
     window._buildPencil = _buildPencil;
     window.testPencil = testPencil;
-    console.log("✅ PencilReport functions made globally available in browser");
+    //console.log("✅ PencilReport functions made globally available in browser");
 } else if (typeof global !== 'undefined') {
     // Node.js environment
     global.pencilSectionsExtraction = pencilSectionsExtraction;
     global.initPencilMode = initPencilMode;
     global._buildPencil = _buildPencil;
     global.testPencil = testPencil;
-    console.log("✅ PencilReport functions made globally available in Node.js");
+    //console.log("✅ PencilReport functions made globally available in Node.js");
 }
 
 //similar to pencilSectionsExtraction, but extracts only sections Subresult
@@ -603,15 +603,19 @@ let sortPencilReport = () => {
     let question_nodes = net.nodes.filter(node=>node.type=="question")
     
     PENCIL_REPORT_OBJECT.questions.forEach(question=>{
-        const questionNode = net.get(question.question_name)||net.getByName(question.question_name)
+        const questionNode = question_nodes.find(node=>node.name==question.question_name || node.id == question.question_name)// net.get(question.question_name)||net.getByName(question.question_name)
         question.index = question_nodes.indexOf(questionNode)
+
+        //console.log(question.question_name+">>>>>>>>>>>>>>>>>> index:"+question.index)
     })
+
+    
 
     let section_nodes = net.nodes.filter(node=>node.type=="section")
     let unit_nodes = net.nodes.filter(node=>node.type=="unit")
 
     PENCIL_REPORT_OBJECT.sections.forEach(section=>{
-        let sectionNode = net.get(section.section_name)||net.getByName(section.section_name)
+        let sectionNode = section_nodes.find(node=>node.name==section.section_name || node.id == section.section_name)// net.get(section.section_name)||net.getByName(section.section_name)
         if(!sectionNode){
             section.index = 1000
             return
@@ -620,10 +624,14 @@ let sortPencilReport = () => {
         if(section.section_name=="Subresult"){
             section.index += 1.5
         }
+
+        //console.log(section.section_name+">>>>>>>>>>>>>>>>>> index:"+section.index)
+        
         if(section.units_report){
             section.units_report.forEach(unit=>{
-                const unitNode = net.get(unit.unit_name)||net.getByName(unit.unit_name)
+                const unitNode = unit_nodes.find(node=>node.name==unit.unit_name || node.id == unit.unit_name)// net.get(unit.unit_name)||net.getByName(unit.unit_name)
                 unit.index = unit_nodes.indexOf(unitNode)
+                //console.log(unit.unit_name+">>>>>>>>>>>>>>>>>> index:"+unit.index)
             })
             section.units_report.sort((a, b) => a.index - b.index)
         }
@@ -639,41 +647,42 @@ let sortPencilReport = () => {
 
 
 async function testPencil() {
-    try {
-        console.log('🚀 Starting testPencil - loading data tables first...');
+    // try {
+    //     console.log('🚀 Starting testPencil - loading data tables first...');
         
-        // Import and run the load function to load all data tables
-        const { load } = await import('./LoadPencil.js');
-        await load();
+    //     // Import and run the load function to load all data tables
+    //     const { load } = await import('./LoadPencil.js');
+    //     await load();
         
-        console.log('✅ Data tables loaded successfully, now running pencil analysis...');
+    //     console.log('✅ Data tables loaded successfully, now running pencil analysis...');
         
-        const paperTest = `The myocardial cellular composition has been revisited in recent years, and leukocyte subsets residing in the healthy heart have been described. Cardiac-resident macrophages exhibiting an M2-like gene expression profile were found to be distributed in close association with the coronary vascular bed, and niches for dendritic cells were found near the cardiac valves of the intact heart.
+    //     const paperTest = `The myocardial cellular composition has been revisited in recent years, and leukocyte subsets residing in the healthy heart have been described. Cardiac-resident macrophages exhibiting an M2-like gene expression profile were found to be distributed in close association with the coronary vascular bed, and niches for dendritic cells were found near the cardiac valves of the intact heart.
 
-        It was also demonstrated that cardiac-resident MHCII+ cells process and present myosin heavy chain-alpha–derived peptides under steady-state conditions and prime T cells ex vivo. However, whether lymphocytes can seed the intact myocardium and whether T-cell priming with myocardial antigens can occur in the absence of an infection or autoimmune myocarditis remain elusive.
+    //     It was also demonstrated that cardiac-resident MHCII+ cells process and present myosin heavy chain-alpha–derived peptides under steady-state conditions and prime T cells ex vivo. However, whether lymphocytes can seed the intact myocardium and whether T-cell priming with myocardial antigens can occur in the absence of an infection or autoimmune myocarditis remain elusive.
 
-        More recently, accumulating evidence indicated that noninfectious myocardial diseases are modulated by T cells. During the last couple of years, our group demonstrated that ischemic, sterile myocardial injuries can elicit lymphocyte activation directed against cardiac antigens. Our previous data, showing for the first time that CD4+ T cells reactive to cardiac components can foster the healing process that takes place after myocardial infarction, were corroborated by several other reports.
+    //     More recently, accumulating evidence indicated that noninfectious myocardial diseases are modulated by T cells. During the last couple of years, our group demonstrated that ischemic, sterile myocardial injuries can elicit lymphocyte activation directed against cardiac antigens. Our previous data, showing for the first time that CD4+ T cells reactive to cardiac components can foster the healing process that takes place after myocardial infarction, were corroborated by several other reports.
 
-        However, these autoreactive T cells can also be potentially deleterious. Furthermore, it has now been reported that even transverse aortic constriction (TAC) can induce T-cell responses, which in turn contribute to the development of heart failure. The participation of T cells in this context is surprising because the TAC model induces chronic pressure-overload stress with minimal tissue injury.
+    //     However, these autoreactive T cells can also be potentially deleterious. Furthermore, it has now been reported that even transverse aortic constriction (TAC) can induce T-cell responses, which in turn contribute to the development of heart failure. The participation of T cells in this context is surprising because the TAC model induces chronic pressure-overload stress with minimal tissue injury.
 
-        Aging is another relevant situation in which local lymphocyte activity could affect cardiac structure and function. Myocardial senescence is associated with alterations in loading stress conditions, fibrosis, and cardiac functional impairment. Furthermore, myocardial senescence is associated with cardiomyocyte cell death, leading to increased exposure of heart-specific antigens to immune cells.
+    //     Aging is another relevant situation in which local lymphocyte activity could affect cardiac structure and function. Myocardial senescence is associated with alterations in loading stress conditions, fibrosis, and cardiac functional impairment. Furthermore, myocardial senescence is associated with cardiomyocyte cell death, leading to increased exposure of heart-specific antigens to immune cells.
 
-        From the immunological perspective, aging is accompanied by an increased systemic inflammatory basal tone and with defective maintenance of immunological tolerance. These lines of evidence indicate that the heart is an immunologically active site, even under basal conditions, and that lymphocytes can sense shifts in cardiac functioning and eventually mount a local immune response.`
+    //     From the immunological perspective, aging is accompanied by an increased systemic inflammatory basal tone and with defective maintenance of immunological tolerance. These lines of evidence indicate that the heart is an immunologically active site, even under basal conditions, and that lymphocytes can sense shifts in cardiac functioning and eventually mount a local immune response.`
 
-        console.log(`📄 Processing paper text (${paperTest.length} characters)...`);
+    //     console.log(`📄 Processing paper text (${paperTest.length} characters)...`);
 
-        initPencilMode(paperTest, (answer)=>{
-            console.log('✅ Pencil analysis result:', answer)
-        }, (answer)=>{
-            console.log('✅ Pencil analysis complete:')
-            console.log(JSON.stringify(PENCIL_REPORT_OBJECT, null, 2))
+    //     initPencilMode(paperTest, (answer)=>{
+    //         console.log('✅ Pencil analysis result:', answer)
+    //     }, (answer)=>{
+    //         console.log('✅ Pencil analysis complete:')
+    //         console.log(JSON.stringify(PENCIL_REPORT_OBJECT, null, 2))
 
-        })
+    //     })
         
-    } catch (error) {
-        console.error('❌ Error in testPencil:', error.message);
-        console.error('Stack trace:', error.stack);
-    }
+    // } catch (error) {
+    //     console.error('❌ Error in testPencil:', error.message);
+    //     console.error('Stack trace:', error.stack);
+    // }
+    //console.log("[!] testPencil called (no code)")
 }
 
 // Export testPencil for module usage

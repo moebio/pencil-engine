@@ -224,7 +224,7 @@ let llm_completion_proxy2 = function(promptObject){
 			data.promptObject = promptObject
 
             if(promptObject.search){
-                console.log("++++++ data:", data)
+                //console.log("++++++ data:", data)
                 //data.content = data.search_metadata
                 //promptObject.onLoad(data)
 

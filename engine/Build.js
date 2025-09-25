@@ -418,7 +418,7 @@ function buildNetwork(){
 
 // Main function that gets called when tables are loaded - define this last
 export function onLoadTablesPencil(qTable, uTable, sTable, pTable, puTable, gTable, mTable){
-	console.log("onLoadTablesPencil called with tables:", {qTable, uTable, sTable, pTable, puTable, gTable, mTable})
+	//console.log("onLoadTablesPencil called with tables:", {qTable, uTable, sTable, pTable, puTable, gTable, mTable})
 	
 	QUESTIONS_TABLE = qTable
 	UNITS_TABLE = uTable

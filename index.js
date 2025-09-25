@@ -42,7 +42,7 @@ import './engine/PencilReport.js';
         await load();
         console.log('✅ load() function completed successfully');
 
-        console.log("net:", net)
+        //console.log("net:", net)
 
     } catch (error) {
         console.error('❌ Error during initialization:', error);
