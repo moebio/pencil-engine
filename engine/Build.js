@@ -393,7 +393,7 @@ function buildNetwork(){
 	const max_words_count = SECTIONS_TABLE.get("default_words_count")
 	const section_examples = SECTIONS_TABLE.get("section_example")
 
-	console.log("max_words_count:", max_words_count)
+	//console.log("max_words_count:", max_words_count)
 
 
 	SECTIONS_TABLE[0].forEach((sectionName,i)=>{
@@ -413,7 +413,7 @@ function buildNetwork(){
 		if(!sectionNode.guidelines && sectionNode.to[0].guidelines) sectionNode.guidelines = sectionNode.to[0].guidelines
 	})
 
-	console.log("network built successfully", net)
+	console.log("network built successfully")//, net)
 }
 
 // Main function that gets called when tables are loaded - define this last
@@ -428,7 +428,7 @@ export function onLoadTablesPencil(qTable, uTable, sTable, pTable, puTable, gTab
 	GUIDELINES_TABLE = gTable
 	MODELS_TABLE = mTable
 
-	console.log("PROMPTS_TABLE:", PROMPTS_TABLE)
+	//console.log("PROMPTS_TABLE:", PROMPTS_TABLE)
 
 	buildModelsArray()
 	buildNetwork()
