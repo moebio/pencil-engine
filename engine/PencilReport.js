@@ -33,7 +33,9 @@ const NO_ANSWERS = false
 const PENCIL_REPORT_OBJECT = {
     questions:QUESTIONS_FEEDBACK,
     sections:SECTIONS_FEEDBACK,
-    relations:RELATIONS_FEEDBACK
+    relations:RELATIONS_FEEDBACK,
+    version:"1.0.7",
+    version_comment:"updated version number and added version and version_comment to the report object"
 }
 
 // Define functions using function declarations so they get hoisted
